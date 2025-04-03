@@ -1,41 +1,52 @@
-from app.db.mongodb.client import MongoDBClient
 from app.db.mongodb.models.job_description import JobDescription
+from app.db.mongodb.queries.base_crud import BaseCrudRepository
 from app.utils.logger import logger
+from typing import List, Optional
 
-class JobDescriptionRepository:
+class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
     def __init__(self):
-        self.collection = MongoDBClient.get_instance().get_collection('job-descriptions')
-        
-    def create(self, job_description):
-        try:
-            result = self.collection.insert_one(job_description.dict())
-            return str(result.inserted_id)
-        except Exception as e:
-            logger.error(f"Error inserting job description: {e}")
-        
-    def find_by_id(self, id):
-        result = self.collection.find_one({"_id": id})
-        return JobDescription(**result) if result else None
-        
-    def find_all(self, limit=100, skip=0):
-        cursor = self.collection.find().skip(skip).limit(limit)
-        return [JobDescription(**doc) for doc in cursor]
-        
+        super().__init__(JobDescription, "job-descriptions")
+
     def find_by_domain(self, domain):
-        cursor = self.collection.find({"domain": domain})
-        return [JobDescription(**doc) for doc in cursor]
-        
-    def vector_search(self, embedding, limit=10):
-        pipeline = [
-            {
-                "$vectorSearch": {
-                    "index": "job_embedding_index",
-                    "path": "embedding",
-                    "queryVector": embedding,
-                    "numCandidates": 100,
-                    "limit": limit
+        """Fined by domain"""
+        try:
+            cursor = self.collection.find({"domain": domain})
+            return [JobDescription(**doc) for doc in cursor]
+        except Exception as e:
+            logger.error(f"Error find_by_domain job description: {e}")
+    
+
+    def find_by_skills(self, skills: List[str], limit: int = 10) -> List[JobDescription]:
+        """Find job descriptions that require any of the given skills."""
+        try:
+            return self.find_many({"required_skills": {"$in": skills}}, limit)
+        except Exception as e:
+                logger.error(f"Error find_by_domain job description: {e}")
+    
+    def vector_search(self, embedding: List[float], limit: int = 10) -> List[dict]:
+        """Find job descriptions by vector similarity."""
+        try:
+            pipeline = [
+                {
+                    "$vectorSearch": {
+                        "index": "job_descriptions_embedding_vector_index",
+                        "path": "embedding",
+                        "queryVector": embedding,
+                        "numCandidates": 100,
+                        "limit": limit
+                    }
+                },
+                {
+                    "$project": {
+                        "document": "$$ROOT",
+                        "score": {"$meta": "vectorSearchScore"}
+                    }
                 }
-            }
-        ]
-        results = self.collection.aggregate(pipeline)
-        return [JobDescription(**doc) for doc in results]
+            ]
+            results = self.collection.aggregate(pipeline)
+            
+            return [{"job": JobDescription(**doc["document"]), "score": doc["score"]} 
+                    for doc in results]
+        except Exception as e:
+            logger.error(f"Error in vector search for JD: {e}")
+            raise

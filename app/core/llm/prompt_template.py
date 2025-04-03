@@ -1,0 +1,42 @@
+JD_GENERATION_TEMPLATE = """
+            Generate {count} realistic job description for the {domain} domain name.
+            This is import: Ensure the output is valid JSON. Each job description should be a JSON object with the following keys:
+            - Job title (use field name 'title', "title" (string))
+            - {domain} need to include
+            - Technology requirement (some service providers required for specific {domain}, "technology" (array of strings))
+            - Location (mix of remote and in-person, on-site, hybrid,"location" (string))
+            - 5-7 Key responsibilities (use field name 'responsibilities',"responsibilities" (array of strings))
+            - 5-10 required skills (use field name 'required_skills',"required_skills" (array of strings))
+            - Experience level requirement (use field name 'experience_level',"experience_level" (string))
+            - Education requirement (use field name 'education',"education" (string))
+            - Salary range (as min and max values, use field name 'salary_range')
+
+            Format as a JSON array with each job as an object. *Do not include any Markdown or formatting outside of the JSON.*
+            """
+RESUME_PROCESSOR_TEMPLATE = """
+            Extract structured information from the following resume text. 
+            Return the result as a valid JSON object with the following fields:
+            - name (string): Full name of the candidate
+            - email (string): Email address
+            - phone (string): Phone number
+            - summary (string): Professional summary or objective
+            - skills (array of strings): Technical and soft skills
+            - experience (array of objects): Work history with the following fields for each entry:
+                - title (string): Job title
+                - company (string): Company name
+                - duration (string): Employment period
+                - description (string): Job responsibilities and achievements
+            - education (array of objects): Educational background with the following fields for each entry:
+                - degree (string): Degree or certification name
+                - institution (string): School or university name
+                - year (string): Graduation year
+            - certifications (array of strings): Professional certifications
+            - projects (array of objects): Notable projects with the following fields for each:
+                - name (string): Project name
+                - description (string): Project details
+
+            Resume text:
+            {resume_text}
+            
+            Format as a JSON object. Ensure all field names are lowercase. Do not include any explanations, just return the JSON.
+        """

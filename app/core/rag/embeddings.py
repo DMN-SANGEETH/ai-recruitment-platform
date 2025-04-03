@@ -48,3 +48,34 @@ class EmbeddingGenerator:
         except Exception as e:
              logger.error(f"Failed to create job description embedding: {e}")
              return []
+        
+    def create_resume_embedding(self, resume_data: Dict[str, Any]) -> List[float]:
+        """Create embedding for resume by combining relevant fields"""
+        try:
+            skills_str = ', '.join(resume_data.get('skills', []))
+            
+            experience_str = ""
+            for exp in resume_data.get('experience', []):
+                if isinstance(exp, dict):
+                    experience_str += f"{exp.get('title', '')} at {exp.get('company', '')}. {exp.get('description', '')} "
+            
+            education_str = ""
+            for edu in resume_data.get('education', []):
+                if isinstance(edu, dict):
+                    education_str += f"{edu.get('degree', '')} from {edu.get('institution', '')}. "
+            
+            combined_text = f"""
+            Name: {resume_data.get('name', '')}
+            Summary: {resume_data.get('summary', '')}
+            Skills: {skills_str}
+            Experience: {experience_str}
+            Education: {education_str}
+            Certifications: {', '.join(resume_data.get('certifications', []))}
+            """
+            
+            embedding = self.generate_embedding(combined_text)
+            logger.info(f"Successfully created embedding for resume: {resume_data.get('name')}")
+            return embedding
+        except Exception as e:
+             logger.error(f"Failed to create resume embedding: {e}")
+             return []

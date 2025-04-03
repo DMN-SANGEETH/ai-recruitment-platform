@@ -1,10 +1,10 @@
 # job_description.py
-from datetime import datetime
 from typing import List, Optional, Dict
-from pydantic import BaseModel, Field
+from pydantic import Field
 
-class JobDescription(BaseModel):
-    id: Optional[str] = Field(None, alias="_id")
+from app.db.mongodb.models.base import MongoBaseModel
+
+class JobDescription(MongoBaseModel):
     title: str
     domain: str
     technology:List[str]
@@ -16,12 +16,10 @@ class JobDescription(BaseModel):
     education: str
     salary_range: Dict[str, int]
     embedding: Optional[List[float]] = None
-    created_at: datetime = Field(default_factory=datetime.now)
-    updated_at: datetime = Field(default_factory=datetime.now)
     
     class Config:
-        allow_population_by_field_name = True
-        schema_extra = {
+        populate_by_name = True
+        json_schema_extra = {
             "example": {
                 "title": "Machine Learning Engineer",
                 "domain": "Software Engineering",
