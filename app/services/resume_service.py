@@ -11,27 +11,21 @@ class ResumeService:
         self.processor = ResumeProcessor()
         self.repository = ResumeRepository()
 
-    def process_resume_file(self, file, filename:str)-> Dict[str, any]:
-        """Process an uploaded resume file and extract structured information"""
+    def process_resume_bytes(self, file_bytes: bytes, filename: str) -> Dict[str, any]:
+        """Process resume directly from bytes without saving to disk"""
         try:
-            #save file
-            file_path = FileHandler.save_file(file, filename)
-            if not file_path:
-                logger.error("Failed to save resume file")
-                return None
-            
-            #xtract content
-            resume_text = FileHandler.extract_text_from_file(file_path)
+            # Extract text directly from bytes
+            resume_text = FileHandler.extract_text_from_bytes(file_bytes, filename)
             if not resume_text:
-                logger.error("Failed to extract resume file")
+                logger.error("Failed to extract text from file bytes")
                 return None
             
-            #process resume data
-            resume_data = self.processor.process_resume(resume_text, file_path)
+            # Process resume data
+            resume_data = self.processor.process_resume(resume_text)
             return resume_data
 
         except Exception as e:
-            logger.error(f"Error processing resume file: {str(e)}")
+            logger.error(f"Error processing resume: {str(e)}")
             return None
         
     def get_resume_by_id(self, resume_id: str) -> Dict[str, any]:
