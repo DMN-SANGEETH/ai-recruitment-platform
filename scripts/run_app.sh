@@ -1,4 +1,4 @@
-#!/bin/bash
+'''#!/bin/bash
 
 # Navigate to project root
 cd "$(dirname "$0")/.." || exit
@@ -21,3 +21,15 @@ streamlit run app/main.py \
     --server.address=0.0.0.0 \
     --server.headless=true \
     --logger.level=${LOG_LEVEL}
+
+'''
+#!/bin/bash
+
+# Navigate to project root
+cd "$(dirname "$0")/.." || exit
+
+# Install package in editable mode
+pip install -e .
+
+# Run the Streamlit app
+streamlit run app/main.py
