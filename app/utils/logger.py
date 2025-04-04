@@ -1,6 +1,13 @@
+# app/utils/logger.py
+
 import logging
 
-logging.basicConfig(level=logging.INFO,
-                    format="%(asctime)s [%(levelname)s] %(message)s",
-                    )
-logger = logging.getLogger("recruitment-platform")
+logger = logging.getLogger("ai-platform")
+logger.setLevel(logging.DEBUG)
+
+# Optional: log to console
+console_handler = logging.StreamHandler()
+formatter = logging.Formatter("[%(asctime)s] [%(levelname)s] %(message)s")
+console_handler.setFormatter(formatter)
+
+logger.addHandler(console_handler)
