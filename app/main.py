@@ -4,8 +4,6 @@ from pathlib import Path
 # Auto-add project root to Python path (for Streamlit Cloud)
 sys.path.append(str(Path(__file__).parent.parent))
 
-# Now regular imports work
-from app.utils.logger import logger
 
 import streamlit as st
 from app.components.file_uploader import FileUploaderComponent
@@ -41,10 +39,4 @@ def main():
    
 
 if __name__ == "__main__":
-    try:
-    # your startup logic
-        main()
-        logger.info("Application started successfully.")
-    except Exception as e:
-        logger.critical(f"Unhandled exception during startup: {e}")
-        raise
+    main()
