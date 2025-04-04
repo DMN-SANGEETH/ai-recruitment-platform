@@ -42,6 +42,7 @@ class JobDescriptionProcessor:
                 transformed_data["embedding"] = embedding
                 
                 jd = JobDescription(**transformed_data)
+                #Create db
                 result = self.repository.create(jd)
                 
                 if result:

@@ -10,7 +10,7 @@ class Experience(MongoBaseModel):
     description: str
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "title": "Software Engineer",
                 "company": "Tech Inc",
@@ -25,7 +25,7 @@ class Education(MongoBaseModel):
     year: str
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "degree": "B.S. Computer Science",
                 "institution": "University of Technology",
@@ -46,9 +46,6 @@ class Resume(MongoBaseModel):
     summary: Optional[str] = None
     file_path: Optional[str] = None
     
-    
-    
-
     class Config:
         populate_by_name = True
         json_schema_extra = {

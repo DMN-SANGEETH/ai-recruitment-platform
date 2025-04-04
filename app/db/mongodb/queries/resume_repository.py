@@ -5,7 +5,7 @@ from typing import List
 
 class ResumeRepository(BaseCrudRepository[Resume]):
     def __init__(self):
-        super().__init__(Resume, "job-resumes'")
+        super().__init__(Resume, "job-resumes")
     
     def find_by_domain(self, domain):
             """Fined by domain"""

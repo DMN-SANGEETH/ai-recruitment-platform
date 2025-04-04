@@ -11,7 +11,7 @@ class GeminiClient:
         self.max_retries = max_retries
         self.backoff_factor = backoff_factor
 
-    def _call_gemini_with_retry(self, prompt: str, domain: str):
+    def _call_gemini_with_retry(self, prompt: str, domain: str = "general"):
         """Call Gemini API with exponential backoff retry logic"""
         delay = self.initial_delay
         for attempt in range(self.max_retries):

@@ -65,7 +65,7 @@ class ResumeProcessor:
         
         try:
             prompt = self._generate_prompt(resume_text)
-            content = self.gemini_client._call_gemini_with_retry(prompt)
+            content = self.gemini_client._call_gemini_with_retry(prompt, domain="resume_processing")
             
             if not content:
                 logger.error("Failed to extract information from resume")
@@ -88,9 +88,10 @@ class ResumeProcessor:
             experience_list = []
             for exp in resume_data.get("experience", []):
                 experience_list.append(Experience(**exp))
+                
             resume_data["experience"] = experience_list
-
             resume = Resume(**resume_data)
+            #Create db
             result = self.repository.create(resume)
             
             if result:
