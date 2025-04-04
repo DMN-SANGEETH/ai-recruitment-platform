@@ -43,12 +43,11 @@ class FileUploaderComponent:
                     # filename = f"resume_{timestamp}.{file_extension}"
                     
                     # Process the file
-                    file_bytes = uploaded_file.getvalue()
                     resume_data = self.resume_service.process_resume_bytes(
-                        file_bytes=file_bytes,
+                        file_bytes=uploaded_file.getvalue(),
                         filename=uploaded_file.name
-                        )
-                    
+                    )
+                                        
                     if resume_data:
                         st.success(f"Successfully processed resume for {resume_data.get('name', 'candidate')}")
                         
