@@ -27,14 +27,30 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
         """Get all job descriptions that have embeddings"""
         return list(self.collection.find(
             {"embedding": {"$exists": True, "$ne": None}},
-            {"embedding": 1, "title": 1, "required_skills": 1, "domain": 1}  # Include other fields you need
+            {
+            "embedding": 1,
+            "title": 1,
+            "company": 1,
+            "location": 1,
+            "description": 1,
+            "requirements": 1,
+            "required_skills": 1,
+            "salary": 1,
+            "benefits": 1,
+            "experience_level": 1,
+            "education": 1,
+            "domain": 1,
+            "employment_type": 1,
+            "posted_date": 1,
+            "application_deadline": 1,
+            "apply_url": 1
+        }
         ))
     
         
     def vector_search(self, embedding: List[float], limit: int = 10):
         """Find job descriptions by vector similarity."""
         try:
-            print(f"Querying with embedding (first 5 dims): {embedding[:5]}")
             pipeline = [
                 {
                     "$vectorSearch": {
@@ -53,9 +69,6 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
                     }
                 ]
             results = list(self.collection.aggregate(pipeline))
-            print("============================================")
-            print(f"Found {len(results)} matches")
-            print("results:",results)
             
             return [{"job": JobDescription(**doc["document"]), "score": doc["score"]} 
                     for doc in results]

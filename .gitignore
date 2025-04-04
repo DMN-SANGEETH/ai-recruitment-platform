@@ -2,4 +2,4 @@
 __pycache__/*
 *.py[cod]*
 .env.example*
-.streamlit/secrets.toml
+.streamlit/secrets.toml.streamlit/secrets.toml

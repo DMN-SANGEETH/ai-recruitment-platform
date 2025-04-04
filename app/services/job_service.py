@@ -42,7 +42,6 @@ class JobService:
         """Get job recommendations for a resume"""
         try:
             matches = self.matcher.match_resume_to_jobs(resume_data, limit)
-            print("matches2:",matches)
 
             # Convert matches to a format suitable for the UI
             formatted_matches = []

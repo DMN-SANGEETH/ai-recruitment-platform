@@ -1,0 +1,13 @@
+name: Deploy to Streamlit
+on:
+  push:
+    branches: [master]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test
+        run: python -m pytest tests/

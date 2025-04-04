@@ -30,7 +30,6 @@ def main():
         if resume_data:
             with st.spinner("Finding matching jobs..."):
                 matches = job_service.get_job_matches_for_resume(resume_data)
-                print("matches:",matches)
                 results_viewer.render(matches)
    
 
