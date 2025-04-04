@@ -38,13 +38,14 @@ class FileUploaderComponent:
             if st.button("Process Resume"):
                 with st.spinner("Processing your resume..."):
                     # Create a unique filename
-                    file_extension = uploaded_file.name.split('.')[-1]
-                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                    filename = f"resume_{timestamp}.{file_extension}"
+                    # file_extension = uploaded_file.name.split('.')[-1]
+                    # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    # filename = f"resume_{timestamp}.{file_extension}"
                     
                     # Process the file
                     file_bytes = uploaded_file.getvalue()
-                    resume_data = self.resume_service.process_resume_file(file_bytes, filename)
+                    resume_data = self.resume_service.process_resume_bytes(ffile_bytes=file_bytes,
+                        filename=uploaded_file.name)
                     
                     if resume_data:
                         st.success(f"Successfully processed resume for {resume_data.get('name', 'candidate')}")

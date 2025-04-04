@@ -1,7 +1,7 @@
 import os
 import PyPDF2
 import docx
-from typing import Tuple
+from io import BytesIO
 from app.utils.logger import logger
 
 class FileHandler:
@@ -37,50 +37,48 @@ class FileHandler:
             return ""
     
     @classmethod
-    def extract_text_from_file(cls, file_path: str) -> str:
-        """Extract text content from various file formats"""
+    def extract_text_from_bytes(cls, file_bytes: bytes, filename: str) -> str:
+        """Extract text directly from file bytes"""
         try:
-            file_extension = file_path.rsplit('.', 1)[1].lower()
+            file_extension = filename.rsplit('.', 1)[1].lower()
             
             if file_extension == 'pdf':
-                return cls._extract_text_from_pdf(file_path)
+                return cls._extract_text_from_pdf_bytes(file_bytes)
             elif file_extension in ['doc', 'docx']:
-                return cls._extract_text_from_docx(file_path)
+                return cls._extract_text_from_docx_bytes(file_bytes)
             elif file_extension == 'txt':
-                return cls._extract_text_from_txt(file_path)
+                return file_bytes.decode('utf-8')
             else:
                 logger.error(f"Unsupported file extension: {file_extension}")
                 return ""
         
         except Exception as e:
-            logger.error(f"Error extracting text from file: {str(e)}")
+            logger.error(f"Error extracting text: {str(e)}")
             return ""
-    
+        
     @classmethod
-    def _extract_text_from_pdf(cls, file_path: str) -> str:
-        """Extract text from PDF files"""
+    def _extract_text_from_pdf_bytes(cls, file_bytes: bytes) -> str:
+        """Extract text from PDF bytes"""
         try:
             text = ""
-            with open(file_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
-                for page_num in range(len(pdf_reader.pages)):
-                    text += pdf_reader.pages[page_num].extract_text()
+            with BytesIO(file_bytes) as pdf_file:
+                pdf_reader = PyPDF2.PdfReader(pdf_file)
+                for page in pdf_reader.pages:
+                    text += page.extract_text()
             return text
         except Exception as e:
-            logger.error(f"Error extracting text from PDF: {str(e)}")
+            logger.error(f"PDF extraction error: {str(e)}")
             return ""
-    
+
     @classmethod
-    def _extract_text_from_docx(cls, file_path: str) -> str:
-        """Extract text from DOCX files"""
+    def _extract_text_from_docx_bytes(cls, file_bytes: bytes) -> str:
+        """Extract text from DOCX bytes"""
         try:
-            doc = docx.Document(file_path)
-            text = ""
-            for paragraph in doc.paragraphs:
-                text += paragraph.text + "\n"
-            return text
+            with BytesIO(file_bytes) as docx_file:
+                doc = docx.Document(docx_file)
+                return "\n".join([para.text for para in doc.paragraphs])
         except Exception as e:
-            logger.error(f"Error extracting text from DOCX: {str(e)}")
+            logger.error(f"DOCX extraction error: {str(e)}")
             return ""
     
     @classmethod
