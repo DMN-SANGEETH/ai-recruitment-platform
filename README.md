@@ -36,3 +36,7 @@
 ## Step - 02
 # Generate JD 
 ```python3 scripts/seed_database.py```
+
+## Step - 03 
+```chmod +x scripts/run_app.sh```
+```./scripts/run_app.sh```
