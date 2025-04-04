@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+# Auto-add project root to Python path (for Streamlit Cloud)
+sys.path.append(str(Path(__file__).parent.parent))
+
+# Now regular imports work
 from app.utils.logger import logger
 
 import streamlit as st

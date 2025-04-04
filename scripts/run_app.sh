@@ -32,4 +32,8 @@ cd "$(dirname "$0")/.." || exit
 pip install -e .
 
 # Run the Streamlit app
-streamlit run app/main.py
+streamlit run app/main.py \
+    --server.port=8501 \
+    --server.address=0.0.0.0 \
+    --server.headless=true \
+    --logger.level=${LOG_LEVEL}
