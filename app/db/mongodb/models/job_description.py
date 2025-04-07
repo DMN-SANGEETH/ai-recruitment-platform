@@ -16,7 +16,7 @@ class JobDescription(MongoBaseModel):
     education: str
     salary_range: Dict[str, int]
     embedding: Optional[List[float]] = None
-    
+
     class Config:
         populate_by_name = True
         json_schema_extra = {

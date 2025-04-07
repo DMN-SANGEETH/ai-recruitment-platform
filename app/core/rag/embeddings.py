@@ -8,14 +8,14 @@ class EmbeddingGenerator:
         """Initialize the embedding generate with gemini API"""
         try:
             genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
-            self.model = genai.embed_content 
-            logger.info("Embedding generator initialized successfully") 
+            self.model = genai.embed_content
+            logger.info("Embedding generator initialized successfully")
         except Exception as e:
             logger.error(f"Failed to initialize embedding generator: {e}")
             raise
 
     def generate_embedding(self, text:str) -> List[float]:
-        """Genereate Embeding for given text using gemini model"""
+        """Generate Embedding for given text using gemini model"""
         try:
             result = genai.embed_content(
                 model="models/embedding-001",
@@ -30,7 +30,7 @@ class EmbeddingGenerator:
             raise
 
     def create_job_description_embedding(self, job_data: Dict[str, Any]) -> List[float]:
-        """Create emedding for job description by combaing relevent field"""
+        """Create embedding for job description by combing relevant field"""
         try:
             combined_text = f"""
             Job Title: {job_data.get("title", '')}
@@ -48,22 +48,22 @@ class EmbeddingGenerator:
         except Exception as e:
              logger.error(f"Failed to create job description embedding: {e}")
              return []
-        
+
     def create_resume_embedding(self, resume_data: Dict[str, Any]) -> List[float]:
         """Create embedding for resume by combining relevant fields"""
         try:
             skills_str = ', '.join(resume_data.get('skills', []))
-            
+
             experience_str = ""
             for exp in resume_data.get('experience', []):
                 if isinstance(exp, dict):
                     experience_str += f"{exp.get('title', '')} at {exp.get('company', '')}. {exp.get('description', '')} "
-            
+
             education_str = ""
             for edu in resume_data.get('education', []):
                 if isinstance(edu, dict):
                     education_str += f"{edu.get('degree', '')} from {edu.get('institution', '')}. "
-            
+
             combined_text = f"""
             Name: {resume_data.get('name', '')}
             Summary: {resume_data.get('summary', '')}
@@ -72,7 +72,7 @@ class EmbeddingGenerator:
             Education: {education_str}
             Certifications: {', '.join(resume_data.get('certifications', []))}
             """
-            
+
             embedding = self.generate_embedding(combined_text)
             logger.info(f"Successfully created embedding for resume: {resume_data.get('name')}")
             return embedding

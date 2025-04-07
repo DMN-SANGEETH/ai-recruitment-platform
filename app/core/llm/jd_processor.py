@@ -31,28 +31,27 @@ class JobDescriptionProcessor:
         if not job_descriptions or not isinstance(job_descriptions, list):
             logger.error(f"No valid job descriptions provided for domain: {domain}")
             return 0
-            
+
         successful_count = 0
-        
+
         for jd_data in job_descriptions:
             try:
                 transformed_data = self._transform_job_data(jd_data, domain)
 
                 embedding = self.embedding.create_job_description_embedding(transformed_data)
                 transformed_data["embedding"] = embedding
-                
+
                 jd = JobDescription(**transformed_data)
                 #Create db
                 result = self.repository.create(jd)
-                
+
                 if result:
                     successful_count += 1
                     logger.debug(f"Stored job description: {transformed_data['title']}")
                 else:
                     logger.warning(f"Failed to store job description: {transformed_data['title']}")
-                    
+
             except Exception as e:
                 logger.error(f"Error processing job description: {str(e)}")
                 continue
-                
         return successful_count

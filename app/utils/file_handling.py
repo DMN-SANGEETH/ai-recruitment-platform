@@ -6,7 +6,7 @@ from app.utils.logger import logger
 
 class FileHandler:
     """Utility class for handling file uploads and extractions"""
-    
+
     ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc', 'txt'}
     UPLOAD_FOLDER = 'storage/resumes'
 
@@ -14,34 +14,34 @@ class FileHandler:
     def allowed_file(cls, filename: str) -> bool:
         """Check if the file has an allowed extension"""
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in cls.ALLOWED_EXTENSIONS
-    
+
     @classmethod
     def save_file(cls, file, filename: str) -> str:
         """Save the uploaded file to the upload folder"""
         try:
             # Create directory if it doesn't exist
             os.makedirs(cls.UPLOAD_FOLDER, exist_ok=True)
-            
+
             # Generate the file path
             file_path = os.path.join(cls.UPLOAD_FOLDER, filename)
-            
+
             # Save the file
             with open(file_path, 'wb') as f:
                 f.write(file)
-            
+
             logger.info(f"File saved at: {file_path}")
             return file_path
-        
+
         except Exception as e:
             logger.error(f"Error saving file: {str(e)}")
             return ""
-    
+
     @classmethod
     def extract_text_from_bytes(cls, file_bytes: bytes, filename: str) -> str:
         """Extract text directly from file bytes"""
         try:
             file_extension = filename.rsplit('.', 1)[1].lower()
-            
+
             if file_extension == 'pdf':
                 return cls._extract_text_from_pdf_bytes(file_bytes)
             elif file_extension in ['doc', 'docx']:
@@ -51,11 +51,11 @@ class FileHandler:
             else:
                 logger.error(f"Unsupported file extension: {file_extension}")
                 return ""
-        
+
         except Exception as e:
             logger.error(f"Error extracting text: {str(e)}")
             return ""
-        
+
     @classmethod
     def _extract_text_from_pdf_bytes(cls, file_bytes: bytes) -> str:
         """Extract text from PDF bytes"""
@@ -80,7 +80,7 @@ class FileHandler:
         except Exception as e:
             logger.error(f"DOCX extraction error: {str(e)}")
             return ""
-    
+
     @classmethod
     def _extract_text_from_txt(cls, file_path: str) -> str:
         """Extract text from TXT files"""

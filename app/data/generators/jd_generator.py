@@ -11,7 +11,7 @@ from app.utils.logger import logger
 from app.utils.config import MongoDBConfig
 from app.core.rag.embeddings import EmbeddingGenerator
 from app.core.llm.jd_processor import JobDescriptionProcessor
-from app.core.llm.gemini_client import GeminiClient 
+from app.core.llm.gemini_client import GeminiClient
 
 class JobDescriptionGenerator:
     def __init__(self):
@@ -21,11 +21,11 @@ class JobDescriptionGenerator:
 
         self.gemini_client = GeminiClient(
             model=model,
-            initial_delay=5, 
+            initial_delay=5,
             max_retries=3,
             backoff_factor=2
         )
-        
+
         self.repository = JobDescriptionRepository()
         self.embedding = EmbeddingGenerator()
         self.job_processor = JobDescriptionProcessor()
@@ -41,19 +41,19 @@ class JobDescriptionGenerator:
         """Generate job descriptions for specified domains and store them in MongoDB"""
         if not domains or count_per_domain <= 0:
             return "No domains specified or invalid count per domain"
-        
+
         total_generated = 0
-        
+
         for domain in domains:
             logger.info(f"Processing domain: {domain}")
             time.sleep(20)
 
             prompt = self._generate_prompt(domain, count_per_domain)
             content = self.gemini_client._call_gemini_with_retry(prompt, domain)
-            
+
             if not content:
                 continue
-                
+
             try:
                 cleaned_content = extract_and_validate_json(content)
                 if not cleaned_content:
@@ -61,16 +61,15 @@ class JobDescriptionGenerator:
                     continue
 
                 job_descriptions = json.loads(cleaned_content)
-            
+
                 if not isinstance(job_descriptions, list):
                     job_descriptions = [job_descriptions]
-                    
+
                 generated_count = self.job_processor.process_job_descriptions(domain, job_descriptions)
                 total_generated += generated_count
                 logger.info(f"Successfully processed {generated_count} job descriptions for {domain}")
-                
+
             except Exception as e:
                 logger.error(f"Failed to process job descriptions for {domain}: {str(e)}")
                 continue
-                
         return f"Successfully generated {total_generated} job descriptions across {len(domains)} domains"

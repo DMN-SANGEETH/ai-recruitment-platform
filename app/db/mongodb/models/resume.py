@@ -8,7 +8,7 @@ class Experience(MongoBaseModel):
     company: str
     duration: str
     description: str
-    
+
     class Config:
         json_schema_extra = {
             "example": {
@@ -23,7 +23,7 @@ class Education(MongoBaseModel):
     degree: str
     institution: str
     year: str
-    
+
     class Config:
         json_schema_extra = {
             "example": {
@@ -45,7 +45,7 @@ class Resume(MongoBaseModel):
     embedding: Optional[List[float]] = None
     summary: Optional[str] = None
     file_path: Optional[str] = None
-    
+
     class Config:
         populate_by_name = True
         json_schema_extra = {
@@ -73,4 +73,3 @@ class Resume(MongoBaseModel):
             },
                 "summary": "Experienced software engineer with 3+ years in web development"
             }
-        

@@ -16,7 +16,7 @@ class MongoDBConfig:
             logger.error("MONGO_URI not set in environment variables")
             raise ConfigurationError("MongoDB connection URI is required")
         return uri
-    
+
     @staticmethod
     def get_gemini_api_key()-> str:
         """Get Gemini API key with validation"""
@@ -25,10 +25,10 @@ class MongoDBConfig:
             logger.error("GEMINI_API_KEY not set in environment variables")
             raise ConfigurationError("Gemini API key is required")
         return key
-    
+
     @staticmethod
     def get_app_config()-> dict:
-        """Get App configration"""
+        """Get App configuration"""
         return {
             "debug": os.getenv("DEBUG", "False").lower() == "true",
             "log_level": os.getenv("LOG_LEVEL", "INFO"),
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     logger.info("Testing MongoDB configuration")
     try:
         logger.info(f"Gemini API Key: {'*' * 8}{MongoDBConfig.get_gemini_api_key()[-4:]}")
-        logger.info(f"MongoDB URI: {MongoDBConfig.get_mongodb_uri()[:20]}...")  # Log partial URI for security
+        logger.info(f"MongoDB URI: {MongoDBConfig.get_mongodb_uri()[:20]}...")
         logger.info(f"App Config: {MongoDBConfig.get_app_config()}")
         connection = MongoDBConfig.get_mongodb_connection()
         logger.info("MongoDB connection test successful")

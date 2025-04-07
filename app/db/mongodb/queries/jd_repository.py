@@ -1,7 +1,7 @@
 from app.db.mongodb.models.job_description import JobDescription
 from app.db.mongodb.queries.base_crud import BaseCrudRepository
 from app.utils.logger import logger
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
     def __init__(self):
@@ -14,7 +14,7 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
             return [JobDescription(**doc) for doc in cursor]
         except Exception as e:
             logger.error(f"Error find_by_domain job description: {e}")
-    
+
 
     def find_by_skills(self, skills: List[str], limit: int = 10) -> List[JobDescription]:
         """Find job descriptions that require any of the given skills."""
@@ -22,7 +22,7 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
             return self.find_many({"required_skills": {"$in": skills}}, limit)
         except Exception as e:
                 logger.error(f"Error find_by_domain job description: {e}")
-    
+
     def get_all_with_embeddings(self) -> List[Dict]:
         """Get all job descriptions that have embeddings"""
         return list(self.collection.find(
@@ -46,8 +46,7 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
             "apply_url": 1
         }
         ))
-    
-        
+
     def vector_search(self, embedding: List[float], limit: int = 10):
         """Find job descriptions by vector similarity."""
         try:
@@ -69,8 +68,8 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
                     }
                 ]
             results = list(self.collection.aggregate(pipeline))
-            
-            return [{"job": JobDescription(**doc["document"]), "score": doc["score"]} 
+
+            return [{"job": JobDescription(**doc["document"]), "score": doc["score"]}
                     for doc in results]
         except Exception as e:
             logger.error(f"Error in vector search for JD: {e}")

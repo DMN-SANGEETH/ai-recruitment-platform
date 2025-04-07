@@ -60,52 +60,47 @@ class JobDisplayComponent:
     def render_job_card(self, job: Dict[str, Any], match_score: float = None, explanation: str = None):
         """
         Render a single job card with all details
-        
-        Args:
-            job: Dictionary containing job details
-            match_score: Match percentage score (0-100)
-            explanation: Explanation of why this job matches
         """
         with st.container():
             # Start job card with custom styling
             st.markdown('<div class="job-card">', unsafe_allow_html=True)
-            
+
             # Header section with title and match percentage
             col1, col2 = st.columns([4, 1])
             with col1:
                 st.markdown(f'<div class="job-title">{job.get("title", "Job Title")}</div>', unsafe_allow_html=True)
                 st.markdown(f'<div class="job-company">{job.get("company", "Company")}</div>', unsafe_allow_html=True)
-            
+
             with col2:
                 if match_score is not None:
                     st.markdown(f'<div class="match-badge">{match_score:.1f}% Match</div>', unsafe_allow_html=True)
-            
+
             # Basic job metadata
             st.markdown(f"""
             <div class="job-meta">
-                {job.get("location", "Location not specified")} | 
-                {job.get("employment_type", "Employment type not specified")} | 
+                {job.get("location", "Location not specified")} |
+                {job.get("employment_type", "Employment type not specified")} |
                 {self._format_date(job.get("posted_date"))}
             </div>
             """, unsafe_allow_html=True)
-            
+
             # Match explanation if available
             if explanation:
                 with st.expander("Why this match?"):
                     st.info(explanation)
-            
+
             # Tabs for different sections
             tab1, tab2, tab3 = st.tabs(["Description", "Requirements", "Details"])
-            
+
             with tab1:
                 self._render_job_description(job)
-            
+
             with tab2:
                 self._render_job_requirements(job)
-            
+
             with tab3:
                 self._render_job_details(job)
-            
+
             # Apply button
             if job.get("apply_url"):
                 st.markdown(f"""
@@ -127,15 +122,15 @@ class JobDisplayComponent:
                     </button>
                 </a>
                 """, unsafe_allow_html=True)
-            
+
             # End job card
             st.markdown('</div>', unsafe_allow_html=True)
-    
+
     def _render_job_description(self, job: Dict[str, Any]):
         """Render job description section"""
         st.markdown('<div class="job-section">', unsafe_allow_html=True)
         st.markdown('<div class="job-section-title">Job Description</div>', unsafe_allow_html=True)
-        
+
         description = job.get("description")
         if description:
             if isinstance(description, list):
@@ -145,83 +140,79 @@ class JobDisplayComponent:
                 st.markdown(description)
         else:
             st.markdown("No description provided")
-        
+
         st.markdown('</div>', unsafe_allow_html=True)
-    
+
     def _render_job_requirements(self, job: Dict[str, Any]):
         """Render job requirements section"""
         st.markdown('<div class="job-section">', unsafe_allow_html=True)
         st.markdown('<div class="job-section-title">Requirements</div>', unsafe_allow_html=True)
-        
+
         requirements = job.get("requirements", [])
         if requirements:
             for req in requirements:
                 st.markdown(f"- {req}")
         else:
             st.markdown("No requirements listed")
-        
+
         st.markdown('</div>', unsafe_allow_html=True)
-    
+
     def _render_job_details(self, job: Dict[str, Any]):
         """Render additional job details"""
         st.markdown('<div class="job-section">', unsafe_allow_html=True)
         st.markdown('<div class="job-section-title">Additional Details</div>', unsafe_allow_html=True)
-        
+
         # Salary information
         salary = job.get("salary")
         if salary and isinstance(salary, dict):
             st.markdown(f"**Salary Range:** {salary.get('min', 'N/A')} - {salary.get('max', 'N/A')} {salary.get('currency', '')}")
-        
+
         # Benefits
         benefits = job.get("benefits", [])
         if benefits:
             st.markdown("**Benefits:**")
             for benefit in benefits:
                 st.markdown(f"- {benefit}")
-        
+
         # Experience level
         experience = job.get("experience_level")
         if experience:
             st.markdown(f"**Experience Level:** {experience}")
-        
+
         # Education requirements
         education = job.get("education")
         if education:
             st.markdown(f"**Education:** {education}")
-        
+
         # Application deadline
         deadline = job.get("application_deadline")
         if deadline:
             st.markdown(f"**Application Deadline:** {self._format_date(deadline)}")
-        
+
         st.markdown('</div>', unsafe_allow_html=True)
-    
+
     def _format_date(self, date_str: str) -> str:
         """Format date string for display"""
         if not date_str:
             return "Date not specified"
-        
+
         try:
             # Try parsing ISO format
             dt = datetime.fromisoformat(date_str)
             return dt.strftime("%b %d, %Y")
         except (ValueError, TypeError):
             return date_str
-    
+
     def render_job_list(self, jobs: List[Dict[str, Any]], with_matches: bool = False):
         """
         Render a list of job cards
-        
-        Args:
-            jobs: List of job dictionaries
-            with_matches: Whether the jobs include match information
         """
         if not jobs:
             st.info("No jobs found matching your criteria")
             return
-        
+
         st.subheader(f"Found {len(jobs)} matching jobs")
-        
+
         for job_item in jobs:
             if with_matches and isinstance(job_item, dict) and 'job' in job_item:
                 # This is a job match object with score and explanation

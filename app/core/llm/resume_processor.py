@@ -1,6 +1,6 @@
 from typing import Dict, Any, List
 import google.generativeai as genai
-import time
+import json
 from google.api_core import exceptions
 from app.core.llm.gemini_client import GeminiClient
 from app.core.llm.prompt_template import RESUME_PROCESSOR_TEMPLATE
@@ -21,7 +21,7 @@ class ResumeProcessor:
 
         self.gemini_client = GeminiClient(
             model=self.model,
-            initial_delay=5, 
+            initial_delay=5,
             max_retries=3,
             backoff_factor=2
         )
@@ -34,8 +34,6 @@ class ResumeProcessor:
 
     def _transform_resume_data(self, json_data: str, file_path: str = None):
         """Transform extracted JSON data into standardized resume format"""
-        import json
-        
         try:
             data = json.loads(json_data) if isinstance(json_data, str) else json_data
             resume_data = {

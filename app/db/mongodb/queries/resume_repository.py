@@ -6,7 +6,7 @@ from typing import List
 class ResumeRepository(BaseCrudRepository[Resume]):
     def __init__(self):
         super().__init__(Resume, "job-resumes")
-    
+
     def find_by_domain(self, domain):
             """Fined by domain"""
             try:
@@ -14,7 +14,7 @@ class ResumeRepository(BaseCrudRepository[Resume]):
                 return [Resume(**doc) for doc in cursor]
             except Exception as e:
                 logger.error(f"Error find_by_domain CV: {e}")
-        
+
 
     def find_by_skills(self, skills: List[str], limit: int = 10) -> List[Resume]:
         """Find CV that require any of the given skills."""
@@ -22,7 +22,7 @@ class ResumeRepository(BaseCrudRepository[Resume]):
             return self.find_many({"required_skills": {"$in": skills}}, limit)
         except Exception as e:
                 logger.error(f"Error find_by_domain CV: {e}")
-    
+
     def vector_search(self, embedding: List[float], limit: int = 10) -> List[dict]:
         """Find CV by vector similarity."""
         try:
@@ -44,8 +44,8 @@ class ResumeRepository(BaseCrudRepository[Resume]):
                 }
             ]
             results = self.collection.aggregate(pipeline)
-            
-            return [{"job": Resume(**doc["document"]), "score": doc["score"]} 
+
+            return [{"job": Resume(**doc["document"]), "score": doc["score"]}
                     for doc in results]
         except Exception as e:
             logger.error(f"Error in vector search for resumes: {e}")

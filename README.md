@@ -3,7 +3,8 @@
 ![Ai Recruitment Diagram](https://github.com/user-attachments/assets/731c18f4-10a7-4531-888d-a6c108d71735)
 
 ## 📁 Project Structure
-```ai-recruitment-platform/
+```
+ai-recruitment-platform/
 ├── app/
 │   ├── components/
 │   ├── core/
@@ -25,18 +26,23 @@
 ├── README.md
 ├── requirements.txt
 ├── requirements-dev.txt
-├── setup.py```
+├── setup.py
+```
 
 <br />
-## Step - 01
-# Install Requirments
-```pip install -r requirements. txt```
 
- 
+## Step - 01
+# Install Requirements
+
+```
+pip install -r requirements. txt
+```
+
+
 ## Step - 02
-# Generate JD 
+# Generate JD
 ```python3 scripts/seed_database.py```
 
-## Step - 03 
+## Step - 03
 ```chmod +x scripts/run_app.sh```
 ```./scripts/run_app.sh```

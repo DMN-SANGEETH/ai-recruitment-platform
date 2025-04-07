@@ -28,12 +28,12 @@ class FileUploaderComponent:
     def render(self):
         """Render the file uploader component"""
         st.subheader("Upload Your Resume")
-        
+
         uploaded_file = st.file_uploader(
-            "Upload your resume (PDF, DOCX, DOC, TXT)", 
+            "Upload your resume (PDF, DOCX, DOC, TXT)",
             type=list(FileHandler.ALLOWED_EXTENSIONS)
         )
-        
+
         if uploaded_file is not None:
             if st.button("Process Resume"):
                 with st.spinner("Processing your resume..."):
@@ -41,26 +41,25 @@ class FileUploaderComponent:
                     # file_extension = uploaded_file.name.split('.')[-1]
                     # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                     # filename = f"resume_{timestamp}.{file_extension}"
-                    
                     # Process the file
                     resume_data = self.resume_service.process_resume_bytes(
                         file_bytes=uploaded_file.getvalue(),
                         filename=uploaded_file.name
                     )
-                                        
+
                     if resume_data:
                         st.success(f"Successfully processed resume for {resume_data.get('name', 'candidate')}")
-                        
+
                         # Store the processed resume data in session state
                         st.session_state.resume_data = resume_data
                         st.session_state.resume_processed = True
-                        
+
                         # Display a summary of extracted information
                         with st.expander("Resume Information", expanded=True):
                             st.write(f"**Name:** {resume_data.get('name', '')}")
                             st.write(f"**Email:** {resume_data.get('email', '')}")
                             st.write(f"**Phone:** {resume_data.get('phone', '')}")
-                            
+
                             # Skills section
                             st.write("---")
                             st.subheader("Skills")
@@ -71,7 +70,7 @@ class FileUploaderComponent:
                                     cols[i % 4].write(f"• {skill}")
                             else:
                                 st.write("No skills extracted")
-                            
+
                             # Experience section
                             st.write("---")
                             st.subheader("Professional Experience")
@@ -85,7 +84,7 @@ class FileUploaderComponent:
                                         st.write(f"- {exp}")
                             else:
                                 st.write("No experience extracted")
-                            
+
                             # Education section
                             st.write("---")
                             st.subheader("Education")
@@ -97,7 +96,7 @@ class FileUploaderComponent:
                                         st.write("")  # Add space between entries
                                     else:
                                         st.write(f"- {edu}")
-                            
+
                             # Certifications section
                             st.write("---")
                             st.subheader("Certifications")
@@ -107,7 +106,7 @@ class FileUploaderComponent:
                                     st.write(f"• {cert}")
                             else:
                                 st.write("No certifications listed")
-                            
+
                             # Projects section
                             st.write("---")
                             st.subheader("Projects")

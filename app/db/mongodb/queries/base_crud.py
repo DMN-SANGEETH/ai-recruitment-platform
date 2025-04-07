@@ -12,7 +12,7 @@ class BaseCrudRepository(Generic[T]):
     def __init__(self, model_class: Type[T], collection_name: str):
         self.model_class = model_class
         self.collection = MongoDBClient.get_instance().get_collection(collection_name)
-        
+
     def create(self, model: T) -> str:
         """Create a new document."""
         try:
@@ -21,8 +21,7 @@ class BaseCrudRepository(Generic[T]):
             return str(result.inserted_id)
         except Exception as e:
             logger.error(f"Error inserting document: {e}")
-        
-        
+
     def find_by_id(self, id: str) -> Optional[T]:
         """Find a document by ID."""
         try:
@@ -30,7 +29,7 @@ class BaseCrudRepository(Generic[T]):
             return self.model_class(**result) if result else None
         except Exception as e:
             logger.error(f"Error find_by_id job description: {e}")
-        
+
     def update(self, id: str, update_data: Dict[str, Any]) -> bool:
         """Update a document."""
         try:
@@ -42,7 +41,7 @@ class BaseCrudRepository(Generic[T]):
             return result.modified_count > 0
         except Exception as e:
                     logger.error(f"Error Update job description: {e}")
-        
+
     def delete(self, id: str) -> bool:
         """Delete a document."""
         try:
@@ -50,7 +49,7 @@ class BaseCrudRepository(Generic[T]):
             return result.deleted_count > 0
         except Exception as e:
                 logger.error(f"Error delete job description: {e}")
-        
+
     def find_many(self, query: Dict[str, Any], limit: int = 100, skip: int = 0) -> List[T]:
         """Find documents matching query."""
         try:
