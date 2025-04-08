@@ -24,7 +24,7 @@ class GeminiClient:
                     logger.error(f"Rate limit exceeded for {domain} after {self.max_retries} attempts")
                     return None
                 logger.warning(f"Rate limit exceeded for {domain}. Retrying in {delay} seconds (attempt {attempt + 1})")
-                time.sleep(delay) 
+                time.sleep(delay)
                 delay *= self.backoff_factor
             except Exception as e:
                 logger.error(f"Unexpected error generating content for {domain}: {str(e)}")

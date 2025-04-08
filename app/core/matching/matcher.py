@@ -17,7 +17,7 @@ class JobMatcher:
 
         # Initialize Gemini for explanations
         genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
-        self.model = genai.GenerativeModel("gemini-1.5-pro")
+        self.model = genai.GenerativeModel("gemini-1.5-flash") #gemini-1.5-flash gemini-1.5-pro
 
     def _cosine_similarity(self, vec_a: List[float],
                            vec_b: List[float]
@@ -99,6 +99,7 @@ class JobMatcher:
             Provide a concise 2-3 sentence explanation focusing on the most relevant matches between the resume and job requirements.
             """
             response = self.model.generate_content(prompt)
+            print("test ==========================")
             return response.text
         except Exception as e:
             logger.error(f"Error generating match explanation: {str(e)}")

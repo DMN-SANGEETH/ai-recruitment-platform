@@ -17,7 +17,7 @@ class JobDescriptionGenerator:
     def __init__(self):
         """Initialize the JobDescriptionGenerator with Gemini"""
         genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
-        model = genai.GenerativeModel("gemini-1.5-pro")
+        model = genai.GenerativeModel("gemini-1.5-flash") #gemini-1.5-flash gemini-1.5-pro
 
         self.gemini_client = GeminiClient(
             model=model,

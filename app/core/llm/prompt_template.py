@@ -3,6 +3,8 @@ JD_GENERATION_TEMPLATE = """
             This is import: Ensure the output is valid JSON. Each job description should be a JSON object with the following keys:
             - Job title (use field name 'title', "title" (string))
             - {domain} need to include
+            - Job description (Detailed job "description" matching {domain} and title requirements)
+            - Company ("company" name posting this job)
             - Technology requirement (some service providers required for specific {domain}, "technology" (array of strings))
             - Location (mix of remote and in-person, on-site, hybrid,"location" (string))
             - 5-7 Key responsibilities (use field name 'responsibilities',"responsibilities" (array of strings))
@@ -14,7 +16,7 @@ JD_GENERATION_TEMPLATE = """
             Format as a JSON array with each job as an object. *Do not include any Markdown or formatting outside of the JSON.*
             """
 RESUME_PROCESSOR_TEMPLATE = """
-            Extract structured information from the following resume text. 
+            Extract structured information from the following resume text.
             Return the result as a valid JSON object with the following fields:
             - name (string): Full name of the candidate
             - email (string): Email address
@@ -34,9 +36,43 @@ RESUME_PROCESSOR_TEMPLATE = """
             - projects (array of objects): Notable projects with the following fields for each:
                 - name (string): Project name
                 - description (string): Project details
+            - is_valid_resume (boolean): True if document contains resume data, False if not a resume
 
             Resume text:
             {resume_text}
-            
             Format as a JSON object. Ensure all field names are lowercase. Do not include any explanations, just return the JSON.
+            Set is_valid_resume=False for:
+            - Non-resume documents
+            - Extremely poor quality resumes
+            - 'Documents with' <30% 'resume content'
         """
+
+RESUME_VALIDATION_TEMPLATE = """
+            You are a resume validation expert. Your task is to determine whether the provided
+            text is a resume or any other type of content include or not a cv or resume.
+
+            Text to validate:
+            ```
+            {text}
+            ```
+
+            Examine whether this text has the structure and content typically found in a resume, such as:
+            - Personal information (name, contact details)
+            - Professional experience or work history(optional)
+            - Education details
+            - Skills section
+            - Optional sections like projects, certifications, or objective statement
+
+            Provide your analysis in JSON format with these fields:
+            - is_valid_resume: boolean (true if it's a valid resume, false otherwise)
+            - reason: string (brief explanation of your decision)
+            if include un-match data that is not a resume
+
+            Response format:
+            ```json
+            {{
+            "is_valid_resume": true/false,
+            "reason": "Your explanation here"
+            }}
+            ```
+            """

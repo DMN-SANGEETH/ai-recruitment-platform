@@ -1,3 +1,4 @@
+import os
 from typing import Dict, List
 from app.core.llm.resume_processor import ResumeProcessor
 from app.db.mongodb.queries.resume_repository import ResumeRepository
@@ -19,7 +20,7 @@ class ResumeService:
             if not resume_text:
                 logger.error("Failed to extract text from file bytes")
                 return None
-            
+
             # Process resume data
             resume_data = self.processor.process_resume(resume_text)
             return resume_data
@@ -27,7 +28,7 @@ class ResumeService:
         except Exception as e:
             logger.error(f"Error processing resume: {str(e)}")
             return None
-        
+
     def get_resume_by_id(self, resume_id: str) -> Dict[str, any]:
         """Get a resume by ID"""
         try:
@@ -38,7 +39,7 @@ class ResumeService:
         except Exception as e:
             logger.error(f"Error getting resume by ID: {str(e)}")
             return None
-    
+
     def get_all_resumes(self, limit: int = 100, skip: int = 0) -> List[Dict[str, any]]:
         """Get all resumes"""
         try:
@@ -47,7 +48,7 @@ class ResumeService:
         except Exception as e:
             logger.error(f"Error getting all resumes: {str(e)}")
             return []
-    
+
     def delete_resume(self, resume_id: str) -> bool:
         """Delete a resume and its associated file"""
         try:
@@ -56,7 +57,7 @@ class ResumeService:
             if not resume:
                 logger.error(f"Resume with ID {resume_id} not found")
                 return False
-            
+
             # Delete the file if it exists
             if resume.file_path and os.path.exists(resume.file_path):
                 try:
@@ -64,11 +65,11 @@ class ResumeService:
                     logger.info(f"Deleted file: {resume.file_path}")
                 except Exception as e:
                     logger.error(f"Failed to delete resume file: {str(e)}")
-            
+
             # Delete the resume from the database
             result = self.repository.delete(resume_id)
             return result
-            
+
         except Exception as e:
             logger.error(f"Error deleting resume: {str(e)}")
             return False

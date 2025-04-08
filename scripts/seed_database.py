@@ -12,7 +12,7 @@ def main():
 
     domains = [
         "Software Engineering",
-        "Data Science", 
+        "Data Science",
         "DevOps",
         "Machine Learning",
         "Quality Assurance",

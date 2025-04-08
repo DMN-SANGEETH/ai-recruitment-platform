@@ -24,6 +24,7 @@ class ResultsViewer:
 
     def _render_match(self, match: Dict[str, Any]):
         """Render a single job match"""
+        print(match)
         job = match['job']
         score = match.get('match_percentage', 0)
         explanation = match.get('explanation', '')
