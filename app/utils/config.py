@@ -1,11 +1,17 @@
 import os
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import streamlit as st
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, ConfigurationError
 from app.utils import logger
 
-#load_dotenv()
+load_dotenv()
+
+def get_secret(key: str, default: str = None):
+    """Unified method to get secrets from Streamlit or environment variables."""
+    if hasattr(st, "secrets") and key in st.secrets:
+        return st.secrets[key]
+    return os.getenv(key, default)
 
 
 class MongoDBConfig:
@@ -14,7 +20,7 @@ class MongoDBConfig:
     def get_mongodb_uri()-> str:
         """Get MongoDB Atlas connection URI"""
         #uri = os.getenv("MONGO_URI")
-        uri = st.secrets.get("MONGO_URI")
+        uri = get_secret("MONGO_URI")
         if not uri:
             logger.error("MONGO_URI not set in environment variables")
             raise ConfigurationError("MongoDB connection URI is required")
@@ -24,7 +30,7 @@ class MongoDBConfig:
     def get_gemini_api_key()-> str:
         """Get Gemini API key with validation"""
         #key = os.getenv("GEMINI_API_KEY")
-        key = st.secrets.get("GEMINI_API_KEY")
+        key = get_secret("GEMINI_API_KEY")
         if not key:
             logger.error("GEMINI_API_KEY not set in environment variables")
             raise ConfigurationError("Gemini API key is required")
@@ -34,8 +40,8 @@ class MongoDBConfig:
     def get_app_config()-> dict:
         """Get App configuration"""
         return {
-            "debug": str(st.secrets.get("DEBUG", "False")).lower() == "true",
-            "log_level": st.secrets.get("LOG_LEVEL", "INFO"),
+            "debug": str(get_secret("DEBUG", "False")).lower() == "true",
+            "log_level": get_secret("LOG_LEVEL", "INFO"),
         }
 
     @staticmethod
