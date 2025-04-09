@@ -26,7 +26,7 @@ class JobMatcher:
         return 1 - cosine(vec_a, vec_b)
 
     def match_resume_to_jobs(self, resume_data: Dict[str, Any],
-                             limit: int = 5) -> List[Dict[str, Any]]:
+                             limit: int = 4) -> List[Dict[str, Any]]:
         """Match a resume to job descriptions using client-side vector
         similarity"""
         try:
