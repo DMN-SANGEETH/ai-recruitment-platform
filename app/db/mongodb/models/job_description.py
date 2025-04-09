@@ -7,7 +7,8 @@ from app.db.mongodb.models.base import MongoBaseModel
 class JobDescription(MongoBaseModel):
     title: str
     domain: str
-    technology:List[str]
+    description: Optional[str] = None  # Also missing in your model
+    technology: List[str]
     company: Optional[str] = None
     location: str
     responsibilities: List[str]
@@ -15,6 +16,9 @@ class JobDescription(MongoBaseModel):
     experience_level: str
     education: str
     salary_range: Dict[str, int]
+    posted_date: Optional[str] = None
+    application_deadline: Optional[str] = None
+    apply_url: Optional[str] = None
     embedding: Optional[List[float]] = None
 
     class Config:
@@ -23,13 +27,17 @@ class JobDescription(MongoBaseModel):
             "example": {
                 "title": "Machine Learning Engineer",
                 "domain": "Software Engineering",
-                "technology_requirement": ["Experience with cloud-based machine learning platforms (e.g., AWS SageMaker, Azure Machine Learning)"],
+                "description": "Join our team to develop cutting-edge machine learning solutions.",
+                "technology": ["Python", "TensorFlow", "PyTorch", "AWS SageMaker"],
                 "company": "Example Corp",
                 "location": "Remote",
-                "responsibilities": ["Develop web applications", "Collaborate with team"],
-                "required_skills": ["JavaScript", "Python", "React", "Node.js"],
+                "responsibilities": ["Develop machine learning models", "Collaborate with data scientists"],
+                "required_skills": ["Python", "Machine Learning", "Deep Learning", "TensorFlow"],
                 "experience_level": "3-5 years",
-                "education": "Bachelor's in Computer Science or equivalent",
-                "salary_range": {"min": 80000, "max": 120000}
+                "education": "Master's in Computer Science or equivalent",
+                "salary_range": {"min": 80000, "max": 120000},
+                "posted_date": "2025/04/01",
+                "application_deadline": "2025/05/01",
+                "apply_url": "https://example.com/careers/ml-engineer"
             }
         }

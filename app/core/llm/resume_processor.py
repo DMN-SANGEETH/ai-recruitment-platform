@@ -101,7 +101,6 @@ class ResumeProcessor:
         try:
             # First validate if this is a resume
             is_valid, validation_reason = self.validate_resume(resume_text)
-            print(is_valid, validation_reason)
 
             if not is_valid:
                 logger.warning(f"Invalid resume detected: {validation_reason}")
@@ -137,7 +136,6 @@ class ResumeProcessor:
 
             resume_data["experience"] = experience_list
             resume = Resume(**resume_data)
-
 
             # Only store in DB if it's a valid resume
             if is_valid:

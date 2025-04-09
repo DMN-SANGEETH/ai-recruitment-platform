@@ -24,7 +24,6 @@ class ResultsViewer:
 
     def _render_match(self, match: Dict[str, Any]):
         """Render a single job match"""
-        print(match)
         job = match['job']
         score = match.get('match_percentage', 0)
         explanation = match.get('explanation', '')
@@ -47,12 +46,25 @@ class ResultsViewer:
 
             with tab2:
                 st.subheader("Requirements")
-                requirements = job.get('requirements', [])
-                if requirements:
-                    for req in requirements:
-                        st.markdown(f"- {req}")
-                else:
-                    st.markdown("No requirements listed")
+                # Benefits
+                responsibilities = job.get('responsibilities', [])
+                if responsibilities:
+                    st.markdown("**Responsibilities:**")
+                    for responsibility in responsibilities:
+                        st.markdown(f"- {responsibility}")
+
+                # Benefits
+                required_skills = job.get('required_skills', [])
+                if required_skills:
+                    st.markdown("**Required Skills:**")
+                    for required_skill in required_skills:
+                        st.markdown(f"- {required_skill}")
+
+                # Benefits
+                education = job.get('education', [])
+                if education:
+                    st.markdown("**Education:**")
+                    st.markdown(f"- {education}")
 
             with tab3:
                 self._render_job_details(job)
@@ -62,16 +74,14 @@ class ResultsViewer:
         st.subheader("Additional Details")
 
         # Salary information
-        salary = job.get('salary', {})
+        salary = job.get('salary_range', {})
         if salary and isinstance(salary, dict):
             st.markdown(f"**Salary Range:** {salary.get('min', 'N/A')} - {salary.get('max', 'N/A')} {salary.get('currency', '')}")
 
-        # Benefits
-        benefits = job.get('benefits', [])
-        if benefits:
-            st.markdown("**Benefits:**")
-            for benefit in benefits:
-                st.markdown(f"- {benefit}")
+        # Application post date
+        posted_date = job.get('posted_date')
+        if posted_date:
+            st.markdown(f"**Application Deadline:** {posted_date}")
 
         # Application deadline
         deadline = job.get('application_deadline')

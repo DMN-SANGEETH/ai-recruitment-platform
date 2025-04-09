@@ -1,6 +1,6 @@
 JD_GENERATION_TEMPLATE = """
             Generate {count} realistic job description for the {domain} domain name.
-            This is import: Ensure the output is valid JSON. Each job description should be a JSON object with the following keys:
+            This is important: Ensure the output is valid JSON. Each job description should be a JSON object with the following keys:
             - Job title (use field name 'title', "title" (string))
             - {domain} need to include
             - Job description (Detailed job "description" matching {domain} and title requirements)
@@ -11,10 +11,15 @@ JD_GENERATION_TEMPLATE = """
             - 5-10 required skills (use field name 'required_skills',"required_skills" (array of strings))
             - Experience level requirement (use field name 'experience_level',"experience_level" (string))
             - Education requirement (use field name 'education',"education" (string))
-            - Salary range (as min and max values, use field name 'salary_range')
+            - Salary range (as min and max values, use field name 'salary_range', e.g. {{"min": 80000, "max": 120000}})
+            - Posted Date (use field name 'posted_date', format "YYYY/MM/DD", e.g. "2025/04/05")
+            - Application deadline (use field name 'application_deadline', format "YYYY/MM/DD", e.g. "2025/05/05")
+            - Apply URL (use field name 'apply_url', e.g. "https://company.com/careers/job-123")
 
             Format as a JSON array with each job as an object. *Do not include any Markdown or formatting outside of the JSON.*
+            Ensure all field names are consistent and match exactly as specified above.
             """
+
 RESUME_PROCESSOR_TEMPLATE = """
             Extract structured information from the following resume text.
             Return the result as a valid JSON object with the following fields:

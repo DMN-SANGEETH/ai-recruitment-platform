@@ -35,7 +35,7 @@ class JobDescriptionRepository(BaseCrudRepository[JobDescription]):
             "description": 1,
             "requirements": 1,
             "required_skills": 1,
-            "salary": 1,
+            "salary_range": 1,
             "benefits": 1,
             "experience_level": 1,
             "education": 1,

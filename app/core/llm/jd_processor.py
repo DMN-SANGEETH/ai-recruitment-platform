@@ -16,14 +16,19 @@ class JobDescriptionProcessor:
         return {
             "title": raw_data.get("job_title", raw_data.get("title", "")),
             "domain": domain,
+            "description": raw_data.get("job_description",raw_data.get("description", "")),
+            "company": raw_data.get("job_company",raw_data.get("company", "")),
             "technology": raw_data.get("technology_requirement", raw_data.get("technology", [])),
             "location": raw_data.get("location", ""),
             "responsibilities": raw_data.get("key_responsibilities", raw_data.get("responsibilities", [])),
             "required_skills": raw_data.get("required_skills", []),
-            "experience_level": raw_data.get("experience_level_requirement", 
+            "experience_level": raw_data.get("experience_level_requirement",
                                            raw_data.get("experience_level", "")),
             "education": raw_data.get("education_requirement", raw_data.get("education", "")),
             "salary_range": raw_data.get("salary_range", {"min": 0, "max": 0}),
+            "posted_date": raw_data.get("posted_date",""),
+            "application_deadline": raw_data.get("application_deadline", ""),
+            "apply_url": raw_data.get("apply_url",""),
         }
 
     def process_job_descriptions(self, domain: str, job_descriptions: List[Dict[str, Any]]):

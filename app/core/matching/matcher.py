@@ -99,7 +99,6 @@ class JobMatcher:
             Provide a concise 2-3 sentence explanation focusing on the most relevant matches between the resume and job requirements.
             """
             response = self.model.generate_content(prompt)
-            print("test ==========================")
             return response.text
         except Exception as e:
             logger.error(f"Error generating match explanation: {str(e)}")

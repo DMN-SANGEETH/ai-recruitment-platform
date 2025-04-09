@@ -41,6 +41,11 @@ class EmbeddingGenerator:
             Required Skills: {', '.join(job_data.get('required_skills', []))}
             Experience Level: {job_data.get('experience_level', '')}
             Education: {job_data.get('education', '')}
+            Salary Range: {job_data.get('salary_range', '')}
+            Posted Date: {job_data.get('posted_date', '')}
+            Salary Range: {job_data.get('salary_range', '')}
+            Application Deadline: {job_data.get('application_deadline', '')}
+            Apply Url: {job_data.get('apply_url', '')}
             """
             embedding = self.generate_embedding(combined_text)
             logger.info(f"Successfully created embedding for job: {job_data.get('title')}")
