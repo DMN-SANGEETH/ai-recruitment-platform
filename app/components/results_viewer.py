@@ -81,12 +81,17 @@ class ResultsViewer:
         # Application post date
         posted_date = job.get('posted_date')
         if posted_date:
-            st.markdown(f"**Application Deadline:** {posted_date}")
+            st.markdown(f"**Posted Date:** {posted_date}")
 
         # Application deadline
         deadline = job.get('application_deadline')
         if deadline:
             st.markdown(f"**Application Deadline:** {deadline}")
+
+        # Application URL
+        apply_url = job.get('apply_url')
+        if apply_url:
+            st.markdown(f"**Application LINK:** {apply_url}")
 
     def _add_download_button(self, matches: List[Dict[str, Any]]):
         """Add button to download results as CSV"""
