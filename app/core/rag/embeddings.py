@@ -1,20 +1,27 @@
-from app.utils.logger import logger
+"""Embedding Generation"""
+from typing import List, Dict, Any
 import google.generativeai as genai
+
+from app.utils.logger import logger
 from app.utils.config import MongoDBConfig
-from typing import List, Dict, Any, Optional
+
 
 class EmbeddingGenerator:
+    """Embedding Generation Class"""
     def __init__(self):
         """Initialize the embedding generate with gemini API"""
         try:
             genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
             self.model = genai.embed_content
             logger.info("Embedding generator initialized successfully")
+
         except Exception as e:
-            logger.error(f"Failed to initialize embedding generator: {e}")
+            logger.error("Failed to initialize embedding generator: %s", e)
             raise
 
-    def generate_embedding(self, text:str) -> List[float]:
+    def generate_embedding(self,
+                           text:str
+                           ) -> List[float]:
         """Generate Embedding for given text using gemini model"""
         try:
             result = genai.embed_content(
@@ -23,13 +30,18 @@ class EmbeddingGenerator:
                 task_type="retrieval_document"
             )
             embedding = result["embedding"]
-            logger.debug(f"Successfully generated embedding of dimension {len(embedding)}")
+            logger.debug("Successfully generated embedding of dimension %d",
+                         len(embedding)
+                         )
             return embedding
+
         except Exception as e:
-            logger.error(f"Error generating embedding: {e}")
+            logger.error("Error generating embedding: %s", e)
             raise
 
-    def create_job_description_embedding(self, job_data: Dict[str, Any]) -> List[float]:
+    def create_job_description_embedding(self,
+                                         job_data: Dict[str, Any]
+                                         ) -> List[float]:
         """Create embedding for job description by combing relevant field"""
         try:
             combined_text = f"""
@@ -48,26 +60,37 @@ class EmbeddingGenerator:
             Apply Url: {job_data.get('apply_url', '')}
             """
             embedding = self.generate_embedding(combined_text)
-            logger.info(f"Successfully created embedding for job: {job_data.get('title')}")
+            logger.info("Successfully created embedding for job: %s", job_data.get("title"))
             return embedding
-        except Exception as e:
-             logger.error(f"Failed to create job description embedding: {e}")
-             return []
 
-    def create_resume_embedding(self, resume_data: Dict[str, Any]) -> List[float]:
+        except Exception as e:
+            logger.error("Failed to create job description embedding: %s",e)
+            return []
+
+    def create_resume_embedding(self,
+                                resume_data: Dict[str, Any]
+                                ) -> List[float]:
         """Create embedding for resume by combining relevant fields"""
         try:
             skills_str = ', '.join(resume_data.get('skills', []))
 
             experience_str = ""
             for exp in resume_data.get('experience', []):
+
                 if isinstance(exp, dict):
-                    experience_str += f"{exp.get('title', '')} at {exp.get('company', '')}. {exp.get('description', '')} "
+                    title = exp.get('title', '')
+                    company = exp.get('company', '')
+                    description = exp.get('description', '')
+
+                    experience_str += f"{title} at {company}. {description} "
 
             education_str = ""
             for edu in resume_data.get('education', []):
                 if isinstance(edu, dict):
-                    education_str += f"{edu.get('degree', '')} from {edu.get('institution', '')}. "
+                    degree = edu.get('degree', '')
+                    institution = edu.get('institution', '')
+
+                    education_str += f"{degree} from {institution}. "
 
             combined_text = f"""
             Name: {resume_data.get('name', '')}
@@ -79,8 +102,11 @@ class EmbeddingGenerator:
             """
 
             embedding = self.generate_embedding(combined_text)
-            logger.info(f"Successfully created embedding for resume: {resume_data.get('name')}")
+            logger.info("Successfully created embedding for resume: %s",
+                        resume_data.get("name")
+                        )
             return embedding
+
         except Exception as e:
-             logger.error(f"Failed to create resume embedding: {e}")
-             return []
+            logger.error("Failed to create resume embedding: %s", e)
+            return []

@@ -1,7 +1,8 @@
-from typing import Dict, Any, List, Tuple
-import google.generativeai as genai
+"""Resume processor"""
 import json
-from google.api_core import exceptions
+from typing import  Tuple
+import google.generativeai as genai
+
 from app.core.llm.gemini_client import GeminiClient
 from app.core.llm.prompt_template import RESUME_PROCESSOR_TEMPLATE, RESUME_VALIDATION_TEMPLATE
 from app.db.mongodb.models.resume import Resume, Education, Experience
@@ -12,6 +13,7 @@ from app.utils.config import MongoDBConfig
 from app.utils.helpers import extract_and_validate_json
 
 class ResumeProcessor:
+    """Resume Processor class"""
     def __init__(self):
         """Initialize the Resume Processor with Gemini"""
         genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
@@ -26,18 +28,24 @@ class ResumeProcessor:
             backoff_factor=2
         )
 
-    def _generate_prompt(self, resume_text: str):
+    def _generate_prompt(self,
+                         resume_text: str
+                         ):
         """Generate prompt for extracting structured information from resume text"""
         return RESUME_PROCESSOR_TEMPLATE.format(
             resume_text=resume_text
         )
-    def _generate_validation_prompt(self, text: str):
+    def _generate_validation_prompt(self,
+                                    text: str
+                                    ):
         """Generate prompt to validate if the text is a resume"""
         return RESUME_VALIDATION_TEMPLATE.format(
             text=text
         )
 
-    def validate_resume(self, text: str) -> Tuple[bool, str]:
+    def validate_resume(self,
+                        text: str
+                        ) -> Tuple[bool, str]:
         """
         Check if the provided text is a valid resume
         """
@@ -46,7 +54,9 @@ class ResumeProcessor:
 
         try:
             prompt = self._generate_validation_prompt(text)
-            response = self.gemini_client._call_gemini_with_retry(prompt, domain="resume_validation")
+            response = self.gemini_client._call_gemini_with_retry(prompt,
+                                                                  domain="resume_validation"
+                                                                  )
 
             if not response:
                 return False, "Unable to validate resume content"
@@ -65,10 +75,13 @@ class ResumeProcessor:
             return is_valid, reason
 
         except Exception as e:
-            logger.error(f"Error validating resume: {str(e)}")
+            logger.error("Error validating resume: %s", str(e))
             return False, f"Validation error: {str(e)}"
 
-    def _transform_resume_data(self, json_data: str, file_path: str = None):
+    def _transform_resume_data(self,
+                               json_data: str,
+                               file_path: str = None
+                               ):
         """Transform extracted JSON data into standardized resume format"""
         try:
             data = json.loads(json_data) if isinstance(json_data, str) else json_data
@@ -89,10 +102,13 @@ class ResumeProcessor:
             return resume_data
 
         except Exception as e:
-            logger.error(f"Error transforming resume data: {str(e)}")
+            logger.error("Error transforming resume data: %s", str(e))
             return {}
 
-    def process_resume(self, resume_text: str, file_path: str = None):
+    def process_resume(self,
+                       resume_text: str,
+                       file_path: str = None
+                       ):
         """Process resume text to extract structured information and store in database"""
         if not resume_text:
             logger.error("No resume text provided")
@@ -103,14 +119,16 @@ class ResumeProcessor:
             is_valid, validation_reason = self.validate_resume(resume_text)
 
             if not is_valid:
-                logger.warning(f"Invalid resume detected: {validation_reason}")
+                logger.warning("Invalid resume detected: %s", validation_reason)
                 return {
                     "is_valid_resume": False,
                     "validation_reason": validation_reason
                 }
 
             prompt = self._generate_prompt(resume_text)
-            content = self.gemini_client._call_gemini_with_retry(prompt, domain="resume_processing")
+            content = self.gemini_client._call_gemini_with_retry(prompt,
+                                                                 domain="resume_processing"
+                                                                 )
 
             if not content:
                 logger.error("Failed to extract information from resume")
@@ -141,12 +159,18 @@ class ResumeProcessor:
             if is_valid:
                 result = self.repository.create(resume)
                 if result:
-                    logger.info(f"Successfully processed and stored resume for {resume_data['name']}")
+                    logger.info(
+                        "Successfully processed and stored resume for %s",
+                        resume_data["name"]
+                        )
                 else:
-                    logger.error(f"Failed to store resume for {resume_data['name']}")
+                    logger.error(
+                        "Failed to store resume for %s",
+                        resume_data["name"]
+                        )
 
             return resume_data
 
         except Exception as e:
-            logger.error(f"Error processing resume: {str(e)}")
+            logger.error("Error processing resume: %s", e)
             return None

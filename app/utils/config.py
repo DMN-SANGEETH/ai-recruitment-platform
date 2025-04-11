@@ -1,8 +1,10 @@
+"""Configurations"""
 import os
 from dotenv import load_dotenv
 import streamlit as st
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure, ConfigurationError
+
 from app.utils import logger
 
 load_dotenv()
@@ -15,6 +17,7 @@ def get_secret(key: str, default: str = None):
 
 
 class MongoDBConfig:
+    """Mongo DB Config class"""
 
     @staticmethod
     def get_mongodb_uri()-> str:
@@ -55,21 +58,21 @@ class MongoDBConfig:
             logger.info("Successfully connected to MongoDB Atlas")
             return client
         except ConnectionFailure as e:
-            logger.error(f"Failed to connect to MongoDB Atlas: {e}")
+            logger.error("Failed to connect to MongoDB Atlas: %s", e)
             raise
         except Exception as e:
-            logger.error(f"Unexpected error connecting to MongoDB: {e}")
+            logger.error("Unexpected error connecting to MongoDB: %s", e)
             raise
 
 
 if __name__ == "__main__":
     logger.info("Testing MongoDB configuration")
     try:
-        logger.info(f"Gemini API Key: {'*' * 8}{MongoDBConfig.get_gemini_api_key()[-4:]}")
-        logger.info(f"MongoDB URI: {MongoDBConfig.get_mongodb_uri()[:20]}...")
-        logger.info(f"App Config: {MongoDBConfig.get_app_config()}")
+        logger.info("Gemini API Key: %s%s", '*' * 8, MongoDBConfig.get_gemini_api_key()[-4:])
+        logger.info("MongoDB URI: %s...", MongoDBConfig.get_mongodb_uri()[:20])
+        logger.info("App Config: %s", MongoDBConfig.get_app_config())
         connection = MongoDBConfig.get_mongodb_connection()
         logger.info("MongoDB connection test successful")
     except Exception as e:
-        logger.error(f"Configuration test failed: {e}")
+        logger.error("Configuration test failed: %s", e)
         raise

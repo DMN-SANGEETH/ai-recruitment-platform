@@ -1,14 +1,17 @@
+"""Job Matcher component"""
+
 from typing import List, Dict, Any
 from scipy.spatial.distance import cosine
+import google.generativeai as genai
+
 from app.db.mongodb.queries.jd_repository import JobDescriptionRepository
 from app.db.mongodb.queries.resume_repository import ResumeRepository
 from app.core.rag.embeddings import EmbeddingGenerator
 from app.utils.logger import logger
-import google.generativeai as genai
 from app.utils.config import MongoDBConfig
 
-
 class JobMatcher:
+    """Jab Matcher class"""
     def __init__(self):
         """Initialize the Job Matcher with client-side vector search"""
         self.jd_repository = JobDescriptionRepository()
@@ -19,14 +22,10 @@ class JobMatcher:
         genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
         self.model = genai.GenerativeModel("gemini-1.5-flash") #gemini-1.5-flash gemini-1.5-pro
 
-    def _cosine_similarity(self, vec_a: List[float],
-                           vec_b: List[float]
-                           ) -> float:
-        """Calculate cosine similarity between two vectors"""
-        return 1 - cosine(vec_a, vec_b)
-
-    def match_resume_to_jobs(self, resume_data: Dict[str, Any],
-                             limit: int = 4) -> List[Dict[str, Any]]:
+    def match_resume_to_jobs(self,
+                             resume_data: Dict[str, Any],
+                             limit: int = 4
+                             ) -> List[Dict[str, Any]]:
         """Match a resume to job descriptions using client-side vector
         similarity"""
         try:
@@ -75,8 +74,14 @@ class JobMatcher:
             return enhanced_results
 
         except Exception as e:
-            logger.error(f"Error in matching resume to jobs: {str(e)}", exc_info=True)
+            logger.error("Error in matching resume to jobs: %s", e, exc_info=True)
             return []
+
+    def _cosine_similarity(self, vec_a: List[float],
+                           vec_b: List[float]
+                           ) -> float:
+        """Calculate cosine similarity between two vectors"""
+        return 1 - cosine(vec_a, vec_b)
 
     def _generate_match_explanation(self, resume: Dict, job: Dict) -> str:
         """Generate a natural language explanation of the match"""
@@ -101,5 +106,5 @@ class JobMatcher:
             response = self.model.generate_content(prompt)
             return response.text
         except Exception as e:
-            logger.error(f"Error generating match explanation: {str(e)}")
+            logger.error("Error generating match explanation: %s", e)
             return "Match explanation not available"

@@ -1,13 +1,14 @@
 # job_description.py
+"""Job Description"""
 from typing import List, Optional, Dict
-from pydantic import Field
 
 from app.db.mongodb.models.base import MongoBaseModel
 
 class JobDescription(MongoBaseModel):
+    """Job Description class"""
     title: str
     domain: str
-    description: Optional[str] = None  # Also missing in your model
+    description: Optional[str] = None
     technology: List[str]
     company: Optional[str] = None
     location: str
@@ -22,6 +23,7 @@ class JobDescription(MongoBaseModel):
     embedding: Optional[List[float]] = None
 
     class Config:
+        """Config Class"""
         populate_by_name = True
         json_schema_extra = {
             "example": {
@@ -31,7 +33,8 @@ class JobDescription(MongoBaseModel):
                 "technology": ["Python", "TensorFlow", "PyTorch", "AWS SageMaker"],
                 "company": "Example Corp",
                 "location": "Remote",
-                "responsibilities": ["Develop machine learning models", "Collaborate with data scientists"],
+                "responsibilities": ["Develop machine learning models",
+                                     "Collaborate with data scientists"],
                 "required_skills": ["Python", "Machine Learning", "Deep Learning", "TensorFlow"],
                 "experience_level": "3-5 years",
                 "education": "Master's in Computer Science or equivalent",

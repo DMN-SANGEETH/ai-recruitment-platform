@@ -1,13 +1,16 @@
-import streamlit as st
+"""Job Display component"""
+
 from typing import Dict, Any, List
-import pandas as pd
 from datetime import datetime
 
+import streamlit as st
+
 class JobDisplayComponent:
+    """Job Display class"""
     def __init__(self):
         """Initialize the Job Display Component"""
         self._setup_styles()
-    
+
     def _setup_styles(self):
         """Setup custom CSS styles for job cards"""
         st.markdown("""
@@ -57,7 +60,11 @@ class JobDisplayComponent:
         </style>
         """, unsafe_allow_html=True)
 
-    def render_job_card(self, job: Dict[str, Any], match_score: float = None, explanation: str = None):
+    def render_job_card( self,
+                        job: Dict[str, Any],
+                        match_score: float = None,
+                        explanation: str = None
+                        ):
         """
         Render a single job card with all details
         """
@@ -68,12 +75,15 @@ class JobDisplayComponent:
             # Header section with title and match percentage
             col1, col2 = st.columns([4, 1])
             with col1:
-                st.markdown(f'<div class="job-title">{job.get("title", "Job Title")}</div>', unsafe_allow_html=True)
-                st.markdown(f'<div class="job-company">{job.get("company", "Company")}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="job-title">{job.get("title", "Job Title")}</div>',
+                            unsafe_allow_html=True)
+                st.markdown(f'<div class="job-company">{job.get("company", "Company")}</div>',
+                            unsafe_allow_html=True)
 
             with col2:
                 if match_score is not None:
-                    st.markdown(f'<div class="match-badge">{match_score:.1f}% Match</div>', unsafe_allow_html=True)
+                    st.markdown(f'<div class="match-badge">{match_score:.1f}% Match</div>',
+                                unsafe_allow_html=True)
 
             # Basic job metadata
             st.markdown(f"""
@@ -126,10 +136,13 @@ class JobDisplayComponent:
             # End job card
             st.markdown('</div>', unsafe_allow_html=True)
 
-    def _render_job_description(self, job: Dict[str, Any]):
+    def _render_job_description(self,
+                                job: Dict[str, Any]
+                                ):
         """Render job description section"""
         st.markdown('<div class="job-section">', unsafe_allow_html=True)
-        st.markdown('<div class="job-section-title">Job Description</div>', unsafe_allow_html=True)
+        st.markdown('<div class="job-section-title">Job Description</div>',
+                    unsafe_allow_html=True)
 
         description = job.get("description")
         if description:
@@ -143,10 +156,13 @@ class JobDisplayComponent:
 
         st.markdown('</div>', unsafe_allow_html=True)
 
-    def _render_job_requirements(self, job: Dict[str, Any]):
+    def _render_job_requirements(self,
+                                 job: Dict[str, Any]
+                                 ):
         """Render job requirements section"""
         st.markdown('<div class="job-section">', unsafe_allow_html=True)
-        st.markdown('<div class="job-section-title">Requirements</div>', unsafe_allow_html=True)
+        st.markdown('<div class="job-section-title">Requirements</div>',
+                    unsafe_allow_html=True)
 
         requirements = job.get("requirements", [])
         if requirements:
@@ -157,15 +173,21 @@ class JobDisplayComponent:
 
         st.markdown('</div>', unsafe_allow_html=True)
 
-    def _render_job_details(self, job: Dict[str, Any]):
+    def _render_job_details(self,
+                            job: Dict[str, Any]
+                            ):
         """Render additional job details"""
         st.markdown('<div class="job-section">', unsafe_allow_html=True)
-        st.markdown('<div class="job-section-title">Additional Details</div>', unsafe_allow_html=True)
+        st.markdown('<div class="job-section-title">Additional Details</div>',
+                    unsafe_allow_html=True)
 
         # Salary information
         salary = job.get("salary")
         if salary and isinstance(salary, dict):
-            st.markdown(f"**Salary Range:** {salary.get('min', 'N/A')} - {salary.get('max', 'N/A')} {salary.get('currency', '')}")
+            min_s = salary.get('min', 'N/A')
+            max_s = salary.get('max', 'N/A')
+            currency_s = salary.get('currency', '')
+            st.markdown(f"**Salary Range:** {min_s} - {max_s} {currency_s}")
 
         # Benefits
         benefits = job.get("benefits", [])
@@ -191,7 +213,9 @@ class JobDisplayComponent:
 
         st.markdown('</div>', unsafe_allow_html=True)
 
-    def _format_date(self, date_str: str) -> str:
+    def _format_date(self,
+                     date_str: str
+                     ) -> str:
         """Format date string for display"""
         if not date_str:
             return "Date not specified"
@@ -203,7 +227,10 @@ class JobDisplayComponent:
         except (ValueError, TypeError):
             return date_str
 
-    def render_job_list(self, jobs: List[Dict[str, Any]], with_matches: bool = False):
+    def render_job_list(self,
+                        jobs: List[Dict[str, Any]],
+                        with_matches: bool = False
+                        ):
         """
         Render a list of job cards
         """

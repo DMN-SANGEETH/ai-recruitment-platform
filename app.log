@@ -22,3 +22,459 @@
 2025-04-09 14:56:19,456 [INFO] Embedding generator initialized successfully
 2025-04-09 14:56:27,482 [INFO] Successfully created embedding for resume: Nishan Sangeeth
 2025-04-09 14:56:29,400 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-04-09 21:18:04,971 [INFO] Embedding generator initialized successfully
+2025-04-09 21:18:04,971 [INFO] Embedding generator initialized successfully
+2025-04-10 11:50:34,162 [INFO] Embedding generator initialized successfully
+2025-04-10 11:50:34,162 [INFO] Embedding generator initialized successfully
+2025-04-10 11:52:50,546 [INFO] Embedding generator initialized successfully
+2025-04-10 11:52:50,547 [INFO] Embedding generator initialized successfully
+2025-04-10 11:53:18,133 [INFO] Embedding generator initialized successfully
+2025-04-10 11:53:18,133 [INFO] Embedding generator initialized successfully
+2025-04-10 11:53:36,049 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-04-10 11:53:38,103 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-04-11 14:59:22,649 [INFO] Embedding generator initialized successfully
+2025-04-11 14:59:22,650 [INFO] Embedding generator initialized successfully
+2025-04-11 14:59:57,594 [INFO] Embedding generator initialized successfully
+2025-04-11 14:59:57,594 [INFO] Embedding generator initialized successfully
+2025-04-11 14:59:57,594 [INFO] JobDescriptionProcessor initialized successfully
+2025-04-11 14:59:57,594 [INFO] Processing domain: Software Engineering
+2025-04-11 15:00:44,442 [ERROR] Input validation failed: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-04-11 15:00:44,444 [ERROR] Transformation failed for job data: Invalid job description data: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 27, in _validate_input
+    validated_data = JobDescription(**raw_data).dict(exclude_none=True)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 65, in _transform_job_data
+    validated_data = self._validate_input(raw_data)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 31, in _validate_input
+    raise ValueError(f"Invalid job description data: {e}") from e
+ValueError: Invalid job description data: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-04-11 15:08:30,054 [INFO] Embedding generator initialized successfully
+2025-04-11 15:08:30,054 [INFO] Embedding generator initialized successfully
+2025-04-11 15:08:30,054 [INFO] JobDescriptionProcessor initialized successfully
+2025-04-11 15:08:30,055 [INFO] Processing domain: Software Engineering
+2025-04-11 15:09:19,111 [ERROR] Input validation failed: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-04-11 15:09:19,112 [ERROR] Transformation failed for job data: Invalid job description data: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 28, in _validate_input
+    validated_data = JobDescription(**raw_data).dict(exclude_none=True)
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 66, in _transform_job_data
+    validated_data = self._validate_input(raw_data)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 32, in _validate_input
+    raise ValueError(f"Invalid job description data: {e}") from e
+ValueError: Invalid job description data: 1 validation error for JobDescription
+domain
+  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-04-11 15:20:11,064 [INFO] Embedding generator initialized successfully
+2025-04-11 15:20:11,064 [INFO] Embedding generator initialized successfully
+2025-04-11 15:20:11,064 [INFO] JobDescriptionProcessor initialized successfully
+2025-04-11 15:20:11,064 [INFO] Processing domain: Software Engineering
+2025-04-11 15:20:57,919 [INFO] Successfully created embedding for job: Senior Software Engineer
+2025-04-11 15:20:59,067 [INFO] Processed job: Senior Software Engineer
+2025-04-11 15:21:00,454 [INFO] Successfully created embedding for job: Frontend Developer
+2025-04-11 15:21:00,720 [INFO] Processed job: Frontend Developer
+2025-04-11 15:21:01,986 [INFO] Successfully created embedding for job: Software Engineer (Backend)
+2025-04-11 15:21:02,484 [INFO] Processed job: Software Engineer (Backend)
+2025-04-11 15:21:03,733 [INFO] Successfully created embedding for job: Data Scientist
+2025-04-11 15:21:04,197 [INFO] Processed job: Data Scientist
+2025-04-11 15:21:05,473 [INFO] Successfully created embedding for job: DevOps Engineer
+2025-04-11 15:21:05,872 [INFO] Processed job: DevOps Engineer
+2025-04-11 15:21:06,603 [INFO] Successfully created embedding for job: Mobile App Developer (iOS)
+2025-04-11 15:21:07,134 [INFO] Processed job: Mobile App Developer (iOS)
+2025-04-11 15:21:07,622 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
+2025-04-11 15:21:08,113 [INFO] Processed job: Mobile App Developer (Android)
+2025-04-11 15:21:08,644 [INFO] Successfully created embedding for job: Full Stack Engineer
+2025-04-11 15:21:08,982 [INFO] Processed job: Full Stack Engineer
+2025-04-11 15:21:09,468 [INFO] Successfully created embedding for job: Game Developer
+2025-04-11 15:21:09,927 [INFO] Processed job: Game Developer
+2025-04-11 15:21:10,493 [INFO] Successfully created embedding for job: Cloud Engineer
+2025-04-11 15:21:11,165 [INFO] Processed job: Cloud Engineer
+2025-04-11 15:21:11,721 [INFO] Successfully created embedding for job: Security Engineer
+2025-04-11 15:21:12,074 [INFO] Processed job: Security Engineer
+2025-04-11 15:21:12,542 [INFO] Successfully created embedding for job: Database Administrator
+2025-04-11 15:21:13,441 [INFO] Processed job: Database Administrator
+2025-04-11 15:21:13,973 [INFO] Successfully created embedding for job: Machine Learning Engineer
+2025-04-11 15:21:14,312 [INFO] Processed job: Machine Learning Engineer
+2025-04-11 15:21:14,750 [INFO] Successfully created embedding for job: Software Test Engineer
+2025-04-11 15:21:15,088 [INFO] Processed job: Software Test Engineer
+2025-04-11 15:21:15,088 [INFO] Processing complete. Success: 14, Failures: 0
+2025-04-11 15:21:15,089 [ERROR] Failed to process job descriptions for Software Engineering: unsupported operand type(s) for +=: 'int' and 'dict'
+2025-04-11 15:21:15,089 [INFO] Processing domain: Data Science
+2025-04-11 15:22:01,489 [INFO] Successfully created embedding for job: Senior Data Scientist
+2025-04-11 15:22:02,004 [INFO] Processed job: Senior Data Scientist
+2025-04-11 15:22:03,324 [INFO] Successfully created embedding for job: Data Scientist
+2025-04-11 15:22:03,730 [INFO] Processed job: Data Scientist
+2025-04-11 15:22:04,969 [INFO] Successfully created embedding for job: Junior Data Scientist
+2025-04-11 15:22:05,582 [INFO] Processed job: Junior Data Scientist
+2025-04-11 15:22:06,555 [INFO] Successfully created embedding for job: Machine Learning Engineer
+2025-04-11 15:22:06,898 [INFO] Processed job: Machine Learning Engineer
+2025-04-11 15:22:07,359 [INFO] Successfully created embedding for job: Data Analyst
+2025-04-11 15:22:07,652 [INFO] Processed job: Data Analyst
+2025-04-11 15:22:08,205 [INFO] Successfully created embedding for job: Big Data Engineer
+2025-04-11 15:22:08,534 [INFO] Processed job: Big Data Engineer
+2025-04-11 15:22:09,036 [INFO] Successfully created embedding for job: Business Intelligence Analyst
+2025-04-11 15:22:09,344 [INFO] Processed job: Business Intelligence Analyst
+2025-04-11 15:22:09,784 [INFO] Successfully created embedding for job: Data Engineer
+2025-04-11 15:22:10,135 [INFO] Processed job: Data Engineer
+2025-04-11 15:22:10,610 [INFO] Successfully created embedding for job: NLP Engineer
+2025-04-11 15:22:10,924 [INFO] Processed job: NLP Engineer
+2025-04-11 15:22:11,365 [INFO] Successfully created embedding for job: Computer Vision Engineer
+2025-04-11 15:22:11,641 [INFO] Processed job: Computer Vision Engineer
+2025-04-11 15:22:12,090 [INFO] Successfully created embedding for job: Database Administrator
+2025-04-11 15:22:12,546 [INFO] Processed job: Database Administrator
+2025-04-11 15:22:12,982 [INFO] Successfully created embedding for job: Cloud Data Engineer
+2025-04-11 15:22:13,465 [INFO] Processed job: Cloud Data Engineer
+2025-04-11 15:22:13,916 [INFO] Successfully created embedding for job: Analytics Manager
+2025-04-11 15:22:14,280 [INFO] Processed job: Analytics Manager
+2025-04-11 15:22:14,791 [INFO] Successfully created embedding for job: ML Ops Engineer
+2025-04-11 15:22:15,263 [INFO] Processed job: ML Ops Engineer
+2025-04-11 15:22:15,263 [INFO] Processing complete. Success: 14, Failures: 0
+2025-04-11 15:22:15,264 [ERROR] Failed to process job descriptions for Data Science: unsupported operand type(s) for +=: 'int' and 'dict'
+2025-04-11 15:22:15,264 [INFO] Processing domain: DevOps
+2025-04-11 15:38:51,144 [INFO] Embedding generator initialized successfully
+2025-04-11 15:38:51,145 [INFO] Embedding generator initialized successfully
+2025-04-11 15:38:51,145 [INFO] JobDescriptionProcessor initialized successfully
+2025-04-11 15:38:51,145 [INFO] Processing domain: Software Engineering
+2025-04-11 15:39:40,918 [INFO] Successfully created embedding for job: Senior Software Engineer
+2025-04-11 15:39:42,330 [INFO] Processed job: Senior Software Engineer
+2025-04-11 15:39:42,864 [INFO] Successfully created embedding for job: Frontend Software Engineer
+2025-04-11 15:39:43,431 [INFO] Processed job: Frontend Software Engineer
+2025-04-11 15:39:43,937 [INFO] Successfully created embedding for job: Backend Software Engineer
+2025-04-11 15:39:44,299 [INFO] Processed job: Backend Software Engineer
+2025-04-11 15:39:45,016 [INFO] Successfully created embedding for job: Full Stack Software Engineer
+2025-04-11 15:39:45,488 [INFO] Processed job: Full Stack Software Engineer
+2025-04-11 15:39:46,021 [INFO] Successfully created embedding for job: Mobile App Developer (iOS)
+2025-04-11 15:39:46,444 [INFO] Processed job: Mobile App Developer (iOS)
+2025-04-11 15:39:47,000 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
+2025-04-11 15:39:47,416 [INFO] Processed job: Mobile App Developer (Android)
+2025-04-11 15:39:47,914 [INFO] Successfully created embedding for job: Data Scientist
+2025-04-11 15:39:48,337 [INFO] Processed job: Data Scientist
+2025-04-11 15:39:48,896 [INFO] Successfully created embedding for job: DevOps Engineer
+2025-04-11 15:39:49,181 [INFO] Processed job: DevOps Engineer
+2025-04-11 15:39:49,823 [INFO] Successfully created embedding for job: Cloud Architect
+2025-04-11 15:39:50,471 [INFO] Processed job: Cloud Architect
+2025-04-11 15:39:51,055 [INFO] Successfully created embedding for job: Software Test Engineer
+2025-04-11 15:39:51,483 [INFO] Processed job: Software Test Engineer
+2025-04-11 15:39:51,970 [INFO] Successfully created embedding for job: Database Administrator
+2025-04-11 15:39:52,466 [INFO] Processed job: Database Administrator
+2025-04-11 15:39:53,001 [INFO] Successfully created embedding for job: Security Engineer
+2025-04-11 15:39:53,399 [INFO] Processed job: Security Engineer
+2025-04-11 15:39:54,639 [INFO] Successfully created embedding for job: Embedded Software Engineer
+2025-04-11 15:39:55,081 [INFO] Processed job: Embedded Software Engineer
+2025-04-11 15:39:56,373 [INFO] Successfully created embedding for job: Machine Learning Engineer
+2025-04-11 15:39:56,825 [INFO] Processed job: Machine Learning Engineer
+2025-04-11 15:39:58,026 [INFO] Successfully created embedding for job: Game Developer
+2025-04-11 15:39:58,427 [INFO] Processed job: Game Developer
+2025-04-11 15:39:58,427 [INFO] Processing complete. Success: 15, Failures: 0
+2025-04-11 15:39:58,428 [ERROR] Type error processing domain Software Engineering: unsupported operand type(s) for +=: 'int' and 'dict'
+2025-04-11 15:39:58,428 [INFO] Processing domain: Data Science
+2025-04-11 15:43:25,812 [INFO] Embedding generator initialized successfully
+2025-04-11 15:43:25,812 [INFO] Embedding generator initialized successfully
+2025-04-11 15:43:25,812 [INFO] JobDescriptionProcessor initialized successfully
+2025-04-11 15:43:25,812 [INFO] Processing domain: Software Engineering
+2025-04-11 15:44:13,030 [INFO] Successfully created embedding for job: Senior Software Engineer
+2025-04-11 15:44:14,459 [INFO] Processed job: Senior Software Engineer
+2025-04-11 15:44:14,945 [INFO] Successfully created embedding for job: Frontend Software Engineer
+2025-04-11 15:44:15,426 [INFO] Processed job: Frontend Software Engineer
+2025-04-11 15:44:16,063 [INFO] Successfully created embedding for job: Backend Software Engineer
+2025-04-11 15:44:16,531 [INFO] Processed job: Backend Software Engineer
+2025-04-11 15:44:17,086 [INFO] Successfully created embedding for job: Software Engineer Intern
+2025-04-11 15:44:17,631 [INFO] Processed job: Software Engineer Intern
+2025-04-11 15:44:18,090 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
+2025-04-11 15:44:18,638 [INFO] Processed job: Mobile App Developer (Android)
+2025-04-11 15:44:19,098 [INFO] Successfully created embedding for job: Data Engineer
+2025-04-11 15:44:19,457 [INFO] Processed job: Data Engineer
+2025-04-11 15:44:19,953 [INFO] Successfully created embedding for job: DevOps Engineer
+2025-04-11 15:44:20,428 [INFO] Processed job: DevOps Engineer
+2025-04-11 15:44:20,874 [INFO] Successfully created embedding for job: Full Stack Software Engineer
+2025-04-11 15:44:21,263 [INFO] Processed job: Full Stack Software Engineer
+2025-04-11 15:44:21,708 [INFO] Successfully created embedding for job: Machine Learning Engineer
+2025-04-11 15:44:22,093 [INFO] Processed job: Machine Learning Engineer
+2025-04-11 15:44:22,821 [INFO] Successfully created embedding for job: Security Engineer
+2025-04-11 15:44:23,352 [INFO] Processed job: Security Engineer
+2025-04-11 15:44:23,845 [INFO] Successfully created embedding for job: Game Developer
+2025-04-11 15:44:24,231 [INFO] Processed job: Game Developer
+2025-04-11 15:44:24,870 [INFO] Successfully created embedding for job: Embedded Software Engineer
+2025-04-11 15:44:25,391 [INFO] Processed job: Embedded Software Engineer
+2025-04-11 15:44:25,892 [INFO] Successfully created embedding for job: Cloud Architect
+2025-04-11 15:44:26,242 [INFO] Processed job: Cloud Architect
+2025-04-11 15:44:26,678 [INFO] Successfully created embedding for job: Junior Software Engineer
+2025-04-11 15:44:27,008 [INFO] Processed job: Junior Software Engineer
+2025-04-11 15:44:27,532 [INFO] Successfully created embedding for job: Software Test Engineer
+2025-04-11 15:44:28,135 [INFO] Processed job: Software Test Engineer
+2025-04-11 15:44:28,135 [INFO] Processing complete. Success: 15, Failures: 0
+2025-04-11 15:44:28,138 [INFO] Processing domain: Data Science
+2025-04-11 15:48:20,312 [INFO] Embedding generator initialized successfully
+2025-04-11 15:48:20,312 [INFO] Embedding generator initialized successfully
+2025-04-11 15:48:20,312 [INFO] JobDescriptionProcessor initialized successfully
+2025-04-11 15:48:20,312 [INFO] Processing domain: Software Engineering
+2025-04-11 15:49:09,232 [INFO] Successfully created embedding for job: Senior Software Engineer
+2025-04-11 15:49:10,507 [INFO] Processed job: Senior Software Engineer
+2025-04-11 15:49:11,075 [INFO] Successfully created embedding for job: Frontend Software Engineer
+2025-04-11 15:49:11,557 [INFO] Processed job: Frontend Software Engineer
+2025-04-11 15:49:12,026 [INFO] Successfully created embedding for job: Backend Software Engineer
+2025-04-11 15:49:12,460 [INFO] Processed job: Backend Software Engineer
+2025-04-11 15:49:13,028 [INFO] Successfully created embedding for job: Full Stack Software Engineer
+2025-04-11 15:49:13,474 [INFO] Processed job: Full Stack Software Engineer
+2025-04-11 15:49:13,942 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
+2025-04-11 15:49:14,285 [INFO] Processed job: Mobile App Developer (Android)
+2025-04-11 15:49:14,767 [INFO] Successfully created embedding for job: Mobile App Developer (iOS)
+2025-04-11 15:49:15,186 [INFO] Processed job: Mobile App Developer (iOS)
+2025-04-11 15:49:15,691 [INFO] Successfully created embedding for job: DevOps Engineer
+2025-04-11 15:49:16,053 [INFO] Processed job: DevOps Engineer
+2025-04-11 15:49:16,504 [INFO] Successfully created embedding for job: Data Engineer
+2025-04-11 15:49:16,840 [INFO] Processed job: Data Engineer
+2025-04-11 15:49:17,344 [INFO] Successfully created embedding for job: Database Administrator
+2025-04-11 15:49:17,728 [INFO] Processed job: Database Administrator
+2025-04-11 15:49:18,174 [INFO] Successfully created embedding for job: Security Engineer
+2025-04-11 15:49:18,846 [INFO] Processed job: Security Engineer
+2025-04-11 15:49:19,367 [INFO] Successfully created embedding for job: Cloud Engineer
+2025-04-11 15:49:19,815 [INFO] Processed job: Cloud Engineer
+2025-04-11 15:49:20,286 [INFO] Successfully created embedding for job: Software Architect
+2025-04-11 15:49:20,677 [INFO] Processed job: Software Architect
+2025-04-11 15:49:21,172 [INFO] Successfully created embedding for job: Machine Learning Engineer
+2025-04-11 15:49:21,659 [INFO] Processed job: Machine Learning Engineer
+2025-04-11 15:49:22,143 [INFO] Successfully created embedding for job: Game Developer (Unity)
+2025-04-11 15:49:22,621 [INFO] Processed job: Game Developer (Unity)
+2025-04-11 15:49:23,137 [INFO] Successfully created embedding for job: Embedded Software Engineer
+2025-04-11 15:49:23,480 [INFO] Processed job: Embedded Software Engineer
+2025-04-11 15:49:23,480 [INFO] Processing complete. Success: 15, Failures: 0
+2025-04-11 15:49:23,480 [INFO] Successfully processed 15 job descriptions for Software Engineering
+2025-04-11 15:49:23,481 [INFO] Processing domain: Data Science
+2025-04-11 15:50:12,716 [INFO] Successfully created embedding for job: Senior Data Scientist
+2025-04-11 15:50:13,185 [INFO] Processed job: Senior Data Scientist
+2025-04-11 15:50:13,648 [INFO] Successfully created embedding for job: Data Scientist
+2025-04-11 15:50:14,103 [INFO] Processed job: Data Scientist
+2025-04-11 15:50:15,529 [INFO] Successfully created embedding for job: Junior Data Scientist
+2025-04-11 15:50:15,865 [INFO] Processed job: Junior Data Scientist
+2025-04-11 15:50:16,307 [INFO] Successfully created embedding for job: Machine Learning Engineer
+2025-04-11 15:50:16,732 [INFO] Processed job: Machine Learning Engineer
+2025-04-11 15:50:17,278 [INFO] Successfully created embedding for job: Data Analyst
+2025-04-11 15:50:17,651 [INFO] Processed job: Data Analyst
+2025-04-11 15:50:18,319 [INFO] Successfully created embedding for job: Big Data Engineer
+2025-04-11 15:50:18,720 [INFO] Processed job: Big Data Engineer
+2025-04-11 15:50:19,172 [INFO] Successfully created embedding for job: Business Intelligence Analyst
+2025-04-11 15:50:19,688 [INFO] Processed job: Business Intelligence Analyst
+2025-04-11 15:50:20,196 [INFO] Successfully created embedding for job: Data Engineer
+2025-04-11 15:50:20,698 [INFO] Processed job: Data Engineer
+2025-04-11 15:50:21,213 [INFO] Successfully created embedding for job: NLP Engineer
+2025-04-11 15:50:21,617 [INFO] Processed job: NLP Engineer
+2025-04-11 15:50:22,066 [INFO] Successfully created embedding for job: Computer Vision Engineer
+2025-04-11 15:50:22,513 [INFO] Processed job: Computer Vision Engineer
+2025-04-11 15:50:23,042 [INFO] Successfully created embedding for job: Database Administrator
+2025-04-11 15:50:23,730 [INFO] Processed job: Database Administrator
+2025-04-11 15:50:24,192 [INFO] Successfully created embedding for job: ETL Developer
+2025-04-11 15:50:24,689 [INFO] Processed job: ETL Developer
+2025-04-11 15:50:25,209 [INFO] Successfully created embedding for job: Cloud Data Engineer
+2025-04-11 15:50:25,644 [INFO] Processed job: Cloud Data Engineer
+2025-04-11 15:50:26,130 [INFO] Successfully created embedding for job: Data Visualization Specialist
+2025-04-11 15:50:26,579 [INFO] Processed job: Data Visualization Specialist
+2025-04-11 15:50:26,580 [INFO] Processing complete. Success: 14, Failures: 0
+2025-04-11 15:50:26,580 [INFO] Successfully processed 14 job descriptions for Data Science
+2025-04-11 15:50:26,580 [INFO] Processing domain: DevOps
+2025-04-11 15:51:13,746 [INFO] Successfully created embedding for job: Senior DevOps Engineer
+2025-04-11 15:51:14,132 [INFO] Processed job: Senior DevOps Engineer
+2025-04-11 15:51:14,597 [INFO] Successfully created embedding for job: DevOps Engineer
+2025-04-11 15:51:15,036 [INFO] Processed job: DevOps Engineer
+2025-04-11 15:51:15,525 [INFO] Successfully created embedding for job: Cloud DevOps Engineer
+2025-04-11 15:51:15,966 [INFO] Processed job: Cloud DevOps Engineer
+2025-04-11 15:51:16,414 [INFO] Successfully created embedding for job: DevOps Architect
+2025-04-11 15:51:16,855 [INFO] Processed job: DevOps Architect
+2025-04-11 15:51:17,325 [INFO] Successfully created embedding for job: Site Reliability Engineer (SRE)
+2025-04-11 15:51:17,775 [INFO] Processed job: Site Reliability Engineer (SRE)
+2025-04-11 15:51:18,256 [INFO] Successfully created embedding for job: Junior DevOps Engineer
+2025-04-11 15:51:18,766 [INFO] Processed job: Junior DevOps Engineer
+2025-04-11 15:51:19,276 [INFO] Successfully created embedding for job: DevOps Cloud Specialist
+2025-04-11 15:51:19,921 [INFO] Processed job: DevOps Cloud Specialist
+2025-04-11 15:51:21,430 [INFO] Successfully created embedding for job: DevSecOps Engineer
+2025-04-11 15:51:22,063 [INFO] Processed job: DevSecOps Engineer
+2025-04-11 15:51:22,556 [INFO] Successfully created embedding for job: DevOps Release Manager
+2025-04-11 15:51:23,195 [INFO] Processed job: DevOps Release Manager
+2025-04-11 15:51:23,788 [INFO] Successfully created embedding for job: Cloud Infrastructure Engineer
+2025-04-11 15:51:24,258 [INFO] Processed job: Cloud Infrastructure Engineer
+2025-04-11 15:51:24,718 [INFO] Successfully created embedding for job: Automation Engineer
+2025-04-11 15:51:25,075 [INFO] Processed job: Automation Engineer
+2025-04-11 15:51:25,628 [INFO] Successfully created embedding for job: Platform Engineer
+2025-04-11 15:51:26,461 [INFO] Processed job: Platform Engineer
+2025-04-11 15:51:26,927 [INFO] Successfully created embedding for job: Observability Engineer
+2025-04-11 15:51:27,375 [INFO] Processed job: Observability Engineer
+2025-04-11 15:51:27,881 [INFO] Successfully created embedding for job: Data Center Engineer
+2025-04-11 15:51:28,285 [INFO] Processed job: Data Center Engineer
+2025-04-11 15:51:28,285 [INFO] Processing complete. Success: 14, Failures: 0
+2025-04-11 15:51:28,285 [INFO] Successfully processed 14 job descriptions for DevOps
+2025-04-11 15:51:28,285 [INFO] Processing domain: Machine Learning
+2025-04-11 15:52:14,397 [INFO] Successfully created embedding for job: Senior Machine Learning Engineer
+2025-04-11 15:52:14,736 [INFO] Processed job: Senior Machine Learning Engineer
+2025-04-11 15:52:15,293 [INFO] Successfully created embedding for job: Machine Learning Scientist
+2025-04-11 15:52:15,625 [INFO] Processed job: Machine Learning Scientist
+2025-04-11 15:52:16,112 [INFO] Successfully created embedding for job: Machine Learning Engineer (Entry Level)
+2025-04-11 15:52:16,435 [INFO] Processed job: Machine Learning Engineer (Entry Level)
+2025-04-11 15:52:16,866 [INFO] Successfully created embedding for job: ML Ops Engineer
+2025-04-11 15:52:17,197 [INFO] Processed job: ML Ops Engineer
+2025-04-11 15:52:17,650 [INFO] Successfully created embedding for job: Data Scientist
+2025-04-11 15:52:18,167 [INFO] Processed job: Data Scientist
+2025-04-11 15:52:18,684 [INFO] Successfully created embedding for job: Computer Vision Engineer
+2025-04-11 15:52:19,070 [INFO] Processed job: Computer Vision Engineer
+2025-04-11 15:52:19,593 [INFO] Successfully created embedding for job: NLP Engineer
+2025-04-11 15:52:20,108 [INFO] Processed job: NLP Engineer
+2025-04-11 15:52:20,617 [INFO] Successfully created embedding for job: Reinforcement Learning Engineer
+2025-04-11 15:52:21,036 [INFO] Processed job: Reinforcement Learning Engineer
+2025-04-11 15:52:21,475 [INFO] Successfully created embedding for job: Machine Learning Intern
+2025-04-11 15:52:21,875 [INFO] Processed job: Machine Learning Intern
+2025-04-11 15:52:22,559 [INFO] Successfully created embedding for job: Principal Machine Learning Engineer
+2025-04-11 15:52:22,955 [INFO] Processed job: Principal Machine Learning Engineer
+2025-04-11 15:52:23,485 [INFO] Successfully created embedding for job: Applied Machine Learning Scientist
+2025-04-11 15:52:24,087 [INFO] Processed job: Applied Machine Learning Scientist
+2025-04-11 15:52:24,577 [INFO] Successfully created embedding for job: Machine Learning Infrastructure Engineer
+2025-04-11 15:52:25,205 [INFO] Processed job: Machine Learning Infrastructure Engineer
+2025-04-11 15:52:25,667 [INFO] Successfully created embedding for job: AI Research Engineer
+2025-04-11 15:52:26,184 [INFO] Processed job: AI Research Engineer
+2025-04-11 15:52:26,613 [INFO] Successfully created embedding for job: Machine Learning Product Manager
+2025-04-11 15:52:27,005 [INFO] Processed job: Machine Learning Product Manager
+2025-04-11 15:52:27,479 [INFO] Successfully created embedding for job: MLOps Engineer (Cloud)
+2025-04-11 15:52:27,920 [INFO] Processed job: MLOps Engineer (Cloud)
+2025-04-11 15:52:27,920 [INFO] Processing complete. Success: 15, Failures: 0
+2025-04-11 15:52:27,920 [INFO] Successfully processed 15 job descriptions for Machine Learning
+2025-04-11 15:52:27,921 [INFO] Processing domain: Quality Assurance
+2025-04-11 15:53:15,090 [INFO] Successfully created embedding for job: Senior QA Automation Engineer
+2025-04-11 15:53:15,466 [INFO] Processed job: Senior QA Automation Engineer
+2025-04-11 15:53:15,914 [INFO] Successfully created embedding for job: QA Test Analyst
+2025-04-11 15:53:16,268 [INFO] Processed job: QA Test Analyst
+2025-04-11 15:53:16,736 [INFO] Successfully created embedding for job: QA Engineer (Performance Testing)
+2025-04-11 15:53:17,149 [INFO] Processed job: QA Engineer (Performance Testing)
+2025-04-11 15:53:17,608 [INFO] Successfully created embedding for job: SDET (Software Development Engineer in Test)
+2025-04-11 15:53:17,985 [INFO] Processed job: SDET (Software Development Engineer in Test)
+2025-04-11 15:53:18,417 [INFO] Successfully created embedding for job: QA Lead
+2025-04-11 15:53:18,834 [INFO] Processed job: QA Lead
+2025-04-11 15:53:19,293 [INFO] Successfully created embedding for job: Junior QA Analyst
+2025-04-11 15:53:19,614 [INFO] Processed job: Junior QA Analyst
+2025-04-11 15:53:20,113 [INFO] Successfully created embedding for job: QA Automation Engineer (Mobile)
+2025-04-11 15:53:20,544 [INFO] Processed job: QA Automation Engineer (Mobile)
+2025-04-11 15:53:21,033 [INFO] Successfully created embedding for job: Security QA Engineer
+2025-04-11 15:53:21,385 [INFO] Processed job: Security QA Engineer
+2025-04-11 15:53:21,855 [INFO] Successfully created embedding for job: QA Test Engineer (Database)
+2025-04-11 15:53:22,280 [INFO] Processed job: QA Test Engineer (Database)
+2025-04-11 15:53:22,774 [INFO] Successfully created embedding for job: Test Automation Architect
+2025-04-11 15:53:23,218 [INFO] Processed job: Test Automation Architect
+2025-04-11 15:53:23,687 [INFO] Successfully created embedding for job: Cloud QA Engineer
+2025-04-11 15:53:24,144 [INFO] Processed job: Cloud QA Engineer
+2025-04-11 15:53:24,619 [INFO] Successfully created embedding for job: Game QA Tester
+2025-04-11 15:53:24,968 [INFO] Processed job: Game QA Tester
+2025-04-11 15:53:25,433 [INFO] Successfully created embedding for job: UI/UX QA Tester
+2025-04-11 15:53:25,788 [INFO] Processed job: UI/UX QA Tester
+2025-04-11 15:53:26,256 [INFO] Successfully created embedding for job: Data QA Analyst
+2025-04-11 15:53:26,771 [INFO] Processed job: Data QA Analyst
+2025-04-11 15:53:26,771 [INFO] Processing complete. Success: 14, Failures: 0
+2025-04-11 15:53:26,772 [INFO] Successfully processed 14 job descriptions for Quality Assurance
+2025-04-11 15:53:26,772 [INFO] Processing domain: Project Management
+2025-04-11 15:54:14,182 [INFO] Successfully created embedding for job: Senior Project Manager
+2025-04-11 15:54:14,648 [INFO] Processed job: Senior Project Manager
+2025-04-11 15:54:15,203 [INFO] Successfully created embedding for job: Project Manager
+2025-04-11 15:54:15,608 [INFO] Processed job: Project Manager
+2025-04-11 15:54:16,059 [INFO] Successfully created embedding for job: Junior Project Manager
+2025-04-11 15:54:16,490 [INFO] Processed job: Junior Project Manager
+2025-04-11 15:54:16,950 [INFO] Successfully created embedding for job: IT Project Manager
+2025-04-11 15:54:17,428 [INFO] Processed job: IT Project Manager
+2025-04-11 15:54:17,960 [INFO] Successfully created embedding for job: Construction Project Manager
+2025-04-11 15:54:18,404 [INFO] Processed job: Construction Project Manager
+2025-04-11 15:54:18,862 [INFO] Successfully created embedding for job: Program Manager
+2025-04-11 15:54:19,278 [INFO] Processed job: Program Manager
+2025-04-11 15:54:19,811 [INFO] Successfully created embedding for job: Marketing Project Manager
+2025-04-11 15:54:20,137 [INFO] Processed job: Marketing Project Manager
+2025-04-11 15:54:20,626 [INFO] Successfully created embedding for job: Product Project Manager
+2025-04-11 15:54:20,964 [INFO] Processed job: Product Project Manager
+2025-04-11 15:54:21,412 [INFO] Successfully created embedding for job: Scrum Master
+2025-04-11 15:54:21,822 [INFO] Processed job: Scrum Master
+2025-04-11 15:54:22,269 [INFO] Successfully created embedding for job: Portfolio Manager
+2025-04-11 15:54:22,724 [INFO] Processed job: Portfolio Manager
+2025-04-11 15:54:23,199 [INFO] Successfully created embedding for job: Project Controls Manager
+2025-04-11 15:54:23,614 [INFO] Processed job: Project Controls Manager
+2025-04-11 15:54:24,113 [INFO] Successfully created embedding for job: Agile Project Manager
+2025-04-11 15:54:24,489 [INFO] Processed job: Agile Project Manager
+2025-04-11 15:54:25,027 [INFO] Successfully created embedding for job: Risk Manager
+2025-04-11 15:54:25,398 [INFO] Processed job: Risk Manager
+2025-04-11 15:54:25,953 [INFO] Successfully created embedding for job: Waterfall Project Manager
+2025-04-11 15:54:26,327 [INFO] Processed job: Waterfall Project Manager
+2025-04-11 15:54:26,328 [INFO] Processing complete. Success: 14, Failures: 0
+2025-04-11 15:54:26,328 [INFO] Successfully processed 14 job descriptions for Project Management
+2025-04-11 15:54:26,328 [INFO] Processing domain: Business Analytics
+2025-04-11 15:55:13,142 [INFO] Successfully created embedding for job: Senior Business Analyst
+2025-04-11 15:55:13,673 [INFO] Processed job: Senior Business Analyst
+2025-04-11 15:55:14,180 [INFO] Successfully created embedding for job: Data Analyst
+2025-04-11 15:55:14,544 [INFO] Processed job: Data Analyst
+2025-04-11 15:55:15,001 [INFO] Successfully created embedding for job: Business Intelligence Analyst
+2025-04-11 15:55:15,351 [INFO] Processed job: Business Intelligence Analyst
+2025-04-11 15:55:15,925 [INFO] Successfully created embedding for job: Marketing Analytics Manager
+2025-04-11 15:55:16,303 [INFO] Processed job: Marketing Analytics Manager
+2025-04-11 15:55:16,848 [INFO] Successfully created embedding for job: Financial Analyst
+2025-04-11 15:55:17,233 [INFO] Processed job: Financial Analyst
+2025-04-11 15:55:17,690 [INFO] Successfully created embedding for job: Predictive Analyst
+2025-04-11 15:55:18,071 [INFO] Processed job: Predictive Analyst
+2025-04-11 15:55:18,542 [INFO] Successfully created embedding for job: BI Developer
+2025-04-11 15:55:18,919 [INFO] Processed job: BI Developer
+2025-04-11 15:55:19,409 [INFO] Successfully created embedding for job: Data Scientist
+2025-04-11 15:55:20,015 [INFO] Processed job: Data Scientist
+2025-04-11 15:55:20,531 [INFO] Successfully created embedding for job: Junior Business Analyst
+2025-04-11 15:55:20,983 [INFO] Processed job: Junior Business Analyst
+2025-04-11 15:55:21,556 [INFO] Successfully created embedding for job: Supply Chain Analyst
+2025-04-11 15:55:21,977 [INFO] Processed job: Supply Chain Analyst
+2025-04-11 15:55:22,476 [INFO] Successfully created embedding for job: Pricing Analyst
+2025-04-11 15:55:23,390 [INFO] Processed job: Pricing Analyst
+2025-04-11 15:55:23,877 [INFO] Successfully created embedding for job: Customer Analytics Manager
+2025-04-11 15:55:24,364 [INFO] Processed job: Customer Analytics Manager
+2025-04-11 15:55:24,834 [INFO] Successfully created embedding for job: Operations Analyst
+2025-04-11 15:55:25,219 [INFO] Processed job: Operations Analyst
+2025-04-11 15:55:25,750 [INFO] Successfully created embedding for job: Retail Analyst
+2025-04-11 15:55:26,093 [INFO] Processed job: Retail Analyst
+2025-04-11 15:55:26,538 [INFO] Successfully created embedding for job: Consultant, Business Analytics
+2025-04-11 15:55:26,803 [INFO] Processed job: Consultant, Business Analytics
+2025-04-11 15:55:26,807 [INFO] Processing complete. Success: 15, Failures: 0
+2025-04-11 15:55:26,808 [INFO] Successfully processed 15 job descriptions for Business Analytics
+2025-04-11 15:55:26,809 [INFO] Successfully generated 101 job descriptions across 7 domains
+2025-04-11 19:08:44,752 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:44,753 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:47,874 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:47,874 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:52,691 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:52,691 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:54,279 [INFO] Embedding generator initialized successfully
+2025-04-11 19:08:54,280 [INFO] Embedding generator initialized successfully
+2025-04-11 19:09:10,936 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-04-11 19:09:12,636 [INFO] Successfully processed and stored resume for Nishan Sangeeth

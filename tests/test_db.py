@@ -1,12 +1,14 @@
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
-from typing import Optional
 from app.utils.logger import logger
 
 class TestDatabase:
     """Handles database testing operations"""
 
-    def __init__(self, client: MongoClient, test_db_name: str = "test_db"):
+    def __init__(self,
+                 client: MongoClient,
+                 test_db_name: str = "test_db"
+                 ):
         self.client = client
         self.test_db = self.client[test_db_name]
         self.test_collection = self.test_db["test_collection"]

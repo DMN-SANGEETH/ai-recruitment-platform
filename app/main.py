@@ -1,16 +1,17 @@
+"""Main module for the AI-Powered Recruitment Platform Streamlit app."""
+
 import sys
 from pathlib import Path
-
-# Auto-add project root to Python path (for Streamlit Cloud)
-sys.path.append(str(Path(__file__).parent.parent))
-
-
 import streamlit as st
 from app.components.file_uploader import FileUploaderComponent
 from app.components.results_viewer import ResultsViewer
 from app.services.job_service import JobService
+# Ensure app modules can be imported
+sys.path.append(str(Path(__file__).parent.parent))
+
 
 def main():
+    """Main entry point of the Streamlit app."""
     st.set_page_config(
         page_title="AI Recruitment Platform",
         page_icon="💼",

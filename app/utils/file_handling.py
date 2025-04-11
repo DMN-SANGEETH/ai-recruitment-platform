@@ -1,7 +1,11 @@
+"""File Handler"""
 import os
+from io import BytesIO
 import PyPDF2
 import docx
-from io import BytesIO
+
+
+from app.utils.exceptions import FileHandlingError
 from app.utils.logger import logger
 
 class FileHandler:
@@ -11,12 +15,16 @@ class FileHandler:
     UPLOAD_FOLDER = 'storage/resumes'
 
     @classmethod
-    def allowed_file(cls, filename: str) -> bool:
+    def allowed_file(cls,
+                     filename: str
+                     ) -> bool:
         """Check if the file has an allowed extension"""
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in cls.ALLOWED_EXTENSIONS
 
     @classmethod
-    def save_file(cls, file, filename: str) -> str:
+    def save_file(cls,
+                  file, filename: str
+                  ) -> str:
         """Save the uploaded file to the upload folder"""
         try:
             # Create directory if it doesn't exist
@@ -29,15 +37,22 @@ class FileHandler:
             with open(file_path, 'wb') as f:
                 f.write(file)
 
-            logger.info(f"File saved at: {file_path}")
+            logger.info("File saved at: %s", file_path)
             return file_path
 
-        except Exception as e:
-            logger.error(f"Error saving file: {str(e)}")
-            return ""
+        except IOError as e:
+            logger.error("Failed to save file %s: %s",
+                        file_path,
+                        e,
+                        exc_info=True
+                        )
+            return None
 
     @classmethod
-    def extract_text_from_bytes(cls, file_bytes: bytes, filename: str) -> str:
+    def extract_text_from_bytes(cls,
+                                file_bytes: bytes,
+                                filename: str
+                                ) -> str:
         """Extract text directly from file bytes"""
         try:
             file_extension = filename.rsplit('.', 1)[1].lower()
@@ -49,15 +64,31 @@ class FileHandler:
             elif file_extension == 'txt':
                 return file_bytes.decode('utf-8')
             else:
-                logger.error(f"Unsupported file extension: {file_extension}")
-                return ""
+                logger.error("Unsupported file extension: %s",
+                             file_extension
+                             )
+                return None
 
-        except Exception as e:
-            logger.error(f"Error extracting text: {str(e)}")
-            return ""
+        except (TypeError, ValueError, UnicodeDecodeError) as e:
+            logger.error("Failed to extract text from %s: %s",
+                        filename,
+                        e,
+                        exc_info=True
+                        )
+            return None
+
+        except FileHandlingError as e:
+            logger.error("Unexpected error processing %s: %s",
+                        filename,
+                        e,
+                        exc_info=True
+                        )
+            return None
 
     @classmethod
-    def _extract_text_from_pdf_bytes(cls, file_bytes: bytes) -> str:
+    def _extract_text_from_pdf_bytes(cls,
+                                     file_bytes: bytes
+                                     ) -> str:
         """Extract text from PDF bytes"""
         try:
             text = ""
@@ -66,19 +97,29 @@ class FileHandler:
                 for page in pdf_reader.pages:
                     text += page.extract_text()
             return text
-        except Exception as e:
-            logger.error(f"PDF extraction error: {str(e)}")
+
+        except ValueError as e:
+            logger.error("PDF extraction error: %s",
+                         e,
+                         exc_info=True
+                         )
             return ""
 
     @classmethod
-    def _extract_text_from_docx_bytes(cls, file_bytes: bytes) -> str:
+    def _extract_text_from_docx_bytes(cls,
+                                      file_bytes: bytes
+                                      ) -> str:
         """Extract text from DOCX bytes"""
         try:
             with BytesIO(file_bytes) as docx_file:
                 doc = docx.Document(docx_file)
                 return "\n".join([para.text for para in doc.paragraphs])
-        except Exception as e:
-            logger.error(f"DOCX extraction error: {str(e)}")
+
+        except ValueError as e:
+            logger.error("DOCX extraction error: %s",
+                         e,
+                         exc_info=True
+                         )
             return ""
 
     @classmethod
@@ -87,6 +128,11 @@ class FileHandler:
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
                 return file.read()
-        except Exception as e:
-            logger.error(f"Error extracting text from TXT: {str(e)}")
-            return ""
+
+        except FileNotFoundError:
+            logger.error("Text file not found: %s", file_path)
+            raise
+
+        except OSError as e:
+            logger.error("Error reading text file %s: %s", file_path, e, exc_info=True)
+            raise
