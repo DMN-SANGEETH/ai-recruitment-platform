@@ -13,7 +13,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: '3.12'
       
       - name: Install dependencies
         run: |
@@ -21,10 +21,6 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
           pip install -e .
-      
-      - name: Set Python path
-        run: |
-          echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
       
       - name: Run linting
         run: |
@@ -34,30 +30,27 @@ jobs:
         run: |
           pytest app/tests/ --cov=app
 
-  prepare-deployment:
+  deploy:
     needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       
-      - name: Setup Streamlit configs
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
         run: |
-          mkdir -p .streamlit
-          # Create config.toml
-          echo "[server]" > .streamlit/config.toml
-          echo "headless = true" >> .streamlit/config.toml
-          echo "enableCORS = false" >> .streamlit/config.toml
-          echo "[runner]" >> .streamlit/config.toml
-          echo "pythonPath = \".\"" >> .streamlit/config.toml
+          pip install -r requirements.txt
           
-      - name: Set execute permissions on script
-        run: chmod +x app/scripts/setup_and_run.sh
-        
-      - name: Commit deployment files
+      - name: Deploy to Streamlit
+        env:
+          STREAMLIT_TOKEN: ${{ secrets.STREAMLIT_TOKEN }}
         run: |
-          git config --local user.email "dmnsangeeth@gmail.com"
-          git config --local user.name "GitHub Action"
-          git add .streamlit/config.toml
-          git add scripts/setup_and_run.sh
-          git commit -m "Prepare deployment files" || echo "No changes to commit"
-          git push
+          # Install Streamlit CLI
+          pip install streamlit
+          
+          # Deploy (replace with your actual deployment command)
+          streamlit deploy app/main.py --server.port=8501
