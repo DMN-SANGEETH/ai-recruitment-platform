@@ -42,3 +42,12 @@ class GetCountError(Exception):
 
 class FileHandlingError(Exception):
     """File unexpected error processing"""
+
+# Resume process
+
+class FileProcessingError(Exception):
+    """Raised when there's an error processing a file"""
+
+class ResumeProcessingError(Exception):
+    """Raised when there's an error processing a resume"""
+

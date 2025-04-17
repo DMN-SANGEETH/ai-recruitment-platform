@@ -24,6 +24,3 @@ app/db/mongodb/queries/resume_repository.py
 app/services/__init__.py
 app/services/job_service.py
 app/services/resume_service.py
-tests/test_db.py
-tests/test_llm.py
-tests/test_rag.py

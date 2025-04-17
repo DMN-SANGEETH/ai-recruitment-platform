@@ -121,8 +121,9 @@ class FileUploaderComponent:
                                         st.markdown(f'<span>{institution}</span>   -   <span style="color: #43a047">{year}</span>',
                                                 unsafe_allow_html=True)
                                         st.write("")
-                                    else:
-                                        st.write("No Education extracted")
+                                else:
+                                    st.write("No Education extracted")
+
 
                                 # Certifications section
                                 st.write("---")

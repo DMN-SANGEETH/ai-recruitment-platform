@@ -5,7 +5,7 @@ import PyPDF2
 import docx
 
 
-from app.utils.exceptions import FileHandlingError
+from app.utils.exceptions import FileProcessingError
 from app.utils.logger import logger
 
 class FileHandler:
@@ -46,7 +46,7 @@ class FileHandler:
                         e,
                         exc_info=True
                         )
-            return None
+            return FileProcessingError(f"Failed to save file: {str(e)}")
 
     @classmethod
     def extract_text_from_bytes(cls,
@@ -64,10 +64,9 @@ class FileHandler:
             elif file_extension == 'txt':
                 return file_bytes.decode('utf-8')
             else:
-                logger.error("Unsupported file extension: %s",
-                             file_extension
-                             )
-                return None
+                error_msg = "Unsupported file extension: %s",file_extension
+                logger.error(error_msg)
+                raise FileProcessingError(error_msg)
 
         except (TypeError, ValueError, UnicodeDecodeError) as e:
             logger.error("Failed to extract text from %s: %s",
@@ -75,15 +74,7 @@ class FileHandler:
                         e,
                         exc_info=True
                         )
-            return None
-
-        except FileHandlingError as e:
-            logger.error("Unexpected error processing %s: %s",
-                        filename,
-                        e,
-                        exc_info=True
-                        )
-            return None
+            raise FileProcessingError(f"Failed to extract text from {filename}: {str(e)}") from e
 
     @classmethod
     def _extract_text_from_pdf_bytes(cls,
@@ -98,12 +89,12 @@ class FileHandler:
                     text += page.extract_text()
             return text
 
-        except ValueError as e:
+        except Exception as e:
             logger.error("PDF extraction error: %s",
                          e,
                          exc_info=True
                          )
-            return ""
+            raise FileProcessingError(f"Error extracting text from DOCX: {str(e)}") from e
 
     @classmethod
     def _extract_text_from_docx_bytes(cls,
@@ -115,12 +106,12 @@ class FileHandler:
                 doc = docx.Document(docx_file)
                 return "\n".join([para.text for para in doc.paragraphs])
 
-        except ValueError as e:
+        except Exception as e:
             logger.error("DOCX extraction error: %s",
                          e,
                          exc_info=True
                          )
-            return ""
+            raise FileProcessingError(f"Error extracting text from DOCX: {str(e)}") from e
 
     @classmethod
     def _extract_text_from_txt(cls, file_path: str) -> str:
@@ -129,10 +120,10 @@ class FileHandler:
             with open(file_path, 'r', encoding='utf-8') as file:
                 return file.read()
 
-        except FileNotFoundError:
+        except FileNotFoundError as e:
             logger.error("Text file not found: %s", file_path)
-            raise
+            raise FileProcessingError(f"Text file not found: {file_path}") from e
 
         except OSError as e:
             logger.error("Error reading text file %s: %s", file_path, e, exc_info=True)
-            raise
+            raise FileProcessingError(f"Error reading text file: {str(e)}") from e
