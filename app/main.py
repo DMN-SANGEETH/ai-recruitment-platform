@@ -2,6 +2,11 @@
 
 import sys
 from pathlib import Path
+
+# Add the project root to sys.path BEFORE other imports
+root_dir = Path(__file__).parent.parent
+sys.path.append(str(root_dir))
+
 import streamlit as st
 from app.components.file_uploader import FileUploaderComponent
 from app.components.results_viewer import ResultsViewer

@@ -1,26 +1,63 @@
-name: Test and Build Streamlit App
+name: Test and Deploy Streamlit App
 
 on:
   push:
     branches: [master]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+      
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pylint
+          pip install -r requirements-dev.txt
+          pip install -e .
       
+      - name: Set Python path
+        run: |
+          echo "PYTHONPATH=$PYTHONPATH:$(pwd)" >> $GITHUB_ENV
+      
+      - name: Run linting
+        run: |
+          pylint --disable=C0111,C0103,C0303,C0330 app/
+      
+      - name: Run tests
+        run: |
+          pytest app/tests/ --cov=app
 
-
-          # - name: Run lint and tests
-          # run: |
-          #   pylint app/
+  prepare-deployment:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Streamlit configs
+        run: |
+          mkdir -p .streamlit
+          # Create config.toml
+          echo "[server]" > .streamlit/config.toml
+          echo "headless = true" >> .streamlit/config.toml
+          echo "enableCORS = false" >> .streamlit/config.toml
+          echo "[runner]" >> .streamlit/config.toml
+          echo "pythonPath = \".\"" >> .streamlit/config.toml
+          
+      - name: Set execute permissions on script
+        run: chmod +x scripts/setup_and_run.sh
+        
+      - name: Commit deployment files
+        run: |
+          git config --local user.email "dmnsangeeth@gmail.com"
+          git config --local user.name "GitHub Action"
+          git add .streamlit/config.toml
+          git add scripts/setup_and_run.sh
+          git commit -m "Prepare deployment files" || echo "No changes to commit"
+          git push

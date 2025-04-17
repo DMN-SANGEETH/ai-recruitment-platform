@@ -1,4 +1,4 @@
-'''#!/bin/bash
+#!/bin/bash
 
 # Navigate to project root
 cd "$(dirname "$0")/.." || exit
@@ -6,30 +6,24 @@ cd "$(dirname "$0")/.." || exit
 # Add project root to Python path
 export PYTHONPATH="$PYTHONPATH:$(pwd)"
 
-# Activate conda environment
-conda activate gemini
-find . -type d -name "__pycache__" -exec rm -r {} +
+# Activate conda environment if running locally
+if command -v conda &> /dev/null; then
+    conda activate gemini
+fi
 
-# Load environment variables
-set -a
-source .env
-set +a
+# Clean pycache files
+#find . -type d -name "__pycache__" -exec rm -r {} +
+
+# Load environment variables from .env if it exists
+if [ -f .env ]; then
+    set -a
+    source .env
+    set +a
+fi
 
 # Run the Streamlit app
 streamlit run app/main.py \
     --server.port=8501 \
     --server.address=0.0.0.0 \
     --server.headless=true \
-    --logger.level=${LOG_LEVEL}
-
-'''
-#!/bin/bash
-
-# Navigate to project root
-cd "$(dirname "$0")/.." || exit
-
-# Install package in editable mode
-pip install -e .
-
-# Run the Streamlit app
-streamlit run app/main.py \
+    --logger.level=${LOG_LEVEL:-INFO}

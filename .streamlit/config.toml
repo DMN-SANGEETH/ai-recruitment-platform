@@ -1,0 +1,7 @@
+[server]
+headless = true
+enableCORS = false
+
+[runner]
+# Add parent directory to Python path
+pythonPath = "."
