@@ -51,7 +51,7 @@ jobs:
           echo "pythonPath = \".\"" >> .streamlit/config.toml
           
       - name: Set execute permissions on script
-        run: chmod +x scripts/setup_and_run.sh
+        run: chmod +x app/scripts/setup_and_run.sh
         
       - name: Commit deployment files
         run: |

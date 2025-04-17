@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Navigate to project root
-cd "$(dirname "$0")/.." || exit
+# Navigate to project root (from app/scripts/ to project root)
+cd "$(dirname "$0")/../.." || exit
 
 # Install package in editable mode
 pip install -e .
