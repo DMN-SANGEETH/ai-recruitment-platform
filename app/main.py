@@ -1,15 +1,11 @@
 """Main module for the AI-Powered Recruitment Platform Streamlit app."""
-import os
+
 import sys
 from pathlib import Path
 import streamlit as st
-
-sys.path.append(str(Path(__file__).parent))
-
-
-from app.components.file_uploader import FileUploaderComponent
-from app.components.results_viewer import ResultsViewer
-from app.services.job_service import JobService
+from .components.file_uploader import FileUploaderComponent
+from .components.results_viewer import ResultsViewer
+from .services.job_service import JobService
 # Ensure app modules can be imported
 sys.path.append(str(Path(__file__).parent.parent))
 
