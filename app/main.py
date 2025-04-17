@@ -4,8 +4,8 @@ import sys
 from pathlib import Path
 import streamlit as st
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).parent))
+
 
 from app.components.file_uploader import FileUploaderComponent
 from app.components.results_viewer import ResultsViewer
