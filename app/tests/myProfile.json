@@ -2,7 +2,38 @@
     "name": "My Profile",
     "description": "This is a my profile data",
     "version": "1.0.0",
-    "myCV": [],
+    "myCV": [{
+        "profileCompletion": [
+            {
+                "key":"basicInformation",
+                "value": ""
+            },
+            {
+                "key":"schoolLife",
+                "value": ""
+            },
+            {
+                "key":"higherEducationLife",
+                "value": ""
+            },
+            {
+                "key":"workLife",
+                "value": ""
+            },
+            {
+                "key":"jobExpectation",
+                "value": ""
+            },
+            {
+                "key":"memberships",
+                "value": ""
+            },
+            {
+                "key":"makeAVideoResume",
+                "value": ""
+            }
+    ]
+    }],
     "basicInformation": [{
         "title": 0,
         "firstName": "Kasun",
