@@ -1,0 +1,1161 @@
+{
+    "name": "My Profile",
+    "description": "This is a my profile data",
+    "version": "1.0.0",
+    "myCV": [],
+    "basicInformation": [{
+        "title": 0,
+        "firstName": "Kasun",
+        "lastName": "Perera",
+        "nic": "1234567890",
+        "passport": "123456N",
+        "drivingLicense": "B456789",
+        "dateOfBirth": "1990-01-01",
+        "mobileNumber": "+94123456789",
+        "residenceNo": "1/12",
+        "email": "example@gmail.com",
+        "residenceAddress": {
+            "Address_1": "example 1",
+            "Address_2": "example 2",
+            "Address_3": "example 3",
+            "City": "c",
+            "District": "example 2"
+        },
+        "correspondenceAddress": {
+            "Address_1": "example 1",
+            "Address_2": "example 2",
+            "Address_3": "example 3",
+            "City": "c",
+            "District": "example 2"
+        },
+        "languageProficiency":[
+            {
+                "language": 0,
+                "speaking": 0,
+                "reading": 0,
+                "writing": 0
+            },
+            {
+                "language": 1,
+                "speaking": 0,
+                "reading": 0,
+                "writing": 0
+            },
+            {
+                "language": 2,
+                "speaking": 0,
+                "reading": 0,
+                "writing": 0
+            }
+        ],
+        "upperBodyPhotos":[
+            {
+                "id": "ab321bbe4332bd",
+                "filePath": "/path/upperBodyPhotos/img_1.jpg"
+            },
+            {
+                "id": "ab321bbe43y64d",
+                "filePath": "/path/upperBodyPhotos/img_2.jpg"
+            },
+            {
+                "id": "7k321bbe4332bd",
+                "filePath": "/path/upperBodyPhotos/img_3.jpg"
+            }
+        ],
+        "fullBodyPhotos":[
+            {
+                "id": "ab321bbe4332bd",
+                "filePath": "/path/upperBodyPhotos/img_1.jpg"
+            },
+            {
+                "id": "ab321bbe43y64d",
+                "filePath": "/path/upperBodyPhotos/img_2.jpg"
+            },
+            {
+                "id": "7k321bbe4332bd",
+                "filePath": "/path/upperBodyPhotos/img_3.jpg"
+            }
+        ]
+    }],
+    "schoolLife": [{
+        "o/lDetails":{
+            "schools":[
+                {
+                    "district": "ABC",
+                    "city": "XYZ",
+                    "schoolTypes":[
+                        {
+                            "type": "public",
+                            "name": "school_1"
+                        },
+                        {
+                            "type": "private",
+                            "name": "school_2"
+                        },
+                        {
+                            "type": "semi_government",
+                            "name": "school_3"
+                        }
+                    ]
+                },
+                {
+                    "district": "DEF",
+                    "city": "TRS",
+                    "schoolTypes":[
+                        {
+                            "type": "public",
+                            "name": "school_1"
+                        },
+                        {
+                            "type": "private",
+                            "name": "school_2"
+                        },
+                        {
+                            "type": "semi_government",
+                            "name": "school_3"
+                        }
+                    ]
+                }
+            ],
+            "attempts":[
+                {
+                    "attempt": 1,
+                    "year": "2014-01-01",
+                    "type": "local",
+                    "syllabusRevisionYear": "2010",
+                    "results":[
+                        {
+                            "subject": "Mathematics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Science",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "English",
+                            "grade": "A"
+                        }
+                    ]
+                },
+                {
+                    "attempt": 2,
+                    "year": "2015-01-01",
+                    "type": "Local",
+                    "syllabusRevisionYear": "2010",
+                    "results":[
+                        {
+                            "subject": "Mathematics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Science",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "English",
+                            "grade": "A"
+                        }
+                    ]
+                },
+                {
+                    "attempt": 3,
+                    "year": "2016-01-01",
+                    "type": "Edecel",
+                    "syllabusRevisionYear": "2010",
+                    "results":[
+                        {
+                            "subject": "Mathematics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Science",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "English",
+                            "grade": "A"
+                        }
+                    ]
+                }
+            ]
+        },
+        "a/lDetails":{
+            "schools":
+                {
+                    "district": "ABC",
+                    "city": "XYZ",
+                    "name": "school_1"
+                }
+            ,
+            "attempts":[
+                {
+                    "attempt": 1,
+                    "year": "2014-01-01",
+                    "type": "local",
+                    "syllabusRevisionYear": "2010",
+                    "Stream":"maths",
+                    "results":[
+                        {
+                            "subject": "Mathematics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Physics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Chemistry",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "English",
+                            "grade": "A"
+                        }
+                    ]
+                },
+                {
+                    "attempt": 2,
+                    "year": "2015-01-01",
+                    "type": "local",
+                    "syllabusRevisionYear": "2010",
+                    "Stream":"maths",
+                    "results":[
+                        {
+                            "subject": "Mathematics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Physics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Chemistry",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "English",
+                            "grade": "A"
+                        }
+                    ]
+                },
+                {
+                    "attempt": 3,
+                    "year": "2016-01-01",
+                    "type": "local",
+                    "syllabusRevisionYear": "2010",
+                    "Stream":"maths",
+                    "results":[
+                        {
+                            "subject": "Mathematics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Physics",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "Chemistry",
+                            "grade": "A"
+                        },
+                        {
+                            "subject": "English",
+                            "grade": "A"
+                        }
+                    ]
+                }
+            ]
+        },
+        "clubAndSocieties": [
+            {
+                "name": "lio",
+                "fromDate": "2016-01-01",
+                "toDate": "2016-08-08",
+                "position": "Secretary",
+                "achievements": "example"
+            },
+            {
+                "name": "lio",
+                "startDate": "2016-01-01",
+                "endDate": "2016-08-08",
+                "position": "Secretary",
+                "achievements": "example"
+            },
+            {
+                "name": "lio",
+                "startDate": "2016-01-01",
+                "endDate": "2016-08-08",
+                "position": "Secretary",
+                "achievements": "example"
+            }
+        ],
+        "sport": [
+            {
+                "name": "Cricket",
+                "fromDate": "2016-01-01",
+                "toDate": "2016-08-08",
+                "position": "Player",
+                "achievements": "example"
+            },
+            {
+                "name": "Cricket",
+                "startDate": "2016-01-01",
+                "endDate": "2016-08-08",
+                "position": "Player",
+                "achievements": "example"
+            }
+        ],
+        "SocialProject": [
+            {
+                "name": "Cricket",
+                "fromDate": "2016-01-01",
+                "toDate": "2016-08-08",
+                "position": "Player",
+                "achievements": "example"
+            }
+        ]
+    }],
+    "higherEducationLife": [{
+        "postgraduateQualifications": [
+            {
+                "awardingUniversity": "example",
+                "awardingCountry": "Sri Lanka",
+                "affiliatedInstitute": "",
+                "affiliatedCountry": "",
+                "qualificationName": "",
+                "qualificationLevel": "",
+                "specialization": "",
+                "commencementDate": "",
+                "completionDate": "",
+                "specialAchievements": "",
+                "grade": "",
+                "optionalModules": []
+            }
+        ],
+        "undergraduateQualifications": {
+            "withSriLankanPublicUniversities": [
+                    {
+                        "university": "",
+                        "faculty": "",
+                        "department": "",
+                        "qualificationName": "",
+                        "qualificationLevel": "",
+                        "specialization": "",
+                        "commencementDate": "",
+                        "completionDate": "",
+                        "specialAchievements": "",
+                        "gpa": "",
+                        "optionalModules": []
+                    }
+                ],
+            "otherThanSriLankanPublicUniversities": [
+                    {
+                        "awardingUniversity": "",
+                        "awardingCountry": "",
+                        "affiliatedInstitute": "",
+                        "affiliatedCountry": "",
+                        "qualificationName": "",
+                        "qualificationLevel": "",
+                        "specialization": "",
+                        "commencementDate": "",
+                        "completionDate": "",
+                        "specialAchievements": "",
+                        "gpa": "",
+                        "optionalModules": []
+                    }
+                ]
+        },
+        "professionalQualifications": [
+            {
+                "awarding":"",
+                "qualificationName": "",
+                "qualificationLevel": "",
+                "institute": "",
+                "specialization": "",
+                "commencementDate": "",
+                "completionDate": "",
+                "specialAchievements": "",
+                "grade": "",
+                "optionalModules": []
+            }
+        ],
+        "workshopsAndPublications": {
+            "shortTermWorkshops": [
+                {
+                    "programmeName": "",
+                    "qualificationLevel": "",
+                    "conductedBy": "",
+                    "specialization": "",
+                    "commencementDate": "",
+                    "completionDate": "",
+                    "specialAchievements": ""
+                }
+            ],
+            "publications": [
+                {
+                    "title": "",
+                    "journal": "",
+                    "year": "",
+                    "coAuthors": [],
+                    "specialAchievements": ""
+                }
+            ]
+            },
+            "socialActivities": {
+                "clubsAndSocieties": [
+                    {
+                        "institute": "",
+                        "club": "",
+                        "position": "",
+                        "fromDate": "",
+                        "toDate": "",
+                        "specialAchievements": ""
+                    }
+                ],
+                "sports": [
+                    {
+                        "institute": "",
+                        "sport": "",
+                        "position": "",
+                        "fromDate": "",
+                        "toDate": "",
+                        "specialAchievements": ""
+                    }
+                ],
+                "socialProjects": [
+                    {
+                        "institute": "",
+                        "project": "",
+                        "position": "",
+                        "fromDate": "",
+                        "toDate": "",
+                        "specialAchievements": ""
+                    }
+                ]
+            }
+    }],
+    "workLife": [{
+        "presentEmploymentDetails": [
+            {
+                "employeeName": "",
+                "designation": "",
+                "officialAddress": {
+                    "addressLine1": "example 1",
+                    "addressLine2": "example 2",
+                    "addressLine3": "example 3",
+                    "city": "c",
+                    "district": "example 2",
+                    "country": ""
+                }
+            },
+            {
+                "employeeName": "",
+                "designation": "",
+                "officialAddress": {
+                    "addressLine1": "example 1",
+                    "addressLine2": "example 2",
+                    "addressLine3": "example 3",
+                    "city": "c",
+                    "district": "example 2",
+                    "country": ""
+                }
+            }
+        ],
+        "workHistory": [
+            {
+                "organization": "",
+                "designation": "",
+                "employerType": "",
+                "description": "",
+                "commencement": "2010-02-02",
+                "completion": "2010-09-02",
+                "industry": [],
+                "specialty": [],
+                "subSpecialty": [],
+                "duties": "",
+                "isCurrentlyWorking": true
+            },
+            {
+                "organization": "",
+                "designation": "",
+                "employerType": "",
+                "description": "",
+                "commencement": "2010-02-02",
+                "completion": "2010-09-02",
+                "industry": [],
+                "specialty": [],
+                "subSpecialty": [],
+                "duties": "",
+                "isCurrentlyWorking": true
+            }
+        ],
+        "memberExpertise": {
+            "specialty": [],
+            "subSpecialty": [],
+            "industriesEx": []
+        },
+        "serviceLatters": [
+            {
+                "id": "",
+                "description": "",
+                "folderPath": ""
+            },
+            {
+                "id": "",
+                "description": "",
+                "folderPath": ""
+            }
+        ],
+        "photo": {
+            "id": "",
+            "folderPath": ""
+        },
+        "referees": [
+            {
+                "title": "",
+                "firstName": "",
+                "lastName": "",
+                "designation": "",
+                "email": "",
+                "mobileNumber": ""
+            },
+            {
+                "title": "",
+                "firstName": "",
+                "lastName": "",
+                "designation": "",
+                "email": "",
+                "mobileNumber": ""
+            }
+        ],
+        "socialActivities": [
+            {
+                "clubAndSocieties": [
+                    {
+                        "universityName": "",
+                        "clubSociety": "",
+                        "clubPosition": "",
+                        "fromDate": "2016-01-01",
+                        "toDate": "2016-08-08",
+                        "specialAchievements": ""
+                    },
+                    {
+                        "universityName": "",
+                        "clubSociety": "",
+                        "clubPosition": "",
+                        "fromDate": "2016-01-01",
+                        "toDate": "2016-08-08",
+                        "specialAchievements": ""
+                    }
+                ],
+                "sports": [
+                    {
+                        "universityName": "",
+                        "sport": "",
+                        "positionHeld": "",
+                        "fromDate": "2016-01-01",
+                        "toDate": "2016-08-08",
+                        "specialAchievements": ""
+                    },
+                    {
+                        "universityName": "",
+                        "sport": "",
+                        "positionHeld": "",
+                        "fromDate": "2016-01-01",
+                        "toDate": "2016-08-08",
+                        "specialAchievements": ""
+                    }
+                ],
+                "socialProjects": [
+                    {
+                        "universityName": "",
+                        "project": "",
+                        "positionHeld": "",
+                        "fromDate": "2016-01-01",
+                        "toDate": "2016-08-08",
+                        "specialAchievements": ""
+                    },
+                    {
+                        "universityName": "",
+                        "project": "",
+                        "positionHeld": "",
+                        "fromDate": "2016-01-01",
+                        "toDate": "2016-08-08",
+                        "specialAchievements": ""
+                    }
+                ]
+            }
+        ]
+    }],
+    "jobExpectation": [{
+        "jobPreferences": {
+            "employmentType": {
+                "label": "I'm looking for",
+                "type": "checkbox",
+                "options": [
+                    "Full Time Employment",
+                    "Part Time Employment",
+                    "Internship"
+                ]
+            },
+            "specializedDisciplines": {
+                "label": "Interested Specialized Disciplines",
+                "type": "multi-level-checkbox",
+                "maxSelection": 4,
+                "fetchFrom": "SpecializedDisciplinesTable",
+                "subDisciplinesFrom": "SubSpecializedDisciplinesTable",
+                "onExpand": true,
+                "addNewOption": {
+                    "type": "textBox",
+                    "approvalRequired": true
+                }
+            },
+            "industries": {
+                "label": "Interested Industries",
+                "type": "checkbox",
+                "fetchFrom": "IndustryList",
+                "onExpand": true,
+                "addNewOption": {
+                    "type": "textBox",
+                    "approvalRequired": true
+                }
+            },
+            "seniorityLevel": {
+                "label": "Seniority Level",
+                "type": "dropdown",
+                "fetchFrom": "SeniorityLevelList"
+            },
+            "jobHuntIntensity": {
+                "label": "How Intensive my Job Hunt is",
+                "type": "radio",
+                "options": [
+                    "Aggressively looking for",
+                    "Casually looking for",
+                    "Not looking for"
+                ]
+            },
+            "availableDate": {
+                "label": "Available Date",
+                "type": "radioWithDate",
+                "options": ["Immediately", "After"],
+                "calendarRequiredIf": "After"
+            },
+            "preferredDistricts": {
+                "label": "Districts you prefer to work",
+                "type": "checkbox",
+                "fetchFrom": "DistrictList",
+                "onExpand": true
+            },
+            "preferredCities": {
+                "label": "Cities you prefer to work",
+                "type": "autocompleteMultiple",
+                "fetchFrom": "CityList",
+                "addNewAllowed": true
+            },
+            "nonPreferredCities": {
+                "label": "Cities you DO NOT prefer to work",
+                "type": "autocompleteMultiple",
+                "fetchFrom": "CityList",
+                "addNewAllowed": true
+            }
+        },
+        "fullTimePreferences": {
+            "preferredCompanies": {
+                "label": "Companies you like to work",
+                "type": "autocompleteMultiple",
+                "fetchFrom": "OrganizationList",
+                "addNewAllowed": true
+            },
+            "nonPreferredCompanies": {
+                "label": "Companies you don’t like to work",
+                "type": "autocompleteMultiple",
+                "fetchFrom": "OrganizationList",
+                "addNewAllowed": true
+            },
+            "employmentLevel": {
+                "label": "Employment Level",
+                "type": "checkbox",
+                "fetchFrom": "EmploymentLevelList",
+                "onExpand": true,
+                "selectionRule": "only_3_adjoining_levels"
+            }
+        },
+        "partTimePreferences": {
+            "workTypePreferences": {
+                "label": "Types of Work you like / don't like to do",
+                "type": "radioList",
+                "fetchFrom": "PartTimeWorkList",
+                "optionsPerItem": ["Like", "Don't Like", "Neutral"],
+                "addNewAllowed": true
+            },
+            "weeklyHours": {
+                "label": "No of hours you can work per week",
+                "type": "textBox"
+            },
+            "availability": {
+                "label": "Dates and Times you can work",
+                "type": "complexCheckbox",
+                "options": [
+                    {
+                        "label": "Selected weekdays 9am - 5pm",
+                        "autocomplete": "weekdaySelector"
+                    },
+                    {
+                        "label": "Selected weekdays after 5pm",
+                        "autocomplete": "weekdaySelector"
+                    },
+                    {
+                        "label": "Saturdays after 5pm",
+                        "extraField": "endTime"
+                    },
+                    {
+                        "label": "Sundays after 5pm",
+                        "extraField": "endTime"
+                    }
+                ]
+            }
+        }
+    }],
+    "memberships": [{
+        "professionalAssociations": [
+            {
+                "association": "",
+                "fromDate": "",
+                "toDate": "",
+                "position":"",
+                "specialAchievements": ""
+            },
+            {
+                "association": "",
+                "fromDate": "",
+                "toDate": "",
+                "position":"",
+                "specialAchievements": ""
+            }
+        ],
+        "socialClubs": [
+            {
+                "association": "",
+                "fromDate": "",
+                "toDate": "",
+                "position":"",
+                "specialAchievements": ""
+            },
+            {
+                "association": "",
+                "fromDate": "",
+                "toDate": "",
+                "position":"",
+                "specialAchievements": ""
+            }
+        ]
+    }],
+    "skillsAndExpertise": [{
+        "specializedIndustriesAndSpecificSkills": [
+            {
+                "industry": "hotel and lodging",
+                "specificSkills": [
+                    {
+                        "skill": "chanel management",
+                        "rating": "80%"
+                    },
+                    {
+                        "skill": "yield management",
+                        "rating": "60%"
+                    }
+                ]
+            },
+            {
+                "industry": "telecommunication",
+                "specificSkills": [
+                    {
+                        "skill": "GSM Routing",
+                        "rating": "80%"
+                    },
+                    {
+                        "skill": "Network Design",
+                        "rating": "60%"
+                    }
+                ]
+            }
+        ],
+        "specializedDisciplines": [
+            {
+                "disciplines": "Marketing",
+                "subDisciplines": [
+                    {
+                        "title": "Branding",
+                        "rating": "80%"
+                    },
+                    {
+                        "skill": "Media Coordination",
+                        "rating": "60%"
+                    }
+                ]
+            },
+            {
+                "disciplines": "Finance",
+                "subDisciplines": [
+                    {
+                        "title": "Finance reporting",
+                        "rating": "80%"
+                    }
+                ]
+            }
+        ],
+        "otherSkills": [
+            {
+                "skill": "Team building",
+                "rating": "80%"
+            },
+            {
+                "skill": "Negotiation Skills",
+                "rating": "60%"
+            }
+        ],
+        "toolsAndTechnologies": [
+            {
+                "skill": "PHP",
+                "rating": "80%"
+            },
+            {
+                "skill": "Google",
+                "rating": "60%"
+            }
+        ],
+        "rateSkill": {
+            "name": "",
+            "skill": "",
+            "rate": "",
+            "howKnow": "",
+            "fromWhere": ""
+        }
+
+    }],
+    "sampleWork": [{
+        "projectName": "",
+        "link": "www.example.com",
+        "attachWorkPath": "/path/doc.pdf",
+        "completionDate": "",
+        "EntireProjectDescription": "",
+        "SectionOfTheProjectDescription": "",
+        "remarks": ""
+    }],
+    "recommendations": [{
+        "name": "",
+        "designation": "",
+        "organization": "",
+        "howIKnow": "",
+        "fromWhereIKnow": "",
+        "photo": "/path/image.png",
+        "text": ""
+    }],
+    "makeAVideoResume": [{
+        "industries": {
+            "yourself": "/path/video.mkv",
+            "careerAmbition": "/path/video.mkv"
+        },
+        "impromptu": {
+            "careerAmbition": "/path/video.mkv"
+        },
+        "cover": {
+            "cover01": "/path/video.mkv",
+            "cover02": "/path/video.mkv"
+        },
+        "randomTopic": "inflation",
+        "name": ""
+    }],
+    "myActivityLog": [{
+        "nameOfUser": "",
+        "log": [
+            {
+                "date": "",
+                "time": "",
+                "initiator": "",
+                "action": "",
+                "status": "",
+                "organization": "",
+                "remarks": ""
+            },
+            {
+                "date": "",
+                "time": "",
+                "initiator": "",
+                "action": "",
+                "status": "",
+                "organization": "",
+                "remarks": ""
+            }
+    ]
+    }],
+    "Lists": [
+        {
+        "name": "A/L Result Grade List",
+        "key": "alResultGradeList",
+        "values": ["A", "B", "C", "S", "F"]
+        },
+        {
+        "name": "A/L Subject Stream List",
+        "key": "alSubjectStreamList",
+        "values": []
+        },
+        {
+        "name": "A/L Syllabus Revision Year List",
+        "key": "alSyllabusRevisionYearList",
+        "values": []
+        },
+        {
+        "name": "Academic Journal List",
+        "key": "academicJournalList",
+        "values": []
+        },
+        {
+        "name": "Academic Qualification List",
+        "key": "academicQualificationList",
+        "values": ["BSc (Marketing)", "BBA (Languages)", "Diploma"]
+        },
+        {
+        "name": "City List",
+        "key": "cityList",
+        "values": ["Colombo", "Kandy", "Galle", "Jaffna", "Negombo", "Matara", "Anuradhapura"]
+        },
+        {
+        "name": "Club & Society Positions List",
+        "key": "clubSocietyPositionsList",
+        "values": []
+        },
+        {
+        "name": "Clubs and Society List",
+        "key": "clubsAndSocietyList",
+        "values": []
+        },
+        {
+        "name": "Country List",
+        "key": "countryList",
+        "values": ["Sri Lanka", "India", "USA", "UK", "Australia", "Canada", "Japan"]
+        },
+        {
+        "name": "Department List (ABC University)",
+        "key": "departmentListABCUniversity",
+        "values": [],
+        "note": "There will be a separate list for each university"
+        },
+        {
+        "name": "Designation List",
+        "key": "designationList",
+        "values": []
+        },
+        {
+        "name": "District List",
+        "key": "districtList",
+        "values": [
+            "Ampara", "Anuradhapura", "Badulla", "Batticaloa", "Colombo", 
+            "Galle", "Gampaha", "Hambantota", "Jaffna", "Kalutara", 
+            "Kandy", "Kegalle", "Kilinochchi", "Kurunegala", "Mannar", 
+            "Matale", "Matara", "Monaragala", "Mullaitivu", "Nuwara Eliya", 
+            "Polonnaruwa", "Puttalam", "Ratnapura", "Trincomalee", "Vavuniya"
+        ]
+        },
+        {
+        "name": "Employment Level List",
+        "key": "employmentLevelList",
+        "values": []
+        },
+        {
+        "name": "Faculty List (ABC University)",
+        "key": "facultyListABCUniversity",
+        "values": [],
+        "note": "There will be a separate list for each university"
+        },
+        {
+        "name": "Higher Education Provider List",
+        "key": "higherEducationProviderList",
+        "values": [],
+        "note": "This will consist of Local and Foreign public and private universities, colleges and institutes. Users should be able to filter each category wise"
+        },
+        {
+        "name": "Hobbies List",
+        "key": "hobbiesList",
+        "values": []
+        },
+        {
+        "name": "Industry List",
+        "key": "industryList",
+        "values": []
+        },
+        {
+        "name": "Industry Specific Skills List",
+        "key": "industrySpecificSkillsList",
+        "values": []
+        },
+        {
+        "name": "Interpersonal Skills List",
+        "key": "interpersonalSkillsList",
+        "values": []
+        },
+        {
+        "name": "Language List",
+        "key": "languageList",
+        "values": ["Sinhala", "Tamil", "English", "Hindi", "French", "German", "Japanese"]
+        },
+        {
+        "name": "Monthly Expenses for Education List",
+        "key": "monthlyExpensesForEducationList",
+        "values": []
+        },
+        {
+        "name": "Monthly Income Range List",
+        "key": "monthlyIncomeRangeList",
+        "values": []
+        },
+        {
+        "name": "O/L Result Grade List",
+        "key": "olResultGradeList",
+        "values": [
+            {
+            "years": "1990-1999",
+            "grades": ["D", "C", "S", "F"]
+            },
+            {
+            "years": "2000-2010",
+            "grades": ["A", "B", "C", "W"]
+            }
+        ],
+        "note": "Depending on syllabus revision (1990-1999 -> D,C,S,F 2000-2010 -> A,B,C,W)"
+        },
+        {
+        "name": "O/L Subject List",
+        "key": "olSubjectList",
+        "values": []
+        },
+        {
+        "name": "O/L Syllabus Revision Year List",
+        "key": "olSyllabusRevisionYearList",
+        "values": ["1990-1999", "2000-2010"],
+        "note": "O/L syllabus revision year ex 1990 - 1999/ 2000 - 2010"
+        },
+        {
+        "name": "Organisation List",
+        "key": "organisationList",
+        "values": []
+        },
+        {
+        "name": "Part Time Work List",
+        "key": "partTimeWorkList",
+        "values": []
+        },
+        {
+        "name": "Personal Skill List",
+        "key": "personalSkillList",
+        "values": []
+        },
+        {
+        "name": "Professional Association List (All Countries)",
+        "key": "professionalAssociationList",
+        "values": []
+        },
+        {
+        "name": "Qualification Level List",
+        "key": "qualificationLevelList",
+        "values": []
+        },
+        {
+        "name": "Qualification List",
+        "key": "qualificationList",
+        "values": []
+        },
+        {
+        "name": "Qualification Name List",
+        "key": "qualificationNameList",
+        "values": []
+        },
+        {
+        "name": "School List",
+        "key": "schoolList",
+        "values": [],
+        "note": "This will carry all private, public and semi government schools in Sri Lanka. Users should be able to filter each category wise"
+        },
+        {
+        "name": "Seniority Level List",
+        "key": "seniorityLevelList",
+        "values": []
+        },
+        {
+        "name": "Short Term Training List",
+        "key": "shortTermTrainingList",
+        "values": []
+        },
+        {
+        "name": "Short Term Training Providers List",
+        "key": "shortTermTrainingProvidersList",
+        "values": []
+        },
+        {
+        "name": "Social Club List",
+        "key": "socialClubList",
+        "values": []
+        },
+        {
+        "name": "Special Project Position List",
+        "key": "specialProjectPositionList",
+        "values": []
+        },
+        {
+        "name": "Specialised Discipline List",
+        "key": "specialisedDisciplineList",
+        "values": []
+        },
+        {
+        "name": "Specialised Industry List",
+        "key": "specialisedIndustryList",
+        "values": []
+        },
+        {
+        "name": "Specialised Sub Discipline List",
+        "key": "specialisedSubDisciplineList",
+        "values": [],
+        "note": "Sub speciality list will always get created below a speciality (ex digital marketing, branding under marketing)"
+        },
+        {
+        "name": "Sports List",
+        "key": "sportsList",
+        "values": ["Cricket", "Football", "Rugby", "Tennis", "Badminton", "Swimming", "Athletics"]
+        },
+        {
+        "name": "Sports Team Position List",
+        "key": "sportsTeamPositionList",
+        "values": []
+        },
+        {
+        "name": "Technologies List",
+        "key": "technologiesList",
+        "values": []
+        },
+        {
+        "name": "Tools List",
+        "key": "toolsList",
+        "values": []
+        },
+        {
+        "name": "Type of A/L List",
+        "key": "typeOfALList",
+        "values": []
+        },
+        {
+        "name": "Type of O/L List",
+        "key": "typeOfOLList",
+        "values": []
+        },
+        {
+        "name": "Types of Work List",
+        "key": "typesOfWorkList",
+        "values": []
+        },
+        {
+        "name": "Year List",
+        "key": "yearList",
+        "values": []
+        }
+    ]
+
+}
