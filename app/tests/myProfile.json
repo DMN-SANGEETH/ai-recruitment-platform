@@ -46,16 +46,16 @@
         "residenceNo": "1/12",
         "email": "example@gmail.com",
         "residenceAddress": {
-            "Address_1": "example 1",
-            "Address_2": "example 2",
-            "Address_3": "example 3",
+            "addressLine1": "example 1",
+            "addressLine2": "example 2",
+            "addressLine3": "example 3",
             "City": "c",
             "District": "example 2"
         },
         "correspondenceAddress": {
-            "Address_1": "example 1",
-            "Address_2": "example 2",
-            "Address_3": "example 3",
+            "addressLine1": "example 1",
+            "addressLine2": "example 2",
+            "addressLine3": "example 3",
             "City": "c",
             "District": "example 2"
         },
@@ -980,10 +980,10 @@
         "name": "District List",
         "key": "districtList",
         "values": [
-            "Ampara", "Anuradhapura", "Badulla", "Batticaloa", "Colombo", 
-            "Galle", "Gampaha", "Hambantota", "Jaffna", "Kalutara", 
-            "Kandy", "Kegalle", "Kilinochchi", "Kurunegala", "Mannar", 
-            "Matale", "Matara", "Monaragala", "Mullaitivu", "Nuwara Eliya", 
+            "Ampara", "Anuradhapura", "Badulla", "Batticaloa", "Colombo",
+            "Galle", "Gampaha", "Hambantota", "Jaffna", "Kalutara",
+            "Kandy", "Kegalle", "Kilinochchi", "Kurunegala", "Mannar",
+            "Matale", "Matara", "Monaragala", "Mullaitivu", "Nuwara Eliya",
             "Polonnaruwa", "Puttalam", "Ratnapura", "Trincomalee", "Vavuniya"
         ]
         },
@@ -1188,5 +1188,4 @@
         "values": []
         }
     ]
-
 }

@@ -81,3 +81,53 @@ RESUME_VALIDATION_TEMPLATE = """
             }}
             ```
             """
+
+LINKEDIN_VALIDATION_TEMPLATE = """
+            You are a professional profile validation expert analyzing LinkedIn profile data. Evaluate the following content:
+
+            {text}
+
+            Analysis Criteria:
+            1. REQUIRED FIELDS (at least 2 must be present):
+            - Name fields (first_name/last_name/full_name)
+            - Professional headline or position
+            - Work experiences or education
+
+            2. OPTIONAL FIELDS (nice to have but not required):
+            - About/summary
+            - Location
+            - Skills
+            - Contact info
+            - Profile URL
+
+            3. ACCEPTABLE FORMATS:
+            - Raw database records with professional info
+            - JSON-like structures
+            - Machine-readable formats
+            - Null/empty fields are acceptable
+
+            Validation Rules:
+            - Consider it valid if it contains professional information, even if not human-readable
+            - Missing optional fields should not invalidate the profile
+            - Empty arrays (like education=[]) are acceptable
+
+            Response Format (STRICT JSON):
+            {{
+                "is_valid_profile": boolean,
+                "reason": "Brief explanation",
+                "missing_critical_fields": ["field1", "field2"]  // only if profile is invalid
+            }}
+
+            Example Valid Responses:
+            {{
+                "is_valid_profile": true,
+                "reason": "Profile contains name, headline, and work experience",
+                "missing_critical_fields": []
+            }}
+
+            {{
+                "is_valid_profile": false,
+                "reason": "Missing both name and professional information",
+                "missing_critical_fields": ["name", "professional_info"]
+            }}
+            """

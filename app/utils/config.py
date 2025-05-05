@@ -1,5 +1,6 @@
 """Configurations"""
 import os
+from typing import List
 from dotenv import load_dotenv
 import streamlit as st
 from pymongo import MongoClient
@@ -15,6 +16,53 @@ def get_secret(key: str, default: str = None):
         return st.secrets[key]
     return os.getenv(key, default)
 
+class Settings:
+    """Application settings class"""
+
+    @staticmethod
+    def get_allowed_hosts() -> List[str]:
+        """Get allowed hosts for CORS"""
+        hosts = get_secret("ALLOWED_HOSTS", "http://localhost:8501,http://localhost:8000")
+        return [host.strip() for host in hosts.split(",") if host.strip()]
+
+class LinkedInConfig:
+    """LinkedIn Config"""
+
+    @staticmethod
+    def get_relevance_ai_api_key() -> str:
+        """Get RELEVANCE AI API Key"""
+        key = get_secret("RELEVANCE_API_KEY")
+        if not key:
+            logger.error("RELEVANCE_API_KEY not set in environment variables")
+            raise ConfigurationError("RELEVANCE_API_KEY is required")
+        return key
+
+    @staticmethod
+    def get_relevance_ai_project_id() -> str:
+        """Get RELEVANCE__PROJECT_ID"""
+        endpoint = get_secret("RELEVANCE__PROJECT_ID")
+        if not endpoint:
+            logger.error("RELEVANCE__PROJECT_ID not set in environment variables")
+            raise ConfigurationError("RELEVANCE__PROJECT_ID is required")
+        return endpoint
+
+    @staticmethod
+    def get_relevance_ai_endpoint() -> str:
+        """Get RELEVANCE__ENDPOINT"""
+        project_id = get_secret("RELEVANCE__ENDPOINT")
+        if not project_id:
+            logger.error("RELEVANCE__ENDPOINT not set in environment variables")
+            raise ConfigurationError("RELEVANCE__ENDPOINT is required")
+        return project_id
+
+    @staticmethod
+    def get_relevance_ai_api_timeout() -> str:
+        """Get RELEVANCE__API_TIMEOUT"""
+        api_timeout = get_secret("RELEVANCE__API_TIMEOUT")
+        if not api_timeout:
+            logger.error("RELEVANCE__API_TIMEOUT not set in environment variables")
+            raise ConfigurationError("RELEVANCE__API_TIMEOUT is required")
+        return api_timeout
 
 class MongoDBConfig:
     """Mongo DB Config class"""

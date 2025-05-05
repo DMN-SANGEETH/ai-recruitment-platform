@@ -4,7 +4,7 @@ from typing import  Tuple
 import google.generativeai as genai
 
 from app.core.llm.gemini_client import GeminiClient
-from app.core.llm.prompt_template import RESUME_PROCESSOR_TEMPLATE, RESUME_VALIDATION_TEMPLATE
+from app.core.llm.prompt_template import LINKEDIN_VALIDATION_TEMPLATE, RESUME_PROCESSOR_TEMPLATE, RESUME_VALIDATION_TEMPLATE
 from app.db.mongodb.models.resume import Resume, Education, Experience
 from app.db.mongodb.queries.resume_repository import ResumeRepository
 from app.core.rag.embeddings import EmbeddingGenerator
@@ -12,7 +12,7 @@ from app.utils.logger import logger
 from app.utils.config import MongoDBConfig
 from app.utils.helpers import extract_and_validate_json
 
-class ResumeProcessor:
+class LinkedInProcessor:
     """Resume Processor class"""
     def __init__(self):
         """Initialize the Resume Processor with Gemini"""
@@ -35,15 +35,16 @@ class ResumeProcessor:
         return RESUME_PROCESSOR_TEMPLATE.format(
             resume_text=resume_text
         )
-    def _generate_validation_prompt(self,
+
+    def _generate_validation_linkedin_prompt(self,
                                     text: str
                                     ):
         """Generate prompt to validate if the text is a resume"""
-        return RESUME_VALIDATION_TEMPLATE.format(
+        return LINKEDIN_VALIDATION_TEMPLATE.format(
             text=text
         )
 
-    def validate_resume(self,
+    def validate_linkedin(self,
                         text: str
                         ) -> Tuple[bool, str]:
         """
@@ -53,7 +54,7 @@ class ResumeProcessor:
             return False, "Text is too short to be a valid resume"
 
         try:
-            prompt = self._generate_validation_prompt(text)
+            prompt = self._generate_validation_linkedin_prompt(text)
             response = self.gemini_client._call_gemini_with_retry(prompt,
                                                                   domain="resume_validation"
                                                                   )
@@ -71,8 +72,9 @@ class ResumeProcessor:
 
             is_valid = validate_data.get("is_valid_resume", False)
             reason = validate_data.get("reason", "No reason provided")
+            missing_critical_fields = validate_data.get("missing_critical_fields", [])
 
-            return is_valid, reason
+            return is_valid, reason, missing_critical_fields
 
         except Exception as e:
             logger.error("Error validating resume: %s", str(e))
@@ -105,30 +107,20 @@ class ResumeProcessor:
             logger.error("Error transforming resume data: %s", str(e))
             return {}
 
-    def process_resume(self,
-                       resume_text: str,
-                       file_path: str = None
-                       ):
-        """Process resume text to extract structured information and store in database"""
-        if not resume_text:
-            logger.error("No resume text provided")
-            return None
+
+    def process_linkedin(self, content:str, file_path: str = None):
 
         try:
             # First validate if this is a resume
-            is_valid, validation_reason = self.validate_resume(resume_text)
+            is_valid, validation_reason, missing_critical_fields = self.validate_linkedin(content)
 
             if not is_valid:
-                logger.warning("Invalid resume detected: %s", validation_reason)
+                logger.warning("Invalid resume detected: %s" , validation_reason)
                 return {
                     "is_valid_resume": False,
-                    "validation_reason": validation_reason
+                    "validation_reason": validation_reason,
+                    "missing_critical_fields": []
                 }
-
-            prompt = self._generate_prompt(resume_text)
-            content = self.gemini_client._call_gemini_with_retry(prompt,
-                                                                 domain="resume_processing"
-                                                                 )
             if not content:
                 logger.error("Failed to extract information from resume")
                 return None
@@ -152,21 +144,7 @@ class ResumeProcessor:
                 experience_list.append(Experience(**exp))
 
             resume_data["experience"] = experience_list
-            resume = Resume(**resume_data)
 
-            # Only store in DB if it's a valid resume
-            if is_valid:
-                result = self.repository.create(resume)
-                if result:
-                    logger.info(
-                        "Successfully processed and stored resume for %s",
-                        resume_data["name"]
-                        )
-                else:
-                    logger.error(
-                        "Failed to store resume for %s",
-                        resume_data["name"]
-                        )
 
             return resume_data
 

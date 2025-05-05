@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
-      
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
           pip install -e .
-      
+
       - name: Run linting
         run: |
           pylint --disable=C0111,C0103,C0303,C0330 app/
-      
+
       - name: Run tests
         run: |
           pytest app/tests/ --cov=app
@@ -35,22 +35,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
-      
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          
+
       - name: Deploy to Streamlit
         env:
           STREAMLIT_TOKEN: ${{ secrets.STREAMLIT_TOKEN }}
         run: |
           # Install Streamlit CLI
           pip install streamlit
-          
+
           # Deploy (replace with your actual deployment command)
           streamlit deploy app/main.py --server.port=8501

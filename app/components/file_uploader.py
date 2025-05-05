@@ -1,3 +1,4 @@
+from datetime import datetime
 import streamlit as st
 from app.utils.file_handling import FileHandler
 from app.services.resume_service import ResumeService
@@ -40,9 +41,19 @@ class FileUploaderComponent:
                     # timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                     # filename = f"resume_{timestamp}.{file_extension}"
                     # Process the file
-                    resume_data = self.resume_service.process_resume_bytes(
-                        file_bytes=uploaded_file.getvalue(),
-                        filename=uploaded_file.name
+
+                    # resume_data = self.resume_service.process_resume_bytes(
+                    #     file_bytes=uploaded_file.getvalue(),
+                    #     filename=uploaded_file.name
+                    # )
+                    file_extension = uploaded_file.name.split('.')[-1]
+                    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+                    filename = f"resume_{timestamp}.{file_extension}"
+                    print("filename 01:",filename)
+                    print("uploaded_file======================:",uploaded_file)
+                    resume_data = self.resume_service.process_resume_file(
+                        file=uploaded_file,
+                        filename=filename
                     )
 
                     if resume_data:

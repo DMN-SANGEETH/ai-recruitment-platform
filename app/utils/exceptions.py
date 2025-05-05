@@ -51,3 +51,7 @@ class FileProcessingError(Exception):
 class ResumeProcessingError(Exception):
     """Raised when there's an error processing a resume"""
 
+#Linkedin Error
+
+class ProfileProcessingError(Exception):
+    """Linkedin error profile"""

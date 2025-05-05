@@ -1,490 +1,1377 @@
-2025-04-09 13:51:31,398 [ERROR] GEMINI_API_KEY not set in environment variables
-2025-04-09 13:55:21,282 [ERROR] GEMINI_API_KEY not set in environment variables
-2025-04-09 14:09:18,909 [INFO] Embedding generator initialized successfully
-2025-04-09 14:09:18,909 [INFO] Embedding generator initialized successfully
-2025-04-09 14:09:55,966 [INFO] Embedding generator initialized successfully
-2025-04-09 14:09:55,966 [INFO] Embedding generator initialized successfully
-2025-04-09 14:10:00,791 [INFO] Embedding generator initialized successfully
-2025-04-09 14:10:00,791 [INFO] Embedding generator initialized successfully
-2025-04-09 14:10:02,814 [INFO] Embedding generator initialized successfully
-2025-04-09 14:10:02,814 [INFO] Embedding generator initialized successfully
-2025-04-09 14:10:21,699 [INFO] Successfully created embedding for resume: Nishan Sangeeth
-2025-04-09 14:10:23,386 [INFO] Successfully processed and stored resume for Nishan Sangeeth
-2025-04-09 14:54:44,725 [INFO] Embedding generator initialized successfully
-2025-04-09 14:54:44,725 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:06,194 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:06,194 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:08,036 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:08,036 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:15,869 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:15,870 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:19,456 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:19,456 [INFO] Embedding generator initialized successfully
-2025-04-09 14:56:27,482 [INFO] Successfully created embedding for resume: Nishan Sangeeth
-2025-04-09 14:56:29,400 [INFO] Successfully processed and stored resume for Nishan Sangeeth
-2025-04-09 21:18:04,971 [INFO] Embedding generator initialized successfully
-2025-04-09 21:18:04,971 [INFO] Embedding generator initialized successfully
-2025-04-10 11:50:34,162 [INFO] Embedding generator initialized successfully
-2025-04-10 11:50:34,162 [INFO] Embedding generator initialized successfully
-2025-04-10 11:52:50,546 [INFO] Embedding generator initialized successfully
-2025-04-10 11:52:50,547 [INFO] Embedding generator initialized successfully
-2025-04-10 11:53:18,133 [INFO] Embedding generator initialized successfully
-2025-04-10 11:53:18,133 [INFO] Embedding generator initialized successfully
-2025-04-10 11:53:36,049 [INFO] Successfully created embedding for resume: Nishan Sangeeth
-2025-04-10 11:53:38,103 [INFO] Successfully processed and stored resume for Nishan Sangeeth
-2025-04-11 14:59:22,649 [INFO] Embedding generator initialized successfully
-2025-04-11 14:59:22,650 [INFO] Embedding generator initialized successfully
-2025-04-11 14:59:57,594 [INFO] Embedding generator initialized successfully
-2025-04-11 14:59:57,594 [INFO] Embedding generator initialized successfully
-2025-04-11 14:59:57,594 [INFO] JobDescriptionProcessor initialized successfully
-2025-04-11 14:59:57,594 [INFO] Processing domain: Software Engineering
-2025-04-11 15:00:44,442 [ERROR] Input validation failed: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+2025-05-02 17:38:15,201 [INFO] Embedding generator initialized successfully
+2025-05-02 17:38:15,266 [INFO] Embedding generator initialized successfully
+2025-05-02 17:39:33,980 [INFO] Embedding generator initialized successfully
+2025-05-02 17:39:34,037 [INFO] Embedding generator initialized successfully
+2025-05-02 17:40:41,142 [ERROR] Error processing LinkedIn profile: app.db.mongodb.models.linkedin.LinkedInProfile() argument after ** must be a mapping, not TypeError
+2025-05-02 17:40:41,142 [ERROR] Error processing resume: Profile processing failed: app.db.mongodb.models.linkedin.LinkedInProfile() argument after ** must be a mapping, not TypeError
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 57, in scraping_linkedin_content
+    profile = LinkedInProfile(
+        **raw_data,
+        profile_url=str(linkedin_url)
+    )
+TypeError: app.db.mongodb.models.linkedin.LinkedInProfile() argument after ** must be a mapping, not TypeError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 24, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 68, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: app.db.mongodb.models.linkedin.LinkedInProfile() argument after ** must be a mapping, not TypeError
+2025-05-02 17:43:56,959 [INFO] File saved at: storage/resumes/resume_20250502_174356.png
+2025-05-02 17:43:58,571 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-02 17:44:04,830 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwrO60ZXSubeNqZ7KekangNRTyLKqls0Y9JOLRckhq9yKww1eRObOPYorFqYN5kmdH8sOBp1igA_kMv8si7jY6QT0i4Y6yV0iOoJKr9eGA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-02 17:44:04,864 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-02 17:44:09,935 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-02 17:44:09,940 [INFO] AFC remote call 1 is done.
+2025-05-02 17:44:19,615 [INFO] Successfully created embedding for resume: NISHAN SANGEETH
+2025-05-02 17:44:21,466 [INFO] Successfully processed and stored resume for NISHAN SANGEETH
+2025-05-02 17:44:21,928 [INFO] Successfully created embedding for resume: None
+2025-05-02 17:57:16,089 [INFO] Embedding generator initialized successfully
+2025-05-02 17:57:16,148 [INFO] Embedding generator initialized successfully
+2025-05-02 17:57:57,289 [INFO] Embedding generator initialized successfully
+2025-05-02 17:57:57,342 [INFO] Embedding generator initialized successfully
+2025-05-02 17:59:21,673 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 17:59:21,673 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 59, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 45, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 74, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:00:18,116 [INFO] Embedding generator initialized successfully
+2025-05-02 18:00:18,177 [INFO] Embedding generator initialized successfully
+2025-05-02 18:00:25,755 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:00:25,756 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 59, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 45, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url="https://www.linkedin.com/in/dmn-sangeeth")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 74, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:00:58,163 [INFO] Embedding generator initialized successfully
+2025-05-02 18:00:58,224 [INFO] Embedding generator initialized successfully
+2025-05-02 18:01:03,140 [INFO] Embedding generator initialized successfully
+2025-05-02 18:01:03,205 [INFO] Embedding generator initialized successfully
+2025-05-02 18:01:57,940 [INFO] Embedding generator initialized successfully
+2025-05-02 18:01:57,992 [INFO] Embedding generator initialized successfully
+2025-05-02 18:02:12,110 [INFO] Embedding generator initialized successfully
+2025-05-02 18:02:12,191 [INFO] Embedding generator initialized successfully
+2025-05-02 18:02:24,786 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:02:24,787 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 59, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 74, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:03:59,042 [INFO] Embedding generator initialized successfully
+2025-05-02 18:03:59,111 [INFO] Embedding generator initialized successfully
+2025-05-02 18:04:10,421 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:04:10,422 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 59, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 74, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:04:31,313 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:04:31,313 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 59, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 74, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:05:12,807 [INFO] Embedding generator initialized successfully
+2025-05-02 18:05:12,863 [INFO] Embedding generator initialized successfully
+2025-05-02 18:05:12,876 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:05:12,876 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 60, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 75, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:07:09,069 [INFO] Embedding generator initialized successfully
+2025-05-02 18:07:09,154 [INFO] Embedding generator initialized successfully
+2025-05-02 18:07:18,620 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:07:18,620 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 60, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 75, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:09:05,659 [INFO] Embedding generator initialized successfully
+2025-05-02 18:09:05,714 [INFO] Embedding generator initialized successfully
+2025-05-02 18:09:06,784 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:09:06,784 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 61, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 76, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:12:41,495 [INFO] Embedding generator initialized successfully
+2025-05-02 18:12:41,568 [INFO] Embedding generator initialized successfully
+2025-05-02 18:12:41,627 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:12:41,627 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 62, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 77, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:16:06,055 [INFO] Embedding generator initialized successfully
+2025-05-02 18:16:06,112 [INFO] Embedding generator initialized successfully
+2025-05-02 18:16:10,244 [ERROR] Error processing LinkedIn profile: Invalid profile data format
+2025-05-02 18:16:10,245 [ERROR] Error processing LinkedIn profile: Profile processing failed: Invalid profile data format
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 62, in scraping_linkedin_content
+    raise ProfileProcessingError("Invalid profile data format")
+app.utils.exceptions.ProfileProcessingError: Invalid profile data format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 77, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: Invalid profile data format
+2025-05-02 18:16:24,543 [INFO] Embedding generator initialized successfully
+2025-05-02 18:16:24,595 [INFO] Embedding generator initialized successfully
+2025-05-02 18:18:31,867 [INFO] Embedding generator initialized successfully
+2025-05-02 18:18:31,925 [INFO] Embedding generator initialized successfully
+2025-05-02 18:19:18,626 [INFO] Embedding generator initialized successfully
+2025-05-02 18:19:18,692 [INFO] Embedding generator initialized successfully
+2025-05-02 18:19:37,231 [INFO] Embedding generator initialized successfully
+2025-05-02 18:19:37,289 [INFO] Embedding generator initialized successfully
+2025-05-02 18:19:49,787 [ERROR] Unexpected error: Object of type PyObjectId is not JSON serializable
+2025-05-02 18:19:49,788 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
-2025-04-11 15:00:44,444 [ERROR] Transformation failed for job data: Invalid job description data: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+2025-05-02 18:19:49,788 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
 Traceback (most recent call last):
-  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 27, in _validate_input
-    validated_data = JobDescription(**raw_data).dict(exclude_none=True)
-                     ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 89, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
   File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
     validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 65, in _transform_job_data
-    validated_data = self._validate_input(raw_data)
-  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 31, in _validate_input
-    raise ValueError(f"Invalid job description data: {e}") from e
-ValueError: Invalid job description data: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...mecorp.com/careers/123'}, input_type=dict]
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 98, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
-2025-04-11 15:08:30,054 [INFO] Embedding generator initialized successfully
-2025-04-11 15:08:30,054 [INFO] Embedding generator initialized successfully
-2025-04-11 15:08:30,054 [INFO] JobDescriptionProcessor initialized successfully
-2025-04-11 15:08:30,055 [INFO] Processing domain: Software Engineering
-2025-04-11 15:09:19,111 [ERROR] Input validation failed: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+2025-05-02 18:20:18,388 [ERROR] Unexpected error: Object of type PyObjectId is not JSON serializable
+2025-05-02 18:20:18,388 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
-2025-04-11 15:09:19,112 [ERROR] Transformation failed for job data: Invalid job description data: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+2025-05-02 18:20:18,388 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
 Traceback (most recent call last):
-  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 28, in _validate_input
-    validated_data = JobDescription(**raw_data).dict(exclude_none=True)
-                     ~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 89, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
   File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
     validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
-pydantic_core._pydantic_core.ValidationError: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 66, in _transform_job_data
-    validated_data = self._validate_input(raw_data)
-  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/jd_processor.py", line 32, in _validate_input
-    raise ValueError(f"Invalid job description data: {e}") from e
-ValueError: Invalid job description data: 1 validation error for JobDescription
-domain
-  Field required [type=missing, input_value={'title': 'Senior Softwar...nior-software-engineer'}, input_type=dict]
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 98, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
     For further information visit https://errors.pydantic.dev/2.9/v/missing
-2025-04-11 15:20:11,064 [INFO] Embedding generator initialized successfully
-2025-04-11 15:20:11,064 [INFO] Embedding generator initialized successfully
-2025-04-11 15:20:11,064 [INFO] JobDescriptionProcessor initialized successfully
-2025-04-11 15:20:11,064 [INFO] Processing domain: Software Engineering
-2025-04-11 15:20:57,919 [INFO] Successfully created embedding for job: Senior Software Engineer
-2025-04-11 15:20:59,067 [INFO] Processed job: Senior Software Engineer
-2025-04-11 15:21:00,454 [INFO] Successfully created embedding for job: Frontend Developer
-2025-04-11 15:21:00,720 [INFO] Processed job: Frontend Developer
-2025-04-11 15:21:01,986 [INFO] Successfully created embedding for job: Software Engineer (Backend)
-2025-04-11 15:21:02,484 [INFO] Processed job: Software Engineer (Backend)
-2025-04-11 15:21:03,733 [INFO] Successfully created embedding for job: Data Scientist
-2025-04-11 15:21:04,197 [INFO] Processed job: Data Scientist
-2025-04-11 15:21:05,473 [INFO] Successfully created embedding for job: DevOps Engineer
-2025-04-11 15:21:05,872 [INFO] Processed job: DevOps Engineer
-2025-04-11 15:21:06,603 [INFO] Successfully created embedding for job: Mobile App Developer (iOS)
-2025-04-11 15:21:07,134 [INFO] Processed job: Mobile App Developer (iOS)
-2025-04-11 15:21:07,622 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
-2025-04-11 15:21:08,113 [INFO] Processed job: Mobile App Developer (Android)
-2025-04-11 15:21:08,644 [INFO] Successfully created embedding for job: Full Stack Engineer
-2025-04-11 15:21:08,982 [INFO] Processed job: Full Stack Engineer
-2025-04-11 15:21:09,468 [INFO] Successfully created embedding for job: Game Developer
-2025-04-11 15:21:09,927 [INFO] Processed job: Game Developer
-2025-04-11 15:21:10,493 [INFO] Successfully created embedding for job: Cloud Engineer
-2025-04-11 15:21:11,165 [INFO] Processed job: Cloud Engineer
-2025-04-11 15:21:11,721 [INFO] Successfully created embedding for job: Security Engineer
-2025-04-11 15:21:12,074 [INFO] Processed job: Security Engineer
-2025-04-11 15:21:12,542 [INFO] Successfully created embedding for job: Database Administrator
-2025-04-11 15:21:13,441 [INFO] Processed job: Database Administrator
-2025-04-11 15:21:13,973 [INFO] Successfully created embedding for job: Machine Learning Engineer
-2025-04-11 15:21:14,312 [INFO] Processed job: Machine Learning Engineer
-2025-04-11 15:21:14,750 [INFO] Successfully created embedding for job: Software Test Engineer
-2025-04-11 15:21:15,088 [INFO] Processed job: Software Test Engineer
-2025-04-11 15:21:15,088 [INFO] Processing complete. Success: 14, Failures: 0
-2025-04-11 15:21:15,089 [ERROR] Failed to process job descriptions for Software Engineering: unsupported operand type(s) for +=: 'int' and 'dict'
-2025-04-11 15:21:15,089 [INFO] Processing domain: Data Science
-2025-04-11 15:22:01,489 [INFO] Successfully created embedding for job: Senior Data Scientist
-2025-04-11 15:22:02,004 [INFO] Processed job: Senior Data Scientist
-2025-04-11 15:22:03,324 [INFO] Successfully created embedding for job: Data Scientist
-2025-04-11 15:22:03,730 [INFO] Processed job: Data Scientist
-2025-04-11 15:22:04,969 [INFO] Successfully created embedding for job: Junior Data Scientist
-2025-04-11 15:22:05,582 [INFO] Processed job: Junior Data Scientist
-2025-04-11 15:22:06,555 [INFO] Successfully created embedding for job: Machine Learning Engineer
-2025-04-11 15:22:06,898 [INFO] Processed job: Machine Learning Engineer
-2025-04-11 15:22:07,359 [INFO] Successfully created embedding for job: Data Analyst
-2025-04-11 15:22:07,652 [INFO] Processed job: Data Analyst
-2025-04-11 15:22:08,205 [INFO] Successfully created embedding for job: Big Data Engineer
-2025-04-11 15:22:08,534 [INFO] Processed job: Big Data Engineer
-2025-04-11 15:22:09,036 [INFO] Successfully created embedding for job: Business Intelligence Analyst
-2025-04-11 15:22:09,344 [INFO] Processed job: Business Intelligence Analyst
-2025-04-11 15:22:09,784 [INFO] Successfully created embedding for job: Data Engineer
-2025-04-11 15:22:10,135 [INFO] Processed job: Data Engineer
-2025-04-11 15:22:10,610 [INFO] Successfully created embedding for job: NLP Engineer
-2025-04-11 15:22:10,924 [INFO] Processed job: NLP Engineer
-2025-04-11 15:22:11,365 [INFO] Successfully created embedding for job: Computer Vision Engineer
-2025-04-11 15:22:11,641 [INFO] Processed job: Computer Vision Engineer
-2025-04-11 15:22:12,090 [INFO] Successfully created embedding for job: Database Administrator
-2025-04-11 15:22:12,546 [INFO] Processed job: Database Administrator
-2025-04-11 15:22:12,982 [INFO] Successfully created embedding for job: Cloud Data Engineer
-2025-04-11 15:22:13,465 [INFO] Processed job: Cloud Data Engineer
-2025-04-11 15:22:13,916 [INFO] Successfully created embedding for job: Analytics Manager
-2025-04-11 15:22:14,280 [INFO] Processed job: Analytics Manager
-2025-04-11 15:22:14,791 [INFO] Successfully created embedding for job: ML Ops Engineer
-2025-04-11 15:22:15,263 [INFO] Processed job: ML Ops Engineer
-2025-04-11 15:22:15,263 [INFO] Processing complete. Success: 14, Failures: 0
-2025-04-11 15:22:15,264 [ERROR] Failed to process job descriptions for Data Science: unsupported operand type(s) for +=: 'int' and 'dict'
-2025-04-11 15:22:15,264 [INFO] Processing domain: DevOps
-2025-04-11 15:38:51,144 [INFO] Embedding generator initialized successfully
-2025-04-11 15:38:51,145 [INFO] Embedding generator initialized successfully
-2025-04-11 15:38:51,145 [INFO] JobDescriptionProcessor initialized successfully
-2025-04-11 15:38:51,145 [INFO] Processing domain: Software Engineering
-2025-04-11 15:39:40,918 [INFO] Successfully created embedding for job: Senior Software Engineer
-2025-04-11 15:39:42,330 [INFO] Processed job: Senior Software Engineer
-2025-04-11 15:39:42,864 [INFO] Successfully created embedding for job: Frontend Software Engineer
-2025-04-11 15:39:43,431 [INFO] Processed job: Frontend Software Engineer
-2025-04-11 15:39:43,937 [INFO] Successfully created embedding for job: Backend Software Engineer
-2025-04-11 15:39:44,299 [INFO] Processed job: Backend Software Engineer
-2025-04-11 15:39:45,016 [INFO] Successfully created embedding for job: Full Stack Software Engineer
-2025-04-11 15:39:45,488 [INFO] Processed job: Full Stack Software Engineer
-2025-04-11 15:39:46,021 [INFO] Successfully created embedding for job: Mobile App Developer (iOS)
-2025-04-11 15:39:46,444 [INFO] Processed job: Mobile App Developer (iOS)
-2025-04-11 15:39:47,000 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
-2025-04-11 15:39:47,416 [INFO] Processed job: Mobile App Developer (Android)
-2025-04-11 15:39:47,914 [INFO] Successfully created embedding for job: Data Scientist
-2025-04-11 15:39:48,337 [INFO] Processed job: Data Scientist
-2025-04-11 15:39:48,896 [INFO] Successfully created embedding for job: DevOps Engineer
-2025-04-11 15:39:49,181 [INFO] Processed job: DevOps Engineer
-2025-04-11 15:39:49,823 [INFO] Successfully created embedding for job: Cloud Architect
-2025-04-11 15:39:50,471 [INFO] Processed job: Cloud Architect
-2025-04-11 15:39:51,055 [INFO] Successfully created embedding for job: Software Test Engineer
-2025-04-11 15:39:51,483 [INFO] Processed job: Software Test Engineer
-2025-04-11 15:39:51,970 [INFO] Successfully created embedding for job: Database Administrator
-2025-04-11 15:39:52,466 [INFO] Processed job: Database Administrator
-2025-04-11 15:39:53,001 [INFO] Successfully created embedding for job: Security Engineer
-2025-04-11 15:39:53,399 [INFO] Processed job: Security Engineer
-2025-04-11 15:39:54,639 [INFO] Successfully created embedding for job: Embedded Software Engineer
-2025-04-11 15:39:55,081 [INFO] Processed job: Embedded Software Engineer
-2025-04-11 15:39:56,373 [INFO] Successfully created embedding for job: Machine Learning Engineer
-2025-04-11 15:39:56,825 [INFO] Processed job: Machine Learning Engineer
-2025-04-11 15:39:58,026 [INFO] Successfully created embedding for job: Game Developer
-2025-04-11 15:39:58,427 [INFO] Processed job: Game Developer
-2025-04-11 15:39:58,427 [INFO] Processing complete. Success: 15, Failures: 0
-2025-04-11 15:39:58,428 [ERROR] Type error processing domain Software Engineering: unsupported operand type(s) for +=: 'int' and 'dict'
-2025-04-11 15:39:58,428 [INFO] Processing domain: Data Science
-2025-04-11 15:43:25,812 [INFO] Embedding generator initialized successfully
-2025-04-11 15:43:25,812 [INFO] Embedding generator initialized successfully
-2025-04-11 15:43:25,812 [INFO] JobDescriptionProcessor initialized successfully
-2025-04-11 15:43:25,812 [INFO] Processing domain: Software Engineering
-2025-04-11 15:44:13,030 [INFO] Successfully created embedding for job: Senior Software Engineer
-2025-04-11 15:44:14,459 [INFO] Processed job: Senior Software Engineer
-2025-04-11 15:44:14,945 [INFO] Successfully created embedding for job: Frontend Software Engineer
-2025-04-11 15:44:15,426 [INFO] Processed job: Frontend Software Engineer
-2025-04-11 15:44:16,063 [INFO] Successfully created embedding for job: Backend Software Engineer
-2025-04-11 15:44:16,531 [INFO] Processed job: Backend Software Engineer
-2025-04-11 15:44:17,086 [INFO] Successfully created embedding for job: Software Engineer Intern
-2025-04-11 15:44:17,631 [INFO] Processed job: Software Engineer Intern
-2025-04-11 15:44:18,090 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
-2025-04-11 15:44:18,638 [INFO] Processed job: Mobile App Developer (Android)
-2025-04-11 15:44:19,098 [INFO] Successfully created embedding for job: Data Engineer
-2025-04-11 15:44:19,457 [INFO] Processed job: Data Engineer
-2025-04-11 15:44:19,953 [INFO] Successfully created embedding for job: DevOps Engineer
-2025-04-11 15:44:20,428 [INFO] Processed job: DevOps Engineer
-2025-04-11 15:44:20,874 [INFO] Successfully created embedding for job: Full Stack Software Engineer
-2025-04-11 15:44:21,263 [INFO] Processed job: Full Stack Software Engineer
-2025-04-11 15:44:21,708 [INFO] Successfully created embedding for job: Machine Learning Engineer
-2025-04-11 15:44:22,093 [INFO] Processed job: Machine Learning Engineer
-2025-04-11 15:44:22,821 [INFO] Successfully created embedding for job: Security Engineer
-2025-04-11 15:44:23,352 [INFO] Processed job: Security Engineer
-2025-04-11 15:44:23,845 [INFO] Successfully created embedding for job: Game Developer
-2025-04-11 15:44:24,231 [INFO] Processed job: Game Developer
-2025-04-11 15:44:24,870 [INFO] Successfully created embedding for job: Embedded Software Engineer
-2025-04-11 15:44:25,391 [INFO] Processed job: Embedded Software Engineer
-2025-04-11 15:44:25,892 [INFO] Successfully created embedding for job: Cloud Architect
-2025-04-11 15:44:26,242 [INFO] Processed job: Cloud Architect
-2025-04-11 15:44:26,678 [INFO] Successfully created embedding for job: Junior Software Engineer
-2025-04-11 15:44:27,008 [INFO] Processed job: Junior Software Engineer
-2025-04-11 15:44:27,532 [INFO] Successfully created embedding for job: Software Test Engineer
-2025-04-11 15:44:28,135 [INFO] Processed job: Software Test Engineer
-2025-04-11 15:44:28,135 [INFO] Processing complete. Success: 15, Failures: 0
-2025-04-11 15:44:28,138 [INFO] Processing domain: Data Science
-2025-04-11 15:48:20,312 [INFO] Embedding generator initialized successfully
-2025-04-11 15:48:20,312 [INFO] Embedding generator initialized successfully
-2025-04-11 15:48:20,312 [INFO] JobDescriptionProcessor initialized successfully
-2025-04-11 15:48:20,312 [INFO] Processing domain: Software Engineering
-2025-04-11 15:49:09,232 [INFO] Successfully created embedding for job: Senior Software Engineer
-2025-04-11 15:49:10,507 [INFO] Processed job: Senior Software Engineer
-2025-04-11 15:49:11,075 [INFO] Successfully created embedding for job: Frontend Software Engineer
-2025-04-11 15:49:11,557 [INFO] Processed job: Frontend Software Engineer
-2025-04-11 15:49:12,026 [INFO] Successfully created embedding for job: Backend Software Engineer
-2025-04-11 15:49:12,460 [INFO] Processed job: Backend Software Engineer
-2025-04-11 15:49:13,028 [INFO] Successfully created embedding for job: Full Stack Software Engineer
-2025-04-11 15:49:13,474 [INFO] Processed job: Full Stack Software Engineer
-2025-04-11 15:49:13,942 [INFO] Successfully created embedding for job: Mobile App Developer (Android)
-2025-04-11 15:49:14,285 [INFO] Processed job: Mobile App Developer (Android)
-2025-04-11 15:49:14,767 [INFO] Successfully created embedding for job: Mobile App Developer (iOS)
-2025-04-11 15:49:15,186 [INFO] Processed job: Mobile App Developer (iOS)
-2025-04-11 15:49:15,691 [INFO] Successfully created embedding for job: DevOps Engineer
-2025-04-11 15:49:16,053 [INFO] Processed job: DevOps Engineer
-2025-04-11 15:49:16,504 [INFO] Successfully created embedding for job: Data Engineer
-2025-04-11 15:49:16,840 [INFO] Processed job: Data Engineer
-2025-04-11 15:49:17,344 [INFO] Successfully created embedding for job: Database Administrator
-2025-04-11 15:49:17,728 [INFO] Processed job: Database Administrator
-2025-04-11 15:49:18,174 [INFO] Successfully created embedding for job: Security Engineer
-2025-04-11 15:49:18,846 [INFO] Processed job: Security Engineer
-2025-04-11 15:49:19,367 [INFO] Successfully created embedding for job: Cloud Engineer
-2025-04-11 15:49:19,815 [INFO] Processed job: Cloud Engineer
-2025-04-11 15:49:20,286 [INFO] Successfully created embedding for job: Software Architect
-2025-04-11 15:49:20,677 [INFO] Processed job: Software Architect
-2025-04-11 15:49:21,172 [INFO] Successfully created embedding for job: Machine Learning Engineer
-2025-04-11 15:49:21,659 [INFO] Processed job: Machine Learning Engineer
-2025-04-11 15:49:22,143 [INFO] Successfully created embedding for job: Game Developer (Unity)
-2025-04-11 15:49:22,621 [INFO] Processed job: Game Developer (Unity)
-2025-04-11 15:49:23,137 [INFO] Successfully created embedding for job: Embedded Software Engineer
-2025-04-11 15:49:23,480 [INFO] Processed job: Embedded Software Engineer
-2025-04-11 15:49:23,480 [INFO] Processing complete. Success: 15, Failures: 0
-2025-04-11 15:49:23,480 [INFO] Successfully processed 15 job descriptions for Software Engineering
-2025-04-11 15:49:23,481 [INFO] Processing domain: Data Science
-2025-04-11 15:50:12,716 [INFO] Successfully created embedding for job: Senior Data Scientist
-2025-04-11 15:50:13,185 [INFO] Processed job: Senior Data Scientist
-2025-04-11 15:50:13,648 [INFO] Successfully created embedding for job: Data Scientist
-2025-04-11 15:50:14,103 [INFO] Processed job: Data Scientist
-2025-04-11 15:50:15,529 [INFO] Successfully created embedding for job: Junior Data Scientist
-2025-04-11 15:50:15,865 [INFO] Processed job: Junior Data Scientist
-2025-04-11 15:50:16,307 [INFO] Successfully created embedding for job: Machine Learning Engineer
-2025-04-11 15:50:16,732 [INFO] Processed job: Machine Learning Engineer
-2025-04-11 15:50:17,278 [INFO] Successfully created embedding for job: Data Analyst
-2025-04-11 15:50:17,651 [INFO] Processed job: Data Analyst
-2025-04-11 15:50:18,319 [INFO] Successfully created embedding for job: Big Data Engineer
-2025-04-11 15:50:18,720 [INFO] Processed job: Big Data Engineer
-2025-04-11 15:50:19,172 [INFO] Successfully created embedding for job: Business Intelligence Analyst
-2025-04-11 15:50:19,688 [INFO] Processed job: Business Intelligence Analyst
-2025-04-11 15:50:20,196 [INFO] Successfully created embedding for job: Data Engineer
-2025-04-11 15:50:20,698 [INFO] Processed job: Data Engineer
-2025-04-11 15:50:21,213 [INFO] Successfully created embedding for job: NLP Engineer
-2025-04-11 15:50:21,617 [INFO] Processed job: NLP Engineer
-2025-04-11 15:50:22,066 [INFO] Successfully created embedding for job: Computer Vision Engineer
-2025-04-11 15:50:22,513 [INFO] Processed job: Computer Vision Engineer
-2025-04-11 15:50:23,042 [INFO] Successfully created embedding for job: Database Administrator
-2025-04-11 15:50:23,730 [INFO] Processed job: Database Administrator
-2025-04-11 15:50:24,192 [INFO] Successfully created embedding for job: ETL Developer
-2025-04-11 15:50:24,689 [INFO] Processed job: ETL Developer
-2025-04-11 15:50:25,209 [INFO] Successfully created embedding for job: Cloud Data Engineer
-2025-04-11 15:50:25,644 [INFO] Processed job: Cloud Data Engineer
-2025-04-11 15:50:26,130 [INFO] Successfully created embedding for job: Data Visualization Specialist
-2025-04-11 15:50:26,579 [INFO] Processed job: Data Visualization Specialist
-2025-04-11 15:50:26,580 [INFO] Processing complete. Success: 14, Failures: 0
-2025-04-11 15:50:26,580 [INFO] Successfully processed 14 job descriptions for Data Science
-2025-04-11 15:50:26,580 [INFO] Processing domain: DevOps
-2025-04-11 15:51:13,746 [INFO] Successfully created embedding for job: Senior DevOps Engineer
-2025-04-11 15:51:14,132 [INFO] Processed job: Senior DevOps Engineer
-2025-04-11 15:51:14,597 [INFO] Successfully created embedding for job: DevOps Engineer
-2025-04-11 15:51:15,036 [INFO] Processed job: DevOps Engineer
-2025-04-11 15:51:15,525 [INFO] Successfully created embedding for job: Cloud DevOps Engineer
-2025-04-11 15:51:15,966 [INFO] Processed job: Cloud DevOps Engineer
-2025-04-11 15:51:16,414 [INFO] Successfully created embedding for job: DevOps Architect
-2025-04-11 15:51:16,855 [INFO] Processed job: DevOps Architect
-2025-04-11 15:51:17,325 [INFO] Successfully created embedding for job: Site Reliability Engineer (SRE)
-2025-04-11 15:51:17,775 [INFO] Processed job: Site Reliability Engineer (SRE)
-2025-04-11 15:51:18,256 [INFO] Successfully created embedding for job: Junior DevOps Engineer
-2025-04-11 15:51:18,766 [INFO] Processed job: Junior DevOps Engineer
-2025-04-11 15:51:19,276 [INFO] Successfully created embedding for job: DevOps Cloud Specialist
-2025-04-11 15:51:19,921 [INFO] Processed job: DevOps Cloud Specialist
-2025-04-11 15:51:21,430 [INFO] Successfully created embedding for job: DevSecOps Engineer
-2025-04-11 15:51:22,063 [INFO] Processed job: DevSecOps Engineer
-2025-04-11 15:51:22,556 [INFO] Successfully created embedding for job: DevOps Release Manager
-2025-04-11 15:51:23,195 [INFO] Processed job: DevOps Release Manager
-2025-04-11 15:51:23,788 [INFO] Successfully created embedding for job: Cloud Infrastructure Engineer
-2025-04-11 15:51:24,258 [INFO] Processed job: Cloud Infrastructure Engineer
-2025-04-11 15:51:24,718 [INFO] Successfully created embedding for job: Automation Engineer
-2025-04-11 15:51:25,075 [INFO] Processed job: Automation Engineer
-2025-04-11 15:51:25,628 [INFO] Successfully created embedding for job: Platform Engineer
-2025-04-11 15:51:26,461 [INFO] Processed job: Platform Engineer
-2025-04-11 15:51:26,927 [INFO] Successfully created embedding for job: Observability Engineer
-2025-04-11 15:51:27,375 [INFO] Processed job: Observability Engineer
-2025-04-11 15:51:27,881 [INFO] Successfully created embedding for job: Data Center Engineer
-2025-04-11 15:51:28,285 [INFO] Processed job: Data Center Engineer
-2025-04-11 15:51:28,285 [INFO] Processing complete. Success: 14, Failures: 0
-2025-04-11 15:51:28,285 [INFO] Successfully processed 14 job descriptions for DevOps
-2025-04-11 15:51:28,285 [INFO] Processing domain: Machine Learning
-2025-04-11 15:52:14,397 [INFO] Successfully created embedding for job: Senior Machine Learning Engineer
-2025-04-11 15:52:14,736 [INFO] Processed job: Senior Machine Learning Engineer
-2025-04-11 15:52:15,293 [INFO] Successfully created embedding for job: Machine Learning Scientist
-2025-04-11 15:52:15,625 [INFO] Processed job: Machine Learning Scientist
-2025-04-11 15:52:16,112 [INFO] Successfully created embedding for job: Machine Learning Engineer (Entry Level)
-2025-04-11 15:52:16,435 [INFO] Processed job: Machine Learning Engineer (Entry Level)
-2025-04-11 15:52:16,866 [INFO] Successfully created embedding for job: ML Ops Engineer
-2025-04-11 15:52:17,197 [INFO] Processed job: ML Ops Engineer
-2025-04-11 15:52:17,650 [INFO] Successfully created embedding for job: Data Scientist
-2025-04-11 15:52:18,167 [INFO] Processed job: Data Scientist
-2025-04-11 15:52:18,684 [INFO] Successfully created embedding for job: Computer Vision Engineer
-2025-04-11 15:52:19,070 [INFO] Processed job: Computer Vision Engineer
-2025-04-11 15:52:19,593 [INFO] Successfully created embedding for job: NLP Engineer
-2025-04-11 15:52:20,108 [INFO] Processed job: NLP Engineer
-2025-04-11 15:52:20,617 [INFO] Successfully created embedding for job: Reinforcement Learning Engineer
-2025-04-11 15:52:21,036 [INFO] Processed job: Reinforcement Learning Engineer
-2025-04-11 15:52:21,475 [INFO] Successfully created embedding for job: Machine Learning Intern
-2025-04-11 15:52:21,875 [INFO] Processed job: Machine Learning Intern
-2025-04-11 15:52:22,559 [INFO] Successfully created embedding for job: Principal Machine Learning Engineer
-2025-04-11 15:52:22,955 [INFO] Processed job: Principal Machine Learning Engineer
-2025-04-11 15:52:23,485 [INFO] Successfully created embedding for job: Applied Machine Learning Scientist
-2025-04-11 15:52:24,087 [INFO] Processed job: Applied Machine Learning Scientist
-2025-04-11 15:52:24,577 [INFO] Successfully created embedding for job: Machine Learning Infrastructure Engineer
-2025-04-11 15:52:25,205 [INFO] Processed job: Machine Learning Infrastructure Engineer
-2025-04-11 15:52:25,667 [INFO] Successfully created embedding for job: AI Research Engineer
-2025-04-11 15:52:26,184 [INFO] Processed job: AI Research Engineer
-2025-04-11 15:52:26,613 [INFO] Successfully created embedding for job: Machine Learning Product Manager
-2025-04-11 15:52:27,005 [INFO] Processed job: Machine Learning Product Manager
-2025-04-11 15:52:27,479 [INFO] Successfully created embedding for job: MLOps Engineer (Cloud)
-2025-04-11 15:52:27,920 [INFO] Processed job: MLOps Engineer (Cloud)
-2025-04-11 15:52:27,920 [INFO] Processing complete. Success: 15, Failures: 0
-2025-04-11 15:52:27,920 [INFO] Successfully processed 15 job descriptions for Machine Learning
-2025-04-11 15:52:27,921 [INFO] Processing domain: Quality Assurance
-2025-04-11 15:53:15,090 [INFO] Successfully created embedding for job: Senior QA Automation Engineer
-2025-04-11 15:53:15,466 [INFO] Processed job: Senior QA Automation Engineer
-2025-04-11 15:53:15,914 [INFO] Successfully created embedding for job: QA Test Analyst
-2025-04-11 15:53:16,268 [INFO] Processed job: QA Test Analyst
-2025-04-11 15:53:16,736 [INFO] Successfully created embedding for job: QA Engineer (Performance Testing)
-2025-04-11 15:53:17,149 [INFO] Processed job: QA Engineer (Performance Testing)
-2025-04-11 15:53:17,608 [INFO] Successfully created embedding for job: SDET (Software Development Engineer in Test)
-2025-04-11 15:53:17,985 [INFO] Processed job: SDET (Software Development Engineer in Test)
-2025-04-11 15:53:18,417 [INFO] Successfully created embedding for job: QA Lead
-2025-04-11 15:53:18,834 [INFO] Processed job: QA Lead
-2025-04-11 15:53:19,293 [INFO] Successfully created embedding for job: Junior QA Analyst
-2025-04-11 15:53:19,614 [INFO] Processed job: Junior QA Analyst
-2025-04-11 15:53:20,113 [INFO] Successfully created embedding for job: QA Automation Engineer (Mobile)
-2025-04-11 15:53:20,544 [INFO] Processed job: QA Automation Engineer (Mobile)
-2025-04-11 15:53:21,033 [INFO] Successfully created embedding for job: Security QA Engineer
-2025-04-11 15:53:21,385 [INFO] Processed job: Security QA Engineer
-2025-04-11 15:53:21,855 [INFO] Successfully created embedding for job: QA Test Engineer (Database)
-2025-04-11 15:53:22,280 [INFO] Processed job: QA Test Engineer (Database)
-2025-04-11 15:53:22,774 [INFO] Successfully created embedding for job: Test Automation Architect
-2025-04-11 15:53:23,218 [INFO] Processed job: Test Automation Architect
-2025-04-11 15:53:23,687 [INFO] Successfully created embedding for job: Cloud QA Engineer
-2025-04-11 15:53:24,144 [INFO] Processed job: Cloud QA Engineer
-2025-04-11 15:53:24,619 [INFO] Successfully created embedding for job: Game QA Tester
-2025-04-11 15:53:24,968 [INFO] Processed job: Game QA Tester
-2025-04-11 15:53:25,433 [INFO] Successfully created embedding for job: UI/UX QA Tester
-2025-04-11 15:53:25,788 [INFO] Processed job: UI/UX QA Tester
-2025-04-11 15:53:26,256 [INFO] Successfully created embedding for job: Data QA Analyst
-2025-04-11 15:53:26,771 [INFO] Processed job: Data QA Analyst
-2025-04-11 15:53:26,771 [INFO] Processing complete. Success: 14, Failures: 0
-2025-04-11 15:53:26,772 [INFO] Successfully processed 14 job descriptions for Quality Assurance
-2025-04-11 15:53:26,772 [INFO] Processing domain: Project Management
-2025-04-11 15:54:14,182 [INFO] Successfully created embedding for job: Senior Project Manager
-2025-04-11 15:54:14,648 [INFO] Processed job: Senior Project Manager
-2025-04-11 15:54:15,203 [INFO] Successfully created embedding for job: Project Manager
-2025-04-11 15:54:15,608 [INFO] Processed job: Project Manager
-2025-04-11 15:54:16,059 [INFO] Successfully created embedding for job: Junior Project Manager
-2025-04-11 15:54:16,490 [INFO] Processed job: Junior Project Manager
-2025-04-11 15:54:16,950 [INFO] Successfully created embedding for job: IT Project Manager
-2025-04-11 15:54:17,428 [INFO] Processed job: IT Project Manager
-2025-04-11 15:54:17,960 [INFO] Successfully created embedding for job: Construction Project Manager
-2025-04-11 15:54:18,404 [INFO] Processed job: Construction Project Manager
-2025-04-11 15:54:18,862 [INFO] Successfully created embedding for job: Program Manager
-2025-04-11 15:54:19,278 [INFO] Processed job: Program Manager
-2025-04-11 15:54:19,811 [INFO] Successfully created embedding for job: Marketing Project Manager
-2025-04-11 15:54:20,137 [INFO] Processed job: Marketing Project Manager
-2025-04-11 15:54:20,626 [INFO] Successfully created embedding for job: Product Project Manager
-2025-04-11 15:54:20,964 [INFO] Processed job: Product Project Manager
-2025-04-11 15:54:21,412 [INFO] Successfully created embedding for job: Scrum Master
-2025-04-11 15:54:21,822 [INFO] Processed job: Scrum Master
-2025-04-11 15:54:22,269 [INFO] Successfully created embedding for job: Portfolio Manager
-2025-04-11 15:54:22,724 [INFO] Processed job: Portfolio Manager
-2025-04-11 15:54:23,199 [INFO] Successfully created embedding for job: Project Controls Manager
-2025-04-11 15:54:23,614 [INFO] Processed job: Project Controls Manager
-2025-04-11 15:54:24,113 [INFO] Successfully created embedding for job: Agile Project Manager
-2025-04-11 15:54:24,489 [INFO] Processed job: Agile Project Manager
-2025-04-11 15:54:25,027 [INFO] Successfully created embedding for job: Risk Manager
-2025-04-11 15:54:25,398 [INFO] Processed job: Risk Manager
-2025-04-11 15:54:25,953 [INFO] Successfully created embedding for job: Waterfall Project Manager
-2025-04-11 15:54:26,327 [INFO] Processed job: Waterfall Project Manager
-2025-04-11 15:54:26,328 [INFO] Processing complete. Success: 14, Failures: 0
-2025-04-11 15:54:26,328 [INFO] Successfully processed 14 job descriptions for Project Management
-2025-04-11 15:54:26,328 [INFO] Processing domain: Business Analytics
-2025-04-11 15:55:13,142 [INFO] Successfully created embedding for job: Senior Business Analyst
-2025-04-11 15:55:13,673 [INFO] Processed job: Senior Business Analyst
-2025-04-11 15:55:14,180 [INFO] Successfully created embedding for job: Data Analyst
-2025-04-11 15:55:14,544 [INFO] Processed job: Data Analyst
-2025-04-11 15:55:15,001 [INFO] Successfully created embedding for job: Business Intelligence Analyst
-2025-04-11 15:55:15,351 [INFO] Processed job: Business Intelligence Analyst
-2025-04-11 15:55:15,925 [INFO] Successfully created embedding for job: Marketing Analytics Manager
-2025-04-11 15:55:16,303 [INFO] Processed job: Marketing Analytics Manager
-2025-04-11 15:55:16,848 [INFO] Successfully created embedding for job: Financial Analyst
-2025-04-11 15:55:17,233 [INFO] Processed job: Financial Analyst
-2025-04-11 15:55:17,690 [INFO] Successfully created embedding for job: Predictive Analyst
-2025-04-11 15:55:18,071 [INFO] Processed job: Predictive Analyst
-2025-04-11 15:55:18,542 [INFO] Successfully created embedding for job: BI Developer
-2025-04-11 15:55:18,919 [INFO] Processed job: BI Developer
-2025-04-11 15:55:19,409 [INFO] Successfully created embedding for job: Data Scientist
-2025-04-11 15:55:20,015 [INFO] Processed job: Data Scientist
-2025-04-11 15:55:20,531 [INFO] Successfully created embedding for job: Junior Business Analyst
-2025-04-11 15:55:20,983 [INFO] Processed job: Junior Business Analyst
-2025-04-11 15:55:21,556 [INFO] Successfully created embedding for job: Supply Chain Analyst
-2025-04-11 15:55:21,977 [INFO] Processed job: Supply Chain Analyst
-2025-04-11 15:55:22,476 [INFO] Successfully created embedding for job: Pricing Analyst
-2025-04-11 15:55:23,390 [INFO] Processed job: Pricing Analyst
-2025-04-11 15:55:23,877 [INFO] Successfully created embedding for job: Customer Analytics Manager
-2025-04-11 15:55:24,364 [INFO] Processed job: Customer Analytics Manager
-2025-04-11 15:55:24,834 [INFO] Successfully created embedding for job: Operations Analyst
-2025-04-11 15:55:25,219 [INFO] Processed job: Operations Analyst
-2025-04-11 15:55:25,750 [INFO] Successfully created embedding for job: Retail Analyst
-2025-04-11 15:55:26,093 [INFO] Processed job: Retail Analyst
-2025-04-11 15:55:26,538 [INFO] Successfully created embedding for job: Consultant, Business Analytics
-2025-04-11 15:55:26,803 [INFO] Processed job: Consultant, Business Analytics
-2025-04-11 15:55:26,807 [INFO] Processing complete. Success: 15, Failures: 0
-2025-04-11 15:55:26,808 [INFO] Successfully processed 15 job descriptions for Business Analytics
-2025-04-11 15:55:26,809 [INFO] Successfully generated 101 job descriptions across 7 domains
-2025-04-11 19:08:44,752 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:44,753 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:47,874 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:47,874 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:52,691 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:52,691 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:54,279 [INFO] Embedding generator initialized successfully
-2025-04-11 19:08:54,280 [INFO] Embedding generator initialized successfully
-2025-04-11 19:09:10,936 [INFO] Successfully created embedding for resume: Nishan Sangeeth
-2025-04-11 19:09:12,636 [INFO] Successfully processed and stored resume for Nishan Sangeeth
-2025-04-17 13:32:55,687 [INFO] Embedding generator initialized successfully
-2025-04-17 13:32:55,688 [INFO] Embedding generator initialized successfully
-2025-04-17 13:33:02,730 [INFO] Embedding generator initialized successfully
-2025-04-17 13:33:02,731 [INFO] Embedding generator initialized successfully
-2025-04-17 13:33:03,953 [INFO] Embedding generator initialized successfully
-2025-04-17 13:33:03,955 [INFO] Embedding generator initialized successfully
-2025-04-17 13:33:21,659 [INFO] Successfully created embedding for resume: Nishan Sangeeth
-2025-04-17 13:33:23,199 [INFO] Successfully processed and stored resume for Nishan Sangeeth
-2025-04-17 13:53:15,277 [INFO] Embedding generator initialized successfully
-2025-04-17 13:53:15,277 [INFO] Embedding generator initialized successfully
+2025-05-02 18:22:30,126 [INFO] Embedding generator initialized successfully
+2025-05-02 18:22:30,192 [INFO] Embedding generator initialized successfully
+2025-05-02 18:22:30,206 [ERROR] Error processing LinkedIn profile: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+2025-05-02 18:22:30,206 [ERROR] Error processing LinkedIn profile: Profile processing failed: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 77, in scraping_linkedin_content
+    raw_data = await self.fetch_raw_profile(linkedin_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 26, in fetch_raw_profile
+    validate_url = self.validator.validate_linkedin_url(linkedin_url)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/validation/linkedin_validator.py", line 15, in validate_linkedin_url
+    return any(url.startswith(prefix) for prefix in valid_prefixes)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/validation/linkedin_validator.py", line 15, in <genexpr>
+    return any(url.startswith(prefix) for prefix in valid_prefixes)
+               ^^^^^^^^^^^^^^
+AttributeError: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=linkedin_url)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 98, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+2025-05-02 18:27:18,212 [INFO] Embedding generator initialized successfully
+2025-05-02 18:27:18,269 [INFO] Embedding generator initialized successfully
+2025-05-02 18:28:09,941 [INFO] Embedding generator initialized successfully
+2025-05-02 18:28:09,997 [INFO] Embedding generator initialized successfully
+2025-05-02 18:28:43,017 [INFO] Embedding generator initialized successfully
+2025-05-02 18:28:43,076 [INFO] Embedding generator initialized successfully
+2025-05-02 18:28:43,090 [ERROR] Error processing LinkedIn profile: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+2025-05-02 18:28:43,090 [ERROR] Error processing LinkedIn profile: Profile processing failed: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 85, in scraping_linkedin_content
+    raw_data = await self.fetch_raw_profile(linkedin_url)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 26, in fetch_raw_profile
+    validate_url = self.validator.validate_linkedin_url(linkedin_url)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/validation/linkedin_validator.py", line 15, in validate_linkedin_url
+    return any(url.startswith(prefix) for prefix in valid_prefixes)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/validation/linkedin_validator.py", line 15, in <genexpr>
+    return any(url.startswith(prefix) for prefix in valid_prefixes)
+               ^^^^^^^^^^^^^^
+AttributeError: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=linkedin_url)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 106, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 'pydantic_core._pydantic_core.Url' object has no attribute 'startswith'
+2025-05-02 18:29:06,961 [INFO] Embedding generator initialized successfully
+2025-05-02 18:29:07,020 [INFO] Embedding generator initialized successfully
+2025-05-02 18:29:07,034 [ERROR] Unexpected error: Object of type Url is not JSON serializable
+2025-05-02 18:29:07,034 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:29:07,034 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 97, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 106, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:37:48,185 [INFO] Embedding generator initialized successfully
+2025-05-02 18:37:48,266 [INFO] Embedding generator initialized successfully
+2025-05-02 18:37:56,340 [ERROR] Unexpected error: Object of type Url is not JSON serializable
+2025-05-02 18:37:56,340 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:37:56,340 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 98, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 107, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:40:59,820 [INFO] Embedding generator initialized successfully
+2025-05-02 18:40:59,904 [INFO] Embedding generator initialized successfully
+2025-05-02 18:41:00,380 [ERROR] Unexpected error: 'dict' object has no attribute 'dict'
+2025-05-02 18:41:00,380 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:41:00,381 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 118, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 127, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "Unexpected err...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:41:41,372 [INFO] Embedding generator initialized successfully
+2025-05-02 18:41:41,453 [INFO] Embedding generator initialized successfully
+2025-05-02 18:41:41,474 [ERROR] API request failed: No connection adapters were found for '8f40138a7b22-4b6d-8b9a-8474a3de12bc?project=https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook'
+2025-05-02 18:41:41,474 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:41:41,474 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 118, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 127, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:43:05,252 [INFO] Embedding generator initialized successfully
+2025-05-02 18:43:05,316 [INFO] Embedding generator initialized successfully
+2025-05-02 18:43:23,659 [INFO] Embedding generator initialized successfully
+2025-05-02 18:43:23,712 [INFO] Embedding generator initialized successfully
+2025-05-02 18:43:41,786 [ERROR] API request failed: No connection adapters were found for '8f40138a7b22-4b6d-8b9a-8474a3de12bc?project=https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook'
+2025-05-02 18:43:41,786 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:43:41,787 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': "API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:45:04,870 [INFO] Embedding generator initialized successfully
+2025-05-02 18:45:04,953 [INFO] Embedding generator initialized successfully
+2025-05-02 18:46:28,933 [INFO] Embedding generator initialized successfully
+2025-05-02 18:46:28,994 [INFO] Embedding generator initialized successfully
+2025-05-02 18:46:39,174 [INFO] Embedding generator initialized successfully
+2025-05-02 18:46:39,240 [INFO] Embedding generator initialized successfully
+2025-05-02 18:46:39,256 [ERROR] Unexpected error: Timeout value connect was 30, but it must be an int, float or None.
+2025-05-02 18:46:39,257 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:46:39,257 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'Unexpected err...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:47:54,919 [INFO] Embedding generator initialized successfully
+2025-05-02 18:47:54,981 [INFO] Embedding generator initialized successfully
+2025-05-02 18:47:56,106 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 18:47:56,107 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:47:56,107 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:48:47,149 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 18:48:47,150 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:48:47,150 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:51:23,174 [INFO] Embedding generator initialized successfully
+2025-05-02 18:51:23,232 [INFO] Embedding generator initialized successfully
+2025-05-02 18:51:38,317 [INFO] Embedding generator initialized successfully
+2025-05-02 18:51:38,407 [INFO] Embedding generator initialized successfully
+2025-05-02 18:52:26,064 [INFO] Embedding generator initialized successfully
+2025-05-02 18:52:26,130 [INFO] Embedding generator initialized successfully
+2025-05-02 18:52:27,454 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 18:52:27,454 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:52:27,455 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:52:41,279 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 18:52:41,280 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:52:41,280 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:52:50,186 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 18:52:50,187 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 18:52:50,187 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:00:27,728 [INFO] Embedding generator initialized successfully
+2025-05-02 19:00:27,821 [INFO] Embedding generator initialized successfully
+2025-05-02 19:01:04,358 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 19:01:04,359 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:01:04,359 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:03:53,286 [INFO] Embedding generator initialized successfully
+2025-05-02 19:03:53,430 [INFO] Embedding generator initialized successfully
+2025-05-02 19:03:56,282 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 19:03:56,282 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:03:56,282 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 119, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 128, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:11:15,000 [INFO] Embedding generator initialized successfully
+2025-05-02 19:11:15,079 [INFO] Embedding generator initialized successfully
+2025-05-02 19:12:31,910 [INFO] Embedding generator initialized successfully
+2025-05-02 19:12:31,984 [INFO] Embedding generator initialized successfully
+2025-05-02 19:12:54,554 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 19:12:54,555 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:12:54,555 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 120, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 129, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:13:33,558 [INFO] Embedding generator initialized successfully
+2025-05-02 19:13:33,682 [INFO] Embedding generator initialized successfully
+2025-05-02 19:13:40,720 [INFO] Embedding generator initialized successfully
+2025-05-02 19:13:40,830 [INFO] Embedding generator initialized successfully
+2025-05-02 19:14:02,687 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 19:14:02,688 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:14:02,689 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 120, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 129, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:17:22,620 [INFO] Embedding generator initialized successfully
+2025-05-02 19:17:22,798 [INFO] Embedding generator initialized successfully
+2025-05-02 19:17:28,285 [INFO] Embedding generator initialized successfully
+2025-05-02 19:17:28,396 [INFO] Embedding generator initialized successfully
+2025-05-02 19:17:29,193 [ERROR] API request failed: 403 Client Error: Forbidden for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 19:17:29,194 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:17:29,194 [ERROR] Error processing LinkedIn profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 121, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 46, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 130, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 19:24:42,693 [INFO] Embedding generator initialized successfully
+2025-05-02 19:24:42,806 [INFO] Embedding generator initialized successfully
+2025-05-02 19:27:32,377 [INFO] Embedding generator initialized successfully
+2025-05-02 19:27:32,466 [INFO] Embedding generator initialized successfully
+2025-05-02 19:28:07,936 [INFO] Embedding generator initialized successfully
+2025-05-02 19:28:08,044 [INFO] Embedding generator initialized successfully
+2025-05-02 19:29:32,870 [INFO] File saved at: storage/resumes/resume_20250502_192932.png
+2025-05-02 19:29:33,989 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-02 19:29:46,789 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwrt0cecmIYprXYbDV1UjZ7oVOjjBo-jm_Km4LV9a59lx-ZgryEkS2D0z8J1qq1S3sOvsqbi18SHVr2T5Fhvht0oJXU9wHeUsCJkpxoYTg&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-02 19:29:46,790 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-02 19:29:51,398 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-02 19:29:51,399 [INFO] AFC remote call 1 is done.
+2025-05-02 19:30:00,415 [INFO] Successfully created embedding for resume: NISHAN SANGEETH
+2025-05-02 19:30:02,208 [INFO] Successfully processed and stored resume for NISHAN SANGEETH
+2025-05-02 19:30:03,224 [INFO] Successfully created embedding for resume: None
+2025-05-02 19:30:19,124 [INFO] Embedding generator initialized successfully
+2025-05-02 19:30:19,183 [INFO] Embedding generator initialized successfully
+2025-05-02 19:30:25,544 [INFO] File saved at: storage/resumes/resume_20250502_193025.png
+2025-05-02 19:30:26,318 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-02 19:30:33,581 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwrc8O8pEdpAOOXPPy7JjXgUjoqf63Mn2ZyG7hk0w6Az-Rbsyy1lfyNbNFzpWiSwedxCVkjXpkXg50FwBxqG8U2AdMpFO_-dZPrvlLlDVg&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-02 19:30:33,582 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-02 19:30:37,739 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-02 19:30:37,741 [INFO] AFC remote call 1 is done.
+2025-05-02 19:30:46,086 [INFO] Successfully created embedding for resume: NISHAN SANGEETH
+2025-05-02 19:30:47,471 [INFO] Successfully processed and stored resume for NISHAN SANGEETH
+2025-05-02 19:30:48,032 [INFO] Successfully created embedding for resume: None
+2025-05-02 20:17:12,461 [INFO] Embedding generator initialized successfully
+2025-05-02 20:17:12,543 [INFO] Embedding generator initialized successfully
+2025-05-02 20:40:09,317 [INFO] Embedding generator initialized successfully
+2025-05-02 20:40:09,377 [INFO] Embedding generator initialized successfully
+2025-05-02 20:40:22,803 [INFO] Embedding generator initialized successfully
+2025-05-02 20:40:22,887 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:15,735 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:15,790 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:15,793 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:15,828 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:26,619 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:26,706 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:26,710 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:26,762 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:51,961 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:52,019 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:52,023 [INFO] Embedding generator initialized successfully
+2025-05-02 20:46:52,059 [INFO] Embedding generator initialized successfully
+2025-05-02 20:47:08,244 [INFO] File saved at: storage/resumes/resume_20250502_204708.png
+2025-05-02 20:47:09,243 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-02 20:47:17,128 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwpVG_PWLEyYgalgw9c_MdHk3OOQnxraBi-TYmyM2DVGSyxkyp4nB7UZRJ1AhSPE2vQqLta6QRq6YbmlaPuAg78PqZa0ckgouI3XfZIhK28&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-02 20:47:17,128 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-02 20:47:21,941 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-02 20:47:21,945 [INFO] AFC remote call 1 is done.
+2025-05-02 20:47:31,684 [INFO] Successfully created embedding for resume: NISHAN SANGEETH
+2025-05-02 20:47:33,144 [INFO] Successfully processed and stored resume for NISHAN SANGEETH
+2025-05-02 20:47:33,628 [INFO] Successfully created embedding for resume: None
+2025-05-02 20:48:02,391 [WARNING] Invalid resume detected: The provided text is a structured data representation of a LinkedIn profile, not a resume in a human-readable format. While it contains information typically found in a resume (name, work experience, skills implicitly through descriptions), it's presented in a machine-readable format using Python's ObjectId, datetime objects, and other data structures.  A true resume would be formatted for human consumption, typically in a document (e.g., .doc, .pdf)  with clear section headings and a visually appealing layout.
+2025-05-02 20:48:02,905 [INFO] Successfully created embedding for resume: None
+2025-05-02 20:58:50,529 [INFO] Embedding generator initialized successfully
+2025-05-02 20:58:50,587 [INFO] Embedding generator initialized successfully
+2025-05-02 20:58:50,592 [INFO] Embedding generator initialized successfully
+2025-05-02 20:58:50,630 [INFO] Embedding generator initialized successfully
+2025-05-02 20:59:38,698 [INFO] Embedding generator initialized successfully
+2025-05-02 20:59:38,753 [INFO] Embedding generator initialized successfully
+2025-05-02 20:59:38,757 [INFO] Embedding generator initialized successfully
+2025-05-02 20:59:38,794 [INFO] Embedding generator initialized successfully
+2025-05-02 21:03:19,848 [INFO] Embedding generator initialized successfully
+2025-05-02 21:03:19,913 [INFO] Embedding generator initialized successfully
+2025-05-02 21:03:19,917 [INFO] Embedding generator initialized successfully
+2025-05-02 21:03:19,949 [INFO] Embedding generator initialized successfully
+2025-05-02 21:03:58,724 [ERROR] JSON Decode Error: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/utils/helpers.py", line 21, in extract_and_validate_json
+    json.loads(cleaned_text)
+    ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-05-02 21:03:58,729 [ERROR] Invalid JSON content extracted from resume
+2025-05-02 21:03:58,729 [ERROR] Failed to process resume data
+2025-05-02 21:03:59,237 [INFO] Successfully created embedding for resume: None
+2025-05-02 21:05:28,523 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:28,610 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:28,616 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:28,665 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:58,827 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:58,896 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:58,899 [INFO] Embedding generator initialized successfully
+2025-05-02 21:05:58,940 [INFO] Embedding generator initialized successfully
+2025-05-02 21:06:48,199 [ERROR] Error processing resume: ResumeService.process_resume_data() got an unexpected keyword argument 'resume_text'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 54, in upload_linkedin_profile
+    resume_data = await resume_service.process_resume_data(resume_text=profile_data)
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ResumeService.process_resume_data() got an unexpected keyword argument 'resume_text'
+2025-05-02 21:07:41,340 [INFO] Embedding generator initialized successfully
+2025-05-02 21:07:41,425 [INFO] Embedding generator initialized successfully
+2025-05-02 21:07:41,430 [INFO] Embedding generator initialized successfully
+2025-05-02 21:07:41,483 [INFO] Embedding generator initialized successfully
+2025-05-02 21:07:57,732 [INFO] Successfully created embedding for resume: DMN Sangeeth
+2025-05-02 21:07:57,732 [ERROR] Error processing resume: 2 validation errors for Resume
+email
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+phone
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.9/v/string_type
+2025-05-02 21:07:57,732 [ERROR] Failed to process resume data
+2025-05-02 21:07:59,268 [INFO] Successfully created embedding for resume: None
+2025-05-02 21:10:18,096 [INFO] Embedding generator initialized successfully
+2025-05-02 21:10:18,186 [INFO] Embedding generator initialized successfully
+2025-05-02 21:10:18,190 [INFO] Embedding generator initialized successfully
+2025-05-02 21:10:18,226 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:01,520 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:01,604 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:01,610 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:01,665 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:04,758 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:04,816 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:04,820 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:04,859 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:22,392 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:22,451 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:22,454 [INFO] Embedding generator initialized successfully
+2025-05-02 21:11:22,490 [INFO] Embedding generator initialized successfully
+2025-05-02 21:32:50,853 [WARNING] Invalid resume detected: The provided text is not a resume in its presented format.  While it contains resume-like data such as name, work experience, and skills (although embedded in a non-standard way), the structure is that of a database record or JSON representation of a person's profile.  It lacks the typical formatting and presentation of a human-readable resume. Key elements such as contact information are missing or incomplete ('email=None', 'phone=None').  The data is structured for machine processing, not direct human consumption as a resume.
+2025-05-02 21:32:51,386 [INFO] Successfully created embedding for resume: None
+2025-05-02 22:48:28,958 [INFO] Embedding generator initialized successfully
+2025-05-02 22:48:29,013 [INFO] Embedding generator initialized successfully
+2025-05-02 22:48:29,017 [INFO] Embedding generator initialized successfully
+2025-05-02 22:48:29,049 [INFO] Embedding generator initialized successfully
+2025-05-02 22:49:41,521 [INFO] Embedding generator initialized successfully
+2025-05-02 22:49:41,578 [INFO] Embedding generator initialized successfully
+2025-05-02 22:49:41,581 [INFO] Embedding generator initialized successfully
+2025-05-02 22:49:41,617 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:32,275 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:32,355 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:32,359 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:32,409 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:35,296 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:35,353 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:35,357 [INFO] Embedding generator initialized successfully
+2025-05-02 22:53:35,392 [INFO] Embedding generator initialized successfully
+2025-05-02 22:54:02,926 [INFO] Embedding generator initialized successfully
+2025-05-02 22:54:02,981 [INFO] Embedding generator initialized successfully
+2025-05-02 22:54:02,985 [INFO] Embedding generator initialized successfully
+2025-05-02 22:54:03,018 [INFO] Embedding generator initialized successfully
+2025-05-02 22:56:59,196 [INFO] Embedding generator initialized successfully
+2025-05-02 22:56:59,293 [INFO] Embedding generator initialized successfully
+2025-05-02 22:56:59,297 [INFO] Embedding generator initialized successfully
+2025-05-02 22:56:59,335 [INFO] Embedding generator initialized successfully
+2025-05-02 22:57:38,792 [INFO] Embedding generator initialized successfully
+2025-05-02 22:57:38,852 [INFO] Embedding generator initialized successfully
+2025-05-02 22:57:38,856 [INFO] Embedding generator initialized successfully
+2025-05-02 22:57:38,892 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:26,790 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:26,843 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:26,846 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:26,879 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:39,822 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:39,903 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:39,908 [INFO] Embedding generator initialized successfully
+2025-05-02 22:58:39,957 [INFO] Embedding generator initialized successfully
+2025-05-02 23:01:07,467 [INFO] Embedding generator initialized successfully
+2025-05-02 23:01:07,526 [INFO] Embedding generator initialized successfully
+2025-05-02 23:01:07,531 [INFO] Embedding generator initialized successfully
+2025-05-02 23:01:07,567 [INFO] Embedding generator initialized successfully
+2025-05-02 23:02:34,551 [INFO] Embedding generator initialized successfully
+2025-05-02 23:02:34,611 [INFO] Embedding generator initialized successfully
+2025-05-02 23:02:34,615 [INFO] Embedding generator initialized successfully
+2025-05-02 23:02:34,649 [INFO] Embedding generator initialized successfully
+2025-05-02 23:06:02,757 [INFO] Embedding generator initialized successfully
+2025-05-02 23:06:02,840 [INFO] Embedding generator initialized successfully
+2025-05-02 23:06:02,845 [INFO] Embedding generator initialized successfully
+2025-05-02 23:06:02,895 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:31,290 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:31,382 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:31,447 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:31,455 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:31,504 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:34,418 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:34,474 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:34,509 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:34,512 [INFO] Embedding generator initialized successfully
+2025-05-02 23:07:34,547 [INFO] Embedding generator initialized successfully
+2025-05-02 23:08:32,512 [ERROR] Error processing resume: 'ResumeService' object has no attribute 'process_resume_data'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 54, in upload_linkedin_profile
+    resume_data = await resume_service.process_resume_data(profile_data)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ResumeService' object has no attribute 'process_resume_data'. Did you mean: 'process_resume_bytes'?
+2025-05-02 23:10:54,479 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:54,534 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:54,568 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:54,572 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:54,605 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:59,627 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:59,711 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:59,762 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:59,767 [INFO] Embedding generator initialized successfully
+2025-05-02 23:10:59,818 [INFO] Embedding generator initialized successfully
+2025-05-02 23:11:11,201 [WARNING] Invalid resume detected: The profile contains core elements like name, headline, and substantial work experience details.  While optional elements like a summary, skills, and contact information are missing or empty, this is not critical for basic profile validation.
+2025-05-02 23:11:11,755 [INFO] Successfully created embedding for resume: None
+2025-05-02 23:12:23,491 [INFO] Embedding generator initialized successfully
+2025-05-02 23:12:23,580 [INFO] Embedding generator initialized successfully
+2025-05-02 23:12:23,630 [INFO] Embedding generator initialized successfully
+2025-05-02 23:12:23,635 [INFO] Embedding generator initialized successfully
+2025-05-02 23:12:23,685 [INFO] Embedding generator initialized successfully
+2025-05-02 23:12:29,075 [INFO] File saved at: storage/resumes/resume_20250502_231229.png
+2025-05-02 23:12:30,592 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-02 23:12:37,760 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwpCdNqsHtVSjk-v-78qu9qGfX2YeS-w2XqINFV4gnQGGFeE6HmETk6SpIYyz2U74xSKrbhWd2TVBCM2TcoNMO7jXGDAHPTGalTdgObpGw&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-02 23:12:37,762 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-02 23:12:42,472 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-02 23:12:42,475 [INFO] AFC remote call 1 is done.
+2025-05-02 23:12:51,675 [INFO] Successfully created embedding for resume: NISHAN SANGEETH
+2025-05-02 23:12:53,394 [INFO] Successfully processed and stored resume for NISHAN SANGEETH
+2025-05-02 23:12:53,952 [INFO] Successfully created embedding for resume: None
+2025-05-02 23:33:09,986 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:10,040 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:10,073 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:10,076 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:10,109 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:47,855 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:47,909 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:47,943 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:47,948 [INFO] Embedding generator initialized successfully
+2025-05-02 23:33:47,982 [INFO] Embedding generator initialized successfully
+2025-05-02 23:34:19,768 [INFO] Embedding generator initialized successfully
+2025-05-02 23:34:19,828 [INFO] Embedding generator initialized successfully
+2025-05-02 23:34:19,863 [INFO] Embedding generator initialized successfully
+2025-05-02 23:34:19,867 [INFO] Embedding generator initialized successfully
+2025-05-02 23:34:19,906 [INFO] Embedding generator initialized successfully
+2025-05-02 23:35:26,500 [INFO] Embedding generator initialized successfully
+2025-05-02 23:35:26,554 [INFO] Embedding generator initialized successfully
+2025-05-02 23:35:26,586 [INFO] Embedding generator initialized successfully
+2025-05-02 23:35:26,589 [INFO] Embedding generator initialized successfully
+2025-05-02 23:35:26,620 [INFO] Embedding generator initialized successfully
+2025-05-02 23:35:48,866 [ERROR] API request failed: 400 Client Error: Bad Request for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 23:35:48,868 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 23:35:48,868 [ERROR] Error processing profile: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 109, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 52, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 118, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 23:37:31,397 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:31,454 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:31,492 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:31,496 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:31,528 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:48,006 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:48,085 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:48,137 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:48,141 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:48,191 [INFO] Embedding generator initialized successfully
+2025-05-02 23:37:49,174 [ERROR] API request failed: 400 Client Error: Bad Request for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 23:37:49,174 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 23:37:49,174 [ERROR] Error processing resume: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 109, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 52, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 118, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 23:38:25,028 [INFO] Embedding generator initialized successfully
+2025-05-02 23:38:25,079 [INFO] Embedding generator initialized successfully
+2025-05-02 23:38:25,114 [INFO] Embedding generator initialized successfully
+2025-05-02 23:38:25,118 [INFO] Embedding generator initialized successfully
+2025-05-02 23:38:25,150 [INFO] Embedding generator initialized successfully
+2025-05-02 23:38:39,067 [ERROR] API request failed: 400 Client Error: Bad Request for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 23:38:39,067 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 23:38:39,067 [ERROR] Error processing resume: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 109, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 52, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 118, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...in.com/in/dmn-sangeeth'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-02 23:43:54,758 [INFO] Embedding generator initialized successfully
+2025-05-02 23:43:54,821 [INFO] Embedding generator initialized successfully
+2025-05-02 23:43:54,858 [INFO] Embedding generator initialized successfully
+2025-05-02 23:43:54,860 [INFO] Embedding generator initialized successfully
+2025-05-02 23:43:54,895 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:27,294 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:27,375 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:27,421 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:27,424 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:27,471 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:58,516 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:58,594 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:58,644 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:58,648 [INFO] Embedding generator initialized successfully
+2025-05-02 23:44:58,693 [INFO] Embedding generator initialized successfully
+2025-05-02 23:45:52,214 [INFO] Embedding generator initialized successfully
+2025-05-02 23:45:52,272 [INFO] Embedding generator initialized successfully
+2025-05-02 23:45:52,311 [INFO] Embedding generator initialized successfully
+2025-05-02 23:45:52,317 [INFO] Embedding generator initialized successfully
+2025-05-02 23:45:52,364 [INFO] Embedding generator initialized successfully
+2025-05-02 23:45:54,258 [ERROR] API request failed: 400 Client Error: Bad Request for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 23:45:54,258 [ERROR] Error processing LinkedIn profile: API request failed: 400 Client Error: Bad Request for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-02 23:47:56,371 [INFO] Embedding generator initialized successfully
+2025-05-02 23:47:56,425 [INFO] Embedding generator initialized successfully
+2025-05-02 23:47:56,458 [INFO] Embedding generator initialized successfully
+2025-05-02 23:47:56,461 [INFO] Embedding generator initialized successfully
+2025-05-02 23:47:56,493 [INFO] Embedding generator initialized successfully
+2025-05-02 23:49:33,647 [INFO] Embedding generator initialized successfully
+2025-05-02 23:49:33,704 [INFO] Embedding generator initialized successfully
+2025-05-02 23:49:33,737 [INFO] Embedding generator initialized successfully
+2025-05-02 23:49:33,740 [INFO] Embedding generator initialized successfully
+2025-05-02 23:49:33,774 [INFO] Embedding generator initialized successfully
+2025-05-03 08:32:40,095 [INFO] Embedding generator initialized successfully
+2025-05-03 08:32:40,159 [INFO] Embedding generator initialized successfully
+2025-05-03 08:32:40,190 [INFO] Embedding generator initialized successfully
+2025-05-03 08:32:40,194 [INFO] Embedding generator initialized successfully
+2025-05-03 08:32:40,224 [INFO] Embedding generator initialized successfully
+2025-05-03 08:34:21,975 [ERROR] API request failed: 400 Client Error: Bad Request for url: https://api-f1db6c.stack.tryrelevance.com/latest/studios/d58d3b72-d349-44f4-b5f9-9f03f090fa7a/trigger_webhook?project=8f40138a7b22-4b6d-8b9a-8474a3de12bc
+2025-05-03 08:34:21,977 [ERROR] Error processing LinkedIn profile: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-03 08:34:21,977 [ERROR] Error processing resume: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 109, in scraping_linkedin_content
+    profile = LinkedInProfile(**profile_data)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 52, in upload_linkedin_profile
+    profile_data = await linkedin_service.scraping_linkedin_content(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        linkedin_url=str(linkedin_url))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 118, in scraping_linkedin_content
+    raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
+app.utils.exceptions.ProfileProcessingError: Profile processing failed: 1 validation error for LinkedInProfile
+full_name
+  Field required [type=missing, input_value={'error': 'API request fa...n.com/in/dmn-sangeeth/'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2025-05-03 19:41:54,450 [INFO] Embedding generator initialized successfully
+2025-05-03 19:41:54,503 [INFO] Embedding generator initialized successfully
+2025-05-03 19:41:54,540 [INFO] Embedding generator initialized successfully
+2025-05-03 19:41:54,543 [INFO] Embedding generator initialized successfully
+2025-05-03 19:41:54,573 [INFO] Embedding generator initialized successfully
+2025-05-03 19:42:41,753 [WARNING] Invalid resume detected: Profile contains name, headline, and multiple work experiences.
+2025-05-03 19:42:42,676 [INFO] Successfully created embedding for resume: None

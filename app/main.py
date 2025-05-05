@@ -1,48 +1,39 @@
-"""Main module for the AI-Powered Recruitment Platform Streamlit app."""
-
+# main.py (FastAPI backend)
 import sys
 from pathlib import Path
-
-# Add the project root to sys.path BEFORE other imports
 root_dir = Path(__file__).parent.parent
 sys.path.append(str(root_dir))
 
-import streamlit as st
-from app.components.file_uploader import FileUploaderComponent
-from app.components.results_viewer import ResultsViewer
-from app.services.job_service import JobService
-# Ensure app modules can be imported
-sys.path.append(str(Path(__file__).parent.parent))
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.utils.config import Settings
 
 
-def main():
-    """Main entry point of the Streamlit app."""
-    st.set_page_config(
-        page_title="AI Recruitment Platform",
-        page_icon="💼",
-        layout="wide"
+from app.api.v1.router import router as api_router
+
+def create_application() -> FastAPI:
+    app = FastAPI(
+        title="Resume Matcher API",
+        description="API for uploading resumes and finding matching jobs",
+        version="1.0.0"
     )
 
-    st.title("AI-Powered Recruitment Platform")
-    st.markdown("Upload your resume to find matching job opportunities")
+    # CORS middleware
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=Settings.get_allowed_hosts(),
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
-    # Initialize services and components
-    uploader = FileUploaderComponent()
-    results_viewer = ResultsViewer()
-    job_service = JobService()
+    # Include routers
+    app.include_router(api_router, prefix="/api/v1")
 
-    # File upload section
-    uploader.render()
+    return app
 
-    # Process and display results if resume is processed
-    if st.session_state.get('resume_processed', False):
-        resume_data = st.session_state.get('resume_data')
-
-        if resume_data:
-            with st.spinner("Finding matching jobs..."):
-                matches = job_service.get_job_matches_for_resume(resume_data)
-                results_viewer.render(matches)
-
+app = create_application()
 
 if __name__ == "__main__":
-    main()
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)  # FastAPI runs on port 8000

@@ -3,13 +3,16 @@ import time
 import traceback
 from typing import Optional
 from google.api_core import exceptions
+from google import genai
 
 from app.utils import logger
+from app.utils.config import MongoDBConfig
 from app.utils.exceptions import GeminiAPIError,LLMError, GeminiRateLimitError, GeminiContentFilterError
 
 class GeminiClient:
     """Gemini client class"""
     def __init__(self, model, initial_delay=1, max_retries=3, backoff_factor=2):
+        self.client = genai.Client(api_key=MongoDBConfig.get_gemini_api_key())
         self.model = model
         self.initial_delay = initial_delay
         self.max_retries = max_retries
@@ -119,3 +122,26 @@ class GeminiClient:
                 raise GeminiAPIError(f"Unexpected error with Gemini API: {str(e)}") from e
 
         raise GeminiAPIError(f"Failed to get response from Gemini API after {self.max_retries} attempts") from last_error
+
+    def generate_content(self, contents):
+        """Simplified version that matches your working example"""
+        try:
+            response = self.client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=contents
+            )
+            
+            # Directly return text if available
+            if hasattr(response, 'text'):
+                return response.text
+                
+            # Handle candidate-based response
+            if hasattr(response, 'candidates') and response.candidates:
+                if hasattr(response.candidates[0], 'content'):
+                    return response.candidates[0].content.parts[0].text
+                    
+            raise GeminiAPIError("Unexpected response format")
+            
+        except Exception as e:
+            logger.error(f"Generation failed: {str(e)}")
+            raise GeminiAPIError(f"Content generation failed: {str(e)}")

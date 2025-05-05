@@ -7,7 +7,13 @@ ai_recruitment_platform.egg-info/dependency_links.txt
 ai_recruitment_platform.egg-info/requires.txt
 ai_recruitment_platform.egg-info/top_level.txt
 app/__init__.py
+app/app.py
 app/main.py
+app/api/__init__.py
+app/api/v1/__init__.py
+app/api/v1/router.py
+app/api/v1/endpoints/__init__.py
+app/api/v1/endpoints/resume.py
 app/core/__init__.py
 app/data/__init__.py
 app/db/__init__.py
@@ -24,3 +30,9 @@ app/db/mongodb/queries/resume_repository.py
 app/services/__init__.py
 app/services/job_service.py
 app/services/resume_service.py
+app/utils/__init__.py
+app/utils/config.py
+app/utils/exceptions.py
+app/utils/file_handling.py
+app/utils/helpers.py
+app/utils/logger.py
