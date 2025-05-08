@@ -1375,3 +1375,230 @@ full_name
 2025-05-03 19:41:54,573 [INFO] Embedding generator initialized successfully
 2025-05-03 19:42:41,753 [WARNING] Invalid resume detected: Profile contains name, headline, and multiple work experiences.
 2025-05-03 19:42:42,676 [INFO] Successfully created embedding for resume: None
+2025-05-07 08:13:27,070 [INFO] Embedding generator initialized successfully
+2025-05-07 08:13:27,126 [INFO] Embedding generator initialized successfully
+2025-05-07 08:13:27,160 [INFO] Embedding generator initialized successfully
+2025-05-07 08:13:27,172 [INFO] Embedding generator initialized successfully
+2025-05-07 08:13:27,206 [INFO] Embedding generator initialized successfully
+2025-05-07 08:48:58,665 [INFO] Embedding generator initialized successfully
+2025-05-07 08:48:58,719 [INFO] Embedding generator initialized successfully
+2025-05-07 08:48:58,763 [INFO] Embedding generator initialized successfully
+2025-05-07 08:48:58,773 [INFO] Embedding generator initialized successfully
+2025-05-07 08:48:58,806 [INFO] Embedding generator initialized successfully
+2025-05-07 08:53:04,653 [INFO] Embedding generator initialized successfully
+2025-05-07 08:53:04,716 [INFO] Embedding generator initialized successfully
+2025-05-07 08:53:04,750 [INFO] Embedding generator initialized successfully
+2025-05-07 08:53:04,761 [INFO] Embedding generator initialized successfully
+2025-05-07 08:53:04,796 [INFO] Embedding generator initialized successfully
+2025-05-07 08:54:40,794 [INFO] Embedding generator initialized successfully
+2025-05-07 08:54:40,861 [INFO] Embedding generator initialized successfully
+2025-05-07 08:54:40,895 [INFO] Embedding generator initialized successfully
+2025-05-07 08:54:40,905 [INFO] Embedding generator initialized successfully
+2025-05-07 08:54:40,939 [INFO] Embedding generator initialized successfully
+2025-05-07 09:07:59,783 [INFO] Embedding generator initialized successfully
+2025-05-07 09:07:59,876 [INFO] Embedding generator initialized successfully
+2025-05-07 09:07:59,914 [INFO] Embedding generator initialized successfully
+2025-05-07 09:07:59,926 [INFO] Embedding generator initialized successfully
+2025-05-07 09:07:59,963 [INFO] Embedding generator initialized successfully
+2025-05-07 09:12:38,049 [INFO] Embedding generator initialized successfully
+2025-05-07 09:12:38,110 [INFO] Embedding generator initialized successfully
+2025-05-07 09:12:38,147 [INFO] Embedding generator initialized successfully
+2025-05-07 09:12:38,158 [INFO] Embedding generator initialized successfully
+2025-05-07 09:12:38,195 [INFO] Embedding generator initialized successfully
+2025-05-07 09:51:28,583 [INFO] Embedding generator initialized successfully
+2025-05-07 09:51:28,653 [INFO] Embedding generator initialized successfully
+2025-05-07 09:51:28,687 [INFO] Embedding generator initialized successfully
+2025-05-07 09:51:28,698 [INFO] Embedding generator initialized successfully
+2025-05-07 09:51:28,733 [INFO] Embedding generator initialized successfully
+2025-05-07 09:57:50,348 [INFO] Embedding generator initialized successfully
+2025-05-07 09:57:50,408 [INFO] Embedding generator initialized successfully
+2025-05-07 09:57:50,443 [INFO] Embedding generator initialized successfully
+2025-05-07 09:57:50,452 [INFO] Embedding generator initialized successfully
+2025-05-07 09:57:50,485 [INFO] Embedding generator initialized successfully
+2025-05-07 09:58:44,063 [INFO] Embedding generator initialized successfully
+2025-05-07 09:58:44,117 [INFO] Embedding generator initialized successfully
+2025-05-07 09:58:44,151 [INFO] Embedding generator initialized successfully
+2025-05-07 09:58:44,161 [INFO] Embedding generator initialized successfully
+2025-05-07 09:58:44,204 [INFO] Embedding generator initialized successfully
+2025-05-07 10:01:29,886 [INFO] Embedding generator initialized successfully
+2025-05-07 10:01:30,007 [INFO] Embedding generator initialized successfully
+2025-05-07 10:01:30,043 [INFO] Embedding generator initialized successfully
+2025-05-07 10:01:30,061 [INFO] Embedding generator initialized successfully
+2025-05-07 10:01:30,097 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:42,263 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:42,379 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:42,413 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:42,430 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:42,466 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:59,382 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:59,437 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:59,469 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:59,476 [INFO] Embedding generator initialized successfully
+2025-05-07 10:14:59,508 [INFO] Embedding generator initialized successfully
+2025-05-07 10:25:28,637 [INFO] Embedding generator initialized successfully
+2025-05-07 10:25:28,696 [INFO] Embedding generator initialized successfully
+2025-05-07 10:25:28,736 [INFO] Embedding generator initialized successfully
+2025-05-07 10:25:28,745 [INFO] Embedding generator initialized successfully
+2025-05-07 10:25:28,795 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:04,196 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:04,276 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:04,314 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:04,323 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:04,363 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:13,005 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:13,070 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:13,109 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:13,124 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:13,173 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:24,378 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:24,470 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:24,529 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:24,540 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:24,594 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:27,727 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:27,786 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:27,823 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:27,832 [INFO] Embedding generator initialized successfully
+2025-05-07 10:31:27,890 [INFO] Embedding generator initialized successfully
+2025-05-07 11:47:14,900 [INFO] Embedding generator initialized successfully
+2025-05-07 11:47:14,989 [INFO] Embedding generator initialized successfully
+2025-05-07 11:47:15,047 [INFO] Embedding generator initialized successfully
+2025-05-07 11:47:15,063 [INFO] Embedding generator initialized successfully
+2025-05-07 11:47:15,140 [INFO] Embedding generator initialized successfully
+2025-05-07 13:13:04,607 [INFO] Embedding generator initialized successfully
+2025-05-07 13:13:04,663 [INFO] Embedding generator initialized successfully
+2025-05-07 13:13:04,697 [INFO] Embedding generator initialized successfully
+2025-05-07 13:13:04,706 [INFO] Embedding generator initialized successfully
+2025-05-07 13:13:04,744 [INFO] Embedding generator initialized successfully
+2025-05-07 13:27:03,575 [INFO] Embedding generator initialized successfully
+2025-05-07 13:27:03,659 [INFO] Embedding generator initialized successfully
+2025-05-07 13:27:03,707 [INFO] Embedding generator initialized successfully
+2025-05-07 13:27:03,722 [INFO] Embedding generator initialized successfully
+2025-05-07 13:27:03,764 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:13,005 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:13,089 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:13,140 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:13,149 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:13,196 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:40,562 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:40,624 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:40,660 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:40,668 [INFO] Embedding generator initialized successfully
+2025-05-07 13:37:40,702 [INFO] Embedding generator initialized successfully
+2025-05-07 13:43:08,260 [INFO] Embedding generator initialized successfully
+2025-05-07 13:43:08,319 [INFO] Embedding generator initialized successfully
+2025-05-07 13:43:08,358 [INFO] Embedding generator initialized successfully
+2025-05-07 13:43:08,369 [INFO] Embedding generator initialized successfully
+2025-05-07 13:43:08,408 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:31,287 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:31,355 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:31,390 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:31,400 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:31,444 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:42,096 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:42,188 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:42,240 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:42,254 [INFO] Embedding generator initialized successfully
+2025-05-07 14:39:42,315 [INFO] Embedding generator initialized successfully
+2025-05-07 14:40:04,129 [ERROR] Unexpected error processing LinkedIn profile: 'function' object has no attribute 'linkedin_url'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/linkedin.py", line 40, in upload_linkedin_profile
+    logger.info(f"Processing LinkedIn profile: {requests.request.linkedin_url}")
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'linkedin_url'
+2025-05-07 14:41:53,218 [INFO] Embedding generator initialized successfully
+2025-05-07 14:41:53,292 [INFO] Embedding generator initialized successfully
+2025-05-07 14:41:53,330 [INFO] Embedding generator initialized successfully
+2025-05-07 14:41:53,339 [INFO] Embedding generator initialized successfully
+2025-05-07 14:41:53,376 [INFO] Embedding generator initialized successfully
+2025-05-07 14:44:37,949 [INFO] Embedding generator initialized successfully
+2025-05-07 14:44:38,077 [INFO] Embedding generator initialized successfully
+2025-05-07 14:44:38,116 [INFO] Embedding generator initialized successfully
+2025-05-07 14:44:38,138 [INFO] Embedding generator initialized successfully
+2025-05-07 14:44:38,176 [INFO] Embedding generator initialized successfully
+2025-05-07 14:48:41,100 [INFO] Embedding generator initialized successfully
+2025-05-07 14:48:41,243 [INFO] Embedding generator initialized successfully
+2025-05-07 14:48:41,278 [INFO] Embedding generator initialized successfully
+2025-05-07 14:48:41,296 [INFO] Embedding generator initialized successfully
+2025-05-07 14:48:41,330 [INFO] Embedding generator initialized successfully
+2025-05-07 14:49:30,710 [ERROR] Unexpected error in LinkedIn service: Timeout value connect was 30, but it must be an int, float or None.
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 39, in scraping_linkedin_content
+    response = self._make_api_request(headers,payload)
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/services/linkedin_service.py", line 115, in _make_api_request
+    response = requests.post(
+        f"{self.endpoint}?project={self.project_id}",
+    ...<2 lines>...
+        timeout=self.api_timeout
+    )
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/requests/api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/requests/adapters.py", line 664, in send
+    timeout = TimeoutSauce(connect=timeout, read=timeout)
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/urllib3/util/timeout.py", line 115, in __init__
+    self._connect = self._validate_timeout(connect, "connect")
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmnsangeeth/anaconda3/envs/gemini/lib/python3.13/site-packages/urllib3/util/timeout.py", line 165, in _validate_timeout
+    raise ValueError(
+    ...<2 lines>...
+    ) from None
+ValueError: Timeout value connect was 30, but it must be an int, float or None.
+2025-05-07 14:49:30,718 [ERROR] HTTP error while processing LinkedIn profile: 500: Internal server error: Timeout value connect was 30, but it must be an int, float or None.
+2025-05-07 15:06:08,902 [INFO] Embedding generator initialized successfully
+2025-05-07 15:06:09,033 [INFO] Embedding generator initialized successfully
+2025-05-07 15:06:09,072 [INFO] Embedding generator initialized successfully
+2025-05-07 15:06:09,092 [INFO] Embedding generator initialized successfully
+2025-05-07 15:06:09,129 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:50,000 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:50,054 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:50,087 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:50,098 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:50,132 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:55,372 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:55,441 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:55,483 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:55,490 [INFO] Embedding generator initialized successfully
+2025-05-07 15:08:55,538 [INFO] Embedding generator initialized successfully
+2025-05-07 15:20:48,998 [INFO] Embedding generator initialized successfully
+2025-05-07 15:20:49,065 [INFO] Embedding generator initialized successfully
+2025-05-07 15:20:49,104 [INFO] Embedding generator initialized successfully
+2025-05-07 15:20:49,116 [INFO] Embedding generator initialized successfully
+2025-05-07 15:20:49,163 [INFO] Embedding generator initialized successfully
+2025-05-07 18:13:41,684 [INFO] Embedding generator initialized successfully
+2025-05-07 18:13:41,777 [INFO] Embedding generator initialized successfully
+2025-05-07 18:13:41,822 [INFO] Embedding generator initialized successfully
+2025-05-07 18:13:41,832 [INFO] Embedding generator initialized successfully
+2025-05-07 18:13:41,884 [INFO] Embedding generator initialized successfully
+2025-05-07 18:14:11,142 [INFO] Embedding generator initialized successfully
+2025-05-07 18:14:11,262 [INFO] Embedding generator initialized successfully
+2025-05-07 18:14:11,331 [INFO] Embedding generator initialized successfully
+2025-05-07 18:14:11,346 [INFO] Embedding generator initialized successfully
+2025-05-07 18:14:11,412 [INFO] Embedding generator initialized successfully
+2025-05-07 23:29:17,262 [INFO] Embedding generator initialized successfully
+2025-05-07 23:29:17,339 [INFO] Embedding generator initialized successfully
+2025-05-07 23:29:17,385 [INFO] Embedding generator initialized successfully
+2025-05-07 23:29:17,405 [INFO] Embedding generator initialized successfully
+2025-05-07 23:29:17,480 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,674 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,739 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,775 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,786 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,821 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,826 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:06,860 [INFO] Embedding generator initialized successfully
+2025-05-08 09:11:51,695 [INFO] File saved at: storage/resumes/resume_20250508_091151.pdf
+2025-05-08 09:11:52,782 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-08 09:11:56,163 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwq9gDAgVWEHKInrx7CNmZ-iI0JJknS25LHxGD9nweIx4UoMpBn3HsZtjxNg4dQyVI3VZh4nPJfqJufbY2-pTcUZlylVFKSRBZyAwu3lyw&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-08 09:11:56,197 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-08 09:12:06,731 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-08 09:12:06,734 [INFO] AFC remote call 1 is done.
+2025-05-08 09:12:24,734 [INFO] Successfully created embedding for resume: NISHAN SANGEETH
+2025-05-08 09:12:25,821 [INFO] Successfully processed and stored resume for NISHAN SANGEETH
+2025-05-08 09:12:26,281 [INFO] Successfully created embedding for resume: None

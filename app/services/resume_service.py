@@ -32,7 +32,7 @@ class ResumeService:
             try:
                 resume_text = await FileHandler.extract_text_doing_ocr(file_path)
                 print("type===================================",type(resume_text))
-                print("resume_text===================================",resume_text)
+                print("resume_text doing OCR 1 ===================================",resume_text)
             except FileProcessingError as e:
                 logger.error(f"Text extraction failed: {str(e)}")
                 return {
@@ -50,6 +50,8 @@ class ResumeService:
 
             # Process resume data
             resume_data = self.processor.process_resume(resume_text, file_path)
+            print("resume_data type===================================",type(resume_data))
+            print("after proceing 2 resume_data:",resume_data)
             if not resume_data:
                 logger.error("Failed to process resume data")
                 return {

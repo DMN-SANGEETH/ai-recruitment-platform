@@ -34,6 +34,7 @@ async def upload_resume(uploaded_file: UploadFile = File(...)):
             file=uploaded_file,
             filename=filename
         )
+        print("resume_data after adding cv 001:",resume_data)
 
         if not resume_data:
             raise HTTPException(
@@ -77,6 +78,3 @@ async def upload_resume(uploaded_file: UploadFile = File(...)):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Error processing resume: {str(e)}"
         )
-        
-    
-

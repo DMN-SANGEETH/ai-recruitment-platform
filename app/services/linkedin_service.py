@@ -1,15 +1,17 @@
 """LinkedIn Service"""
-import os
+
+from datetime import time
+from fastapi import HTTPException
 import requests
-from typing import Dict, List
-import google.generativeai as genai
+from typing import Any, Dict
+
 from pydantic import HttpUrl
+from fastapi import HTTPException, status
 from app.core.llm.linkedin_processor import LinkedInProcessor
 from app.core.validation.linkedin_validator import LinkedInValidation
 from app.utils import logger
 from app.utils.config import LinkedInConfig
-from app.db.mongodb.models.linkedin import LinkedInProfile, LinkedInRequestPayload
-from app.utils.exceptions import ProfileProcessingError
+from app.utils.exceptions import LinkedInAPIError, ProfileProcessingError
 
 class LinkedInService:
     """LinkedIn Service"""
@@ -20,103 +22,153 @@ class LinkedInService:
         self.project_id = LinkedInConfig.get_relevance_ai_project_id()
         self.api_timeout = LinkedInConfig.get_relevance_ai_api_timeout()
         self.validator = LinkedInValidation
-        self.linkedin_request_payload = LinkedInRequestPayload
+
         self.linkedin_processor = LinkedInProcessor()
 
-    async def fetch_raw_profile(self, linkedin_url: HttpUrl) -> Dict[str, any]:
-        """Fetch raw profile data from LinkedIn API"""
+    async def scraping_linkedin_content(self, linkedin_url: str) -> Dict:
+        """Fetch and process LinkedIn profile, returning structured data"""
 
-        validate_url = self.validator.validate_linkedin_url(linkedin_url)
-        if not validate_url:
-            logger.error("Invalid LinkedIn URL")
-            return {
-                "error": "Invalid LinkedIn URL format",
-                "success": False
-            }
+        headers = self._prepare_request_headers()
+        payload = self._prepare_request_payload(linkedin_url)
 
+
+        print("payload=========",payload)
+        print("type_payload=========",type(payload))
+        print("=======================",f"{self.endpoint}?project={self.project_id}")
         try:
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": self.api_key
-            }
+            response = self._make_api_request(headers,payload)
+            profile_data = self._process_api_response(response)
+            # Record request duration for monitoring
 
-            payload = {
-                "linkedin_url": linkedin_url,
-                "return_keys": {
-                    "first_name": True,
-                    "last_name": True,
-                    "full_name": True,
-                    "headline": True,
-                    "about": True,
-                    "location": True,
-                    "experiences": True,
-                    "education": True,
-                    "skills": True,
-                    "profile_image_url": False
-                },
-                "filter_empty": True,
-                "job_history_count": 3,
-                "output_format": "JSON"
-            }
+            return profile_data
+
+
+        except requests.exceptions.ConnectionError as conn_err:
+            logger.error(f"Connection error accessing LinkedIn API: {str(conn_err)}")
+            raise HTTPException(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail="Could not connect to LinkedIn API service"
+            )
+            
+        except LinkedInAPIError as api_err:
+            logger.error(f"LinkedIn API error: {str(api_err)}")
+            raise HTTPException(
+                status_code=api_err.status_code,
+                detail=api_err.detail
+            )
+            
+        except Exception as e:
+            logger.error(f"Unexpected error in LinkedIn service: {str(e)}", exc_info=True)
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Internal server error: {str(e)}"
+            )
+            
+    def _prepare_request_headers(self) -> Dict[str, str]:
+        """Prepare API request headers"""
+        return {
+            "Content-Type": "application/json",
+            "Authorization": self.api_key
+        }
+        
+    def _prepare_request_payload(self, linkedin_url: str) -> Dict[str, Any]:
+        """Prepare API request payload with all required fields"""
+        return {
+            "linkedin_url": linkedin_url,
+            "return_keys": {
+                "first_name": True,
+                "last_name": True,
+                "full_name": True,
+                "profile_id": True,
+                "headline": True,
+                "about": True,
+                "job_title": True,
+                "location": True,
+                "city": True,
+                "country": True,
+                "profile_image_url": False,
+                "public_id": True,
+                "urn": True,
+                "linkedin_url": True,
+                "company": True,
+                "company_domain": True,
+                "company_employee_range": True,
+                "company_industry": True,
+                "company_linkedin_url": True,
+                "company_website": True,
+                "company_year_founded": True,
+                "hq_city": True,
+                "hq_country": True,
+                "current_company_join_month": True,
+                "current_company_join_year": True,
+                "current_job_duration": True,
+                "experiences": True
+            },
+            "filter_empty": True,
+            "job_history_count": 10,
+            "output_format": "JSON"
+        }
+        
+    def _make_api_request(self, headers: Dict[str, str], payload: Dict[str, Any]) -> requests.Response:
+        """Make API request with error handling"""
+        try:
             response = requests.post(
                 f"{self.endpoint}?project={self.project_id}",
                 headers=headers,
                 json=payload,
                 timeout=int(self.api_timeout)
             )
-
-            # Debug response type
-            response.raise_for_status()
-            output = response.json().get("output", {})
-
-            # Ensure required fields exist
-            if not output.get('full_name'):
-                output['full_name'] = f"{output.get('first_name', '')} {output.get('last_name', '')}".strip()
-
-            return output
-
-        except requests.exceptions.RequestException as e:
-            logger.error(f"API request failed: {str(e)}")
-            return {
-                "error": f"API request failed: {str(e)}",
-                "success": False
-            }
-        except Exception as e:
-            logger.error(f"Unexpected error: {str(e)}")
-            return {
-                "error": f"Unexpected error: {str(e)}",
-                "success": False
-            }
-
-
-
-    async def scraping_linkedin_content(self, linkedin_url: HttpUrl) -> LinkedInProfile:
-
-        """Fetch and process LinkedIn profile, returning string representation"""
+            
+            # Check for HTTP errors
+            if response.status_code != 200:
+                logger.error(f"LinkedIn API returned non-200 status: {response.status_code}")
+                raise LinkedInAPIError(
+                    status_code=response.status_code,
+                    detail=f"LinkedIn API request failed with status {response.status_code}: {response.text}"
+                )
+                
+            return response
+        
+        except requests.exceptions.Timeout:
+            logger.error(f"Request timed out after {self.api_timeout}s")
+            raise
+            
+        except requests.exceptions.RequestException as req_err:
+            logger.error(f"Request error: {str(req_err)}")
+            raise LinkedInAPIError(
+                status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+                detail=f"API request failed: {str(req_err)}"
+            )
+            
+    def _process_api_response(self, response: requests.Response) -> Dict[str, Any]:
+        """Process API response and extract profile data"""
         try:
-            raw_data = await self.fetch_raw_profile(linkedin_url)
-            if not raw_data:
-                raise ProfileProcessingError("No data returned from LinkedIn API")
-
-            # Ensure raw_data is a dictionary
-            if not isinstance(raw_data, dict):
-                raise ProfileProcessingError("Invalid profile data format")
-
-            # Create profile with URL
-            profile_data = raw_data.copy()
-            profile_data["profile_url"] = str(linkedin_url)
-
-            profile = LinkedInProfile(**profile_data)
-
-            # Convert profile to string representation
-            profile_str = str(profile)
-            print("type===================================", profile_str)
-            return profile_str
-
-        except Exception as e:
-            logger.error(f"Error processing LinkedIn profile: {str(e)}")
-            raise ProfileProcessingError(f"Profile processing failed: {str(e)}")
-
+            response_data = response.json()
+            
+            # Check if output exists
+            if response_data.get("output") is None:
+                logger.error("Empty output from LinkedIn API")
+                raise LinkedInAPIError(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="No data returned from LinkedIn API"
+                )
+            
+            # Extract output data
+            output_data = response_data["output"]
+            
+            # Normalize company data
+            if isinstance(output_data.get("company"), str):
+                output_data["company"] = {"name": output_data["company"]}
+            
+            return output_data
+            
+        except ValueError as json_err:
+            logger.error(f"Invalid JSON response: {str(json_err)}")
+            raise LinkedInAPIError(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Invalid response from LinkedIn API"
+            )
+    
     async def process_linkedin_data(self, resume_text: str) -> Dict[str, any]:
         """Process resume file with robust error handling"""
         try:

@@ -129,6 +129,7 @@ class ResumeProcessor:
             content = self.gemini_client._call_gemini_with_retry(prompt,
                                                                  domain="resume_processing"
                                                                  )
+            print("content: 3 =========",content)
             if not content:
                 logger.error("Failed to extract information from resume")
                 return None
@@ -137,6 +138,7 @@ class ResumeProcessor:
             if not cleaned_content:
                 logger.error("Invalid JSON content extracted from resume")
                 return None
+            print("cleaned_content: 4 =========",cleaned_content)
 
             resume_data = self._transform_resume_data(cleaned_content, file_path)
             embedding = self.embedding.create_resume_embedding(resume_data)
