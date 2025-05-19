@@ -4,7 +4,7 @@ class LinkedInValidation:
         """validation"""
 
     @staticmethod
-    def validate_linkedin_url(url: str) -> bool:
+    def validate_linkedin_url_pr(url):
         """Validate LinkedIn URL format"""
         valid_prefixes = (
             "https://www.linkedin.com/in/",

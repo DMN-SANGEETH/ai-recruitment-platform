@@ -1,0 +1,199 @@
+{
+    "metadata": {
+      "processor_version": "2.0",
+      "processing_timestamp": "2025-05-16T14:30:45Z",
+      "source_validation": {
+        "resume_parsing_confidence": 0.92,
+        "linkedin_data_completeness": 0.85,
+        "source_compatibility_score": 0.88
+      }
+    },
+    "merged_profile": {
+      "personal_info": {
+        "full_name": {
+          "resume": "DMN Sangeeth",
+          "linkedin": "Sangeeth Nishan",
+          "suggestion": "DMN Sangeeth (Nishan)",
+          "confidence": 0.95,
+          "resolution_method": "combined_with_resume_primary",
+          "mismatch_reason": "cultural_name_variation"
+        },
+        "contact_info": {
+          "email": {
+            "resume": "dmn.sangeeth@oxotech.io",
+            "linkedin": "sangeeth.nishan@gmail.com",
+            "suggestion": "dmn.sangeeth@oxotech.io",
+            "validation": {
+              "resume": {"is_valid": true, "is_professional": true},
+              "linkedin": {"is_valid": true, "is_professional": false}
+            }
+          },
+          "phone": {
+            "resume": "+94771234567",
+            "linkedin": "0771234567",
+            "suggestion": "+94771234567",
+            "validation": {
+              "resume": {"is_valid": true, "formatted": true},
+              "linkedin": {"is_valid": true, "formatted": false}
+            }
+          }
+        },
+        "professional_headline": {
+          "resume": "AI/ML Engineer",
+          "linkedin": "AI/ML Engineer | Software Engineer",
+          "suggestion": "AI/ML Engineer | Software Engineer",
+          "source_used": "combined"
+        }
+      },
+      "employment": [
+        {
+          "id": "exp_1",
+          "match_type": "exact",
+          "resume": {
+            "title": "AI/ML Engineer",
+            "company": "OXO Tech",
+            "date_range": {"start": "2025-04", "end": "Present"},
+            "description": "Developing LLM applications..."
+          },
+          "linkedin": {
+            "title": "AI/ML Engineer",
+            "company": "OXO Tech",
+            "date_range": {"start": "2025-04", "end": null},
+            "description": "Working with Large Language Models..."
+          },
+          "suggested_merge": {
+            "title": "AI/ML Engineer",
+            "company": "OXO Tech",
+            "date_range": {"start": "2025-04", "end": "Present"},
+            "description": "Developing LLM applications... Working with Large Language Models...",
+            "source_used": "combined",
+            "combined_skills": ["LLM", "Python", "MongoDB"]
+          }
+        },
+        {
+          "id": "exp_2",
+          "match_type": "conflicting",
+          "resume": {
+            "title": "Software Engineer",
+            "company": "MechSIT",
+            "date_range": {"start": "2024-09", "end": "2025-03"}
+          },
+          "linkedin": {
+            "title": "Software Engineer (AI/ML)",
+            "company": "MechSIT (PVT) LTD",
+            "date_range": {"start": "2024-09", "end": "2025-03"}
+          },
+          "suggested_merge": {
+            "title": "Software Engineer (AI/ML)",
+            "company": "MechSIT",
+            "date_range": {"start": "2024-09", "end": "2025-03"},
+            "source_used": "linkedin",
+            "resolution_notes": "LinkedIn contained more specific role details"
+          }
+        }
+      ],
+      "education": [
+        {
+          "id": "edu_1",
+          "match_type": "partial",
+          "resume": {
+            "degree": "BSc Computer Science",
+            "institution": "University of Colombo",
+            "date_range": {"start": "2018", "end": "2022"}
+          },
+          "linkedin": {
+            "degree": "Bachelor's in Computer Science",
+            "institution": "University of Colombo, Sri Lanka",
+            "date_range": {"start": "2018-09", "end": "2022-06"}
+          },
+          "suggested_merge": {
+            "degree": "BSc Computer Science",
+            "institution": "University of Colombo",
+            "date_range": {"start": "2018-09", "end": "2022-06"},
+            "source_used": "combined"
+          }
+        }
+      ],
+      "skills": {
+        "combined": [
+          {"name": "Python", "source": "both", "endorsements": 12},
+          {"name": "LLM", "source": "both", "endorsements": 8},
+          {"name": "React", "source": "resume", "endorsements": null},
+          {"name": "LiDAR", "source": "linkedin", "endorsements": 3}
+        ],
+        "skill_gap_analysis": {
+          "industry_alignment": 0.78,
+          "missing_key_skills": ["TensorFlow", "PyTorch"],
+          "recommended_skills": ["AWS", "Docker"]
+        }
+      }
+    },
+    "conflict_analysis": {
+      "total_conflicts": 4,
+      "resolved_conflicts": [
+        {
+          "field": "name",
+          "resume_value": "DMN Sangeeth",
+          "linkedin_value": "Sangeeth Nishan",
+          "resolution": "combined_with_resume_primary",
+          "auto_resolved": true,
+          "confidence": 0.95
+        },
+        {
+          "field": "job_title",
+          "resume_value": "Software Engineer",
+          "linkedin_value": "Software Engineer (AI/ML)",
+          "resolution": "used_linkedin",
+          "auto_resolved": true,
+          "confidence": 0.85
+        }
+      ],
+      "unresolved_conflicts": [
+        {
+          "field": "email",
+          "resume_value": "dmn.sangeeth@oxotech.io",
+          "linkedin_value": "sangeeth.nishan@gmail.com",
+          "required_manual_review": true,
+          "resolution_options": ["use_resume", "use_linkedin", "keep_both"]
+        }
+      ]
+    },
+    "data_validation": {
+      "issues": [
+        {
+          "field": "phone",
+          "source": "linkedin",
+          "issue": "missing_country_code",
+          "severity": "medium",
+          "corrected_value": "+94771234567"
+        }
+      ],
+      "completeness": {
+        "resume": 0.92,
+        "linkedin": 0.85
+      }
+    },
+    "quality_analysis": {
+      "ats_compatibility": {
+        "score": 0.82,
+        "missing_keywords": ["cloud computing", "CI/CD"]
+      },
+      "improvement_recommendations": [
+        {
+          "area": "skills",
+          "suggestion": "Add 2-3 cloud platform skills (AWS/Azure/GCP)",
+          "priority": "high"
+        },
+        {
+          "area": "employment_descriptions",
+          "suggestion": "Add more quantifiable achievements in current role",
+          "priority": "medium"
+        }
+      ]
+    },
+    "user_merge_options": {
+      "name": ["use_resume", "use_linkedin", "custom"],
+      "email": ["use_resume", "use_linkedin", "keep_both"],
+      "employment": ["keep_both", "use_resume", "use_linkedin", "combine"]
+    }
+  }

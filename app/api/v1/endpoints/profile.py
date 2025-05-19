@@ -5,14 +5,14 @@ from fastapi import APIRouter, UploadFile, File, HTTPException, status
 from typing import List
 
 from app.db.mongodb.models.job_match import JobMatchResponse
-from app.services.resume_service import ResumeService
 from app.services.job_service import JobService
+from app.services.resume_linkedin_service import ResumeLinkedinService
 from app.utils.file_handling import FileHandler
 from app.utils import logger
 
 
 router = APIRouter()
-resume_service = ResumeService()
+resume_linkedin_service = ResumeLinkedinService()
 job_service = JobService()
 
 
@@ -30,7 +30,7 @@ async def upload_resume(uploaded_file: UploadFile = File(...)):
                 detail=f"Unsupported file type. Allowed types: {', '.join(FileHandler.ALLOWED_EXTENSIONS)}"
             )
 
-        resume_data = await resume_service.process_resume_file(
+        resume_data = await resume_linkedin_service.process_resume_file(
             file=uploaded_file,
             filename=filename
         )

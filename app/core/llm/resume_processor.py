@@ -1,13 +1,16 @@
 """Resume processor"""
 import json
 from typing import  Tuple
+from fastapi import HTTPException, status
 import google.generativeai as genai
 
 from app.core.llm.gemini_client import GeminiClient
 from app.core.llm.prompt_template import RESUME_PROCESSOR_TEMPLATE, RESUME_VALIDATION_TEMPLATE
+from app.core.validation.linkedin_validator import LinkedInValidation
 from app.db.mongodb.models.resume import Resume, Education, Experience
 from app.db.mongodb.queries.resume_repository import ResumeRepository
 from app.core.rag.embeddings import EmbeddingGenerator
+from app.services.linkedin_service import LinkedInService
 from app.utils.logger import logger
 from app.utils.config import MongoDBConfig
 from app.utils.helpers import extract_and_validate_json
@@ -20,6 +23,8 @@ class ResumeProcessor:
         self.model = genai.GenerativeModel("gemini-1.5-flash") #gemini-1.5-flash gemini-1.5-pro
         self.repository = ResumeRepository()
         self.embedding = EmbeddingGenerator()
+        self.linkedin_service = LinkedInService()
+        self.validate_linkedin = LinkedInValidation()
 
         self.gemini_client = GeminiClient(
             model=self.model,
@@ -79,12 +84,11 @@ class ResumeProcessor:
             return False, f"Validation error: {str(e)}"
 
     def _transform_resume_data(self,
-                               json_data: str,
+                               data: str,
                                file_path: str = None
                                ):
         """Transform extracted JSON data into standardized resume format"""
         try:
-            data = json.loads(json_data) if isinstance(json_data, str) else json_data
             resume_data = {
                 "name": data.get("name", ""),
                 "email": data.get("email", ""),
@@ -105,7 +109,29 @@ class ResumeProcessor:
             logger.error("Error transforming resume data: %s", str(e))
             return {}
 
-    def process_resume(self,
+    async def _linkedin_scraping(self,
+                           json_content,
+                           ):
+        linkedin_url = json_content.get("linkedin_url")
+        print("linkedin_url=========== 6", linkedin_url)  # Should print: https://www.linkedin.com/in/dmn-sangeeth
+
+        # Proceed with scraping
+        if linkedin_url:
+            print(type(url_str))
+            url_str = str(linkedin_url)
+            print(type(url_str))
+            if not self.validate_linkedin.validate_linkedin_url_pr(url_str):
+                raise HTTPException(
+                    status_code=status.HTTP_400_BAD_REQUEST,
+                    detail="Invalid LinkedIn URL format"
+                )
+            linkedin_profile = await self.linkedin_service.scraping_linkedin_content(linkedin_url = url_str)
+            print("linkedin_profile=========== 7", linkedin_profile)
+            return linkedin_profile
+        else:
+            logger.error("No LinkedIn URL found in resume data")
+
+    async def process_resume(self,
                        resume_text: str,
                        file_path: str = None
                        ):
@@ -126,10 +152,11 @@ class ResumeProcessor:
                 }
 
             prompt = self._generate_prompt(resume_text)
+            print("content: 3 =========",prompt)
             content = self.gemini_client._call_gemini_with_retry(prompt,
                                                                  domain="resume_processing"
                                                                  )
-            print("content: 3 =========",content)
+            print("prompt: 3 =========",content)
             if not content:
                 logger.error("Failed to extract information from resume")
                 return None
@@ -139,8 +166,13 @@ class ResumeProcessor:
                 logger.error("Invalid JSON content extracted from resume")
                 return None
             print("cleaned_content: 4 =========",cleaned_content)
+            print("cleaned_content: 4 type=========",type(cleaned_content))
+            json_content = json.loads(cleaned_content) if isinstance(cleaned_content, str) else cleaned_content
 
-            resume_data = self._transform_resume_data(cleaned_content, file_path)
+            linkedin_profile = await self._linkedin_scraping(json_content)
+            print("linkedin_profile 10", linkedin_profile)
+
+            resume_data = self._transform_resume_data(json_content, file_path)
             embedding = self.embedding.create_resume_embedding(resume_data)
             resume_data["embedding"] = embedding
 

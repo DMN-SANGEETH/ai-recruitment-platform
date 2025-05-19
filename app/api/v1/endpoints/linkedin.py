@@ -38,6 +38,7 @@ async def upload_linkedin_profile(linkedin_url: HttpUrl):
     """Handle LinkedIn profile upload and return string representation"""
     try:
         url_str = str(linkedin_url)
+        print(type(url_str))
         if not validate_linkedin_url(url_str):
             raise HTTPException(
                 status_code=status.HTTP_400_BAD_REQUEST,
