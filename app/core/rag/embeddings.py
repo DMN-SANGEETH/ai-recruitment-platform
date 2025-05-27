@@ -1,5 +1,5 @@
 """Embedding Generation"""
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 import google.generativeai as genai
 
 from app.utils.logger import logger
@@ -21,7 +21,7 @@ class EmbeddingGenerator:
 
     def generate_embedding(self,
                            text:str
-                           ) -> List[float]:
+                           ) -> Tuple[List[float], int]:
         """Generate Embedding for given text using gemini model"""
         try:
             result = genai.embed_content(
@@ -110,3 +110,4 @@ class EmbeddingGenerator:
         except Exception as e:
             logger.error("Failed to create resume embedding: %s", e)
             return []
+        

@@ -3283,3 +3283,1316 @@ Traceback (most recent call last):
 json.decoder.JSONDecodeError: Expecting ',' delimiter: line 516 column 17 (char 28854)
 2025-05-17 12:34:14,635 [INFO] Successfully created embedding for resume: Nishan Sangeeth
 2025-05-17 12:34:16,065 [INFO] Successfully created embedding for resume: None
+2025-05-19 15:39:40,307 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,370 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,370 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,432 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,442 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,442 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,503 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,510 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,510 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,540 [INFO] Embedding generator initialized successfully
+2025-05-19 15:39:40,601 [INFO] Embedding generator initialized successfully
+2025-05-19 15:40:35,806 [INFO] File saved at: storage/resumes/resume_20250519_154035.pdf
+2025-05-19 15:40:37,355 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 15:40:43,295 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoqZKlse8lrqHSMi__tv41ydWqdEuaGHWCgDWTXAU1lUxOWK29ITWy27X6Q1wiKB6JRW_sh8dpUJwb0z-wrqpqdvfxQiTNDH4jUAVwhYA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 15:40:43,297 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 15:40:56,098 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 15:40:56,102 [INFO] AFC remote call 1 is done.
+2025-05-19 15:40:56,103 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 15:42:55,255 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,309 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,309 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,370 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,378 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,379 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,449 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,455 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,455 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,489 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,562 [INFO] Embedding generator initialized successfully
+2025-05-19 15:42:55,858 [INFO] File saved at: storage/resumes/resume_20250519_154255.pdf
+2025-05-19 15:42:57,058 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 15:43:00,912 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwqftTyJG_6nFKYMjvmrlKBoB0IeWvrfwJQs1r6fvOAv6A2CrvchrG8RLBxJoT1rvNSOZ8a0DUgPQ2WEGfZAIwKB97uLCTOw2To9ovTBKRY&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 15:43:00,913 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 15:43:12,492 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 15:43:12,497 [INFO] AFC remote call 1 is done.
+2025-05-19 15:43:12,498 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 15:44:15,066 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,130 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,130 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,212 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,222 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,222 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,290 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,295 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,296 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,327 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:15,389 [INFO] Embedding generator initialized successfully
+2025-05-19 15:44:18,274 [INFO] File saved at: storage/resumes/resume_20250519_154418.pdf
+2025-05-19 15:44:20,027 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 15:44:27,294 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwp_y3fIjSXIV8Ep4Leuyb-ypVtMuEA1MQcQAEN3BNTy0or663R4Dm5scdVT9Vb-vKhc1B8DazxWkZ5LOtukZR9YVN1zfCNKtPfgvSH4GQ&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 15:44:27,295 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 15:44:38,250 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 15:44:38,255 [INFO] AFC remote call 1 is done.
+2025-05-19 15:44:38,257 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 15:53:39,987 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,101 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,101 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,167 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,186 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,186 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,255 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,272 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,272 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,305 [INFO] Embedding generator initialized successfully
+2025-05-19 15:53:40,370 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,007 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,122 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,122 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,186 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,203 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,203 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,269 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,282 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,282 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,317 [INFO] Embedding generator initialized successfully
+2025-05-19 15:54:58,383 [INFO] Embedding generator initialized successfully
+2025-05-19 15:55:07,279 [INFO] File saved at: storage/resumes/resume_20250519_155507.pdf
+2025-05-19 15:55:11,970 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 15:55:24,152 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwoh7cAcudS_p_sqI49rNLGeYvBltOXQbXzUDrVw2_qVFGaFsR0CEwL_EKtzSeUYMaRI2vbAlM19wjvPuCWPTa-TpFPYfvi3ZF_EbZBmEnY&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 15:55:24,156 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 15:55:34,592 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 15:55:34,615 [INFO] AFC remote call 1 is done.
+2025-05-19 15:57:30,986 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 15:57:48,818 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:48,937 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:48,938 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,010 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,032 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,033 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,105 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,122 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,122 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,168 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:49,259 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,333 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,455 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,455 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,522 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,538 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,538 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,603 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,617 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,618 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,655 [INFO] Embedding generator initialized successfully
+2025-05-19 15:57:57,720 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,500 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,613 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,614 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,679 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,696 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,712 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,781 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,794 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,794 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,827 [INFO] Embedding generator initialized successfully
+2025-05-19 15:58:20,889 [INFO] Embedding generator initialized successfully
+2025-05-19 15:59:15,408 [INFO] File saved at: storage/resumes/resume_20250519_155915.pdf
+2025-05-19 15:59:17,653 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 15:59:26,097 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwrS-qz2wVQv4N_uCPs9juAfJNhX0XUdF3ba56bk1BKfHSY0nrfCG7PJ_iK2dArcGv-x75N5quLesFLcIWZzCuXCHxaoeq0Ittv9FA8izA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 15:59:26,099 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 15:59:37,673 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 15:59:37,675 [INFO] AFC remote call 1 is done.
+2025-05-19 16:00:23,806 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 16:02:20,133 [INFO] File saved at: storage/resumes/resume_20250519_160220.png
+2025-05-19 16:02:22,784 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 16:02:29,442 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwqFTsoEu4XK6Jb7LkntWQpIgSnjyZfE6H-Nz2swfe10KZMbgNyIdeF7R6gzzDGJzsdtdrwIkOBZwpNaTtorL-gQHCqxBeFR763p4bLQs8Q&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 16:02:29,443 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 16:02:34,450 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 16:02:34,453 [INFO] AFC remote call 1 is done.
+2025-05-19 16:02:42,436 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 16:04:09,753 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:09,865 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:09,866 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:09,930 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:09,947 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:09,947 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:10,012 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:10,024 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:10,024 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:10,058 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:10,124 [INFO] Embedding generator initialized successfully
+2025-05-19 16:04:21,924 [INFO] File saved at: storage/resumes/resume_20250519_160421.pdf
+2025-05-19 16:04:23,464 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 16:04:28,456 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwpqhr5dfR5Rdod4EvR3he5Ln9YewNjG6yXwn4yz7IWqo1v2Ww1JNPoxjzw-hCqeK11H4ieU-UkMx_T48R-87RlOgCbe7e2z-299Pxqz-NY&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 16:04:28,458 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 16:04:38,784 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 16:04:38,787 [INFO] AFC remote call 1 is done.
+2025-05-19 16:15:48,164 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 16:15:50,518 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 16:15:52,057 [ERROR] Error processing resume: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/api/v1/endpoints/resume.py", line 109, in upload_resume_extract
+    "title": job["job"]["title"],
+             ~~~^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-05-19 16:29:19,506 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,632 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,632 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,697 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,715 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,715 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,782 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,794 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,795 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,829 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:19,893 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,593 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,724 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,725 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,793 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,809 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,809 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,871 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,885 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,885 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:41,941 [INFO] Embedding generator initialized successfully
+2025-05-19 16:29:42,013 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:28,728 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:28,889 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:28,890 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:28,964 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:39,323 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:39,438 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:39,438 [INFO] Embedding generator initialized successfully
+2025-05-19 16:30:39,502 [INFO] Embedding generator initialized successfully
+2025-05-19 16:31:40,678 [INFO] Embedding generator initialized successfully
+2025-05-19 16:31:40,735 [INFO] Embedding generator initialized successfully
+2025-05-19 16:31:40,735 [INFO] Embedding generator initialized successfully
+2025-05-19 16:31:40,812 [INFO] Embedding generator initialized successfully
+2025-05-19 16:36:31,349 [INFO] Embedding generator initialized successfully
+2025-05-19 16:36:31,400 [INFO] Embedding generator initialized successfully
+2025-05-19 16:36:31,400 [INFO] Embedding generator initialized successfully
+2025-05-19 16:36:31,461 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,276 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,348 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,348 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,430 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,449 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,450 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,538 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,546 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,546 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,591 [INFO] Embedding generator initialized successfully
+2025-05-19 16:38:47,683 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,478 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,549 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,549 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,620 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,636 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,637 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,714 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,721 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,721 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,766 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:48,846 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:55,840 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:55,904 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:55,904 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:55,981 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,000 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,000 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,082 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,090 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,090 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,130 [INFO] Embedding generator initialized successfully
+2025-05-19 16:39:56,215 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,488 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,581 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,581 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,656 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,674 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,674 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,750 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,758 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,758 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,799 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:02,876 [INFO] Embedding generator initialized successfully
+2025-05-19 16:40:19,281 [INFO] File saved at: storage/resumes/resume_20250519_164019.pdf
+2025-05-19 16:40:20,870 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 16:40:25,377 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwpqD_bvuhRagga_2NWDdfhgll0nqN096zGu3UC-d2JwS94bKrdIPonSnaiar7s75OvgJYqehQhkLp7-cUInsu_SzsSLrv9yo7rimqpc2g&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 16:40:25,378 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 16:40:35,828 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 16:40:35,829 [INFO] AFC remote call 1 is done.
+2025-05-19 16:40:54,968 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 16:40:56,593 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 16:52:39,136 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,187 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,187 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,250 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,264 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,264 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,326 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,332 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,332 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,363 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:39,424 [INFO] Embedding generator initialized successfully
+2025-05-19 16:52:44,011 [INFO] File saved at: storage/resumes/resume_20250519_165244.pdf
+2025-05-19 16:52:45,594 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 16:52:50,697 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwp42GnXy7I_0eLbZq8FovzGe30sE8_E6_U1_Hb4gWcikFDMkgi4NfnpJz8SxUjk7GZasYmUUtaBc7lk0SZ-qABWbOgLP2jcObOCjuBc0As&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 16:52:50,699 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 16:53:01,156 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 16:53:01,160 [INFO] AFC remote call 1 is done.
+2025-05-19 16:53:20,008 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 16:53:21,532 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 16:54:04,987 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,041 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,041 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,101 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,115 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,115 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,177 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,183 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,183 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,214 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:05,276 [INFO] Embedding generator initialized successfully
+2025-05-19 16:54:14,321 [INFO] File saved at: storage/resumes/resume_20250519_165414.pdf
+2025-05-19 16:54:15,847 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 16:54:19,695 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoK7E8cAILvaPxA1Ae90NfGOoEAxoBOFKCYgojgEyxOvHn2dMBxedPUmWSm8XPl8XfheKH5qo3PCTpNLkxpuI_rp9rkfskiHeb_DNcf0Yc&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 16:54:19,697 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 16:54:30,345 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 16:54:30,349 [INFO] AFC remote call 1 is done.
+2025-05-19 16:54:48,378 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 16:54:49,789 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 16:56:21,543 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,596 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,597 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,677 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,693 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,693 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,758 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,763 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,763 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,795 [INFO] Embedding generator initialized successfully
+2025-05-19 16:56:21,855 [INFO] Embedding generator initialized successfully
+2025-05-19 16:57:25,282 [INFO] File saved at: storage/resumes/resume_20250519_165725.pdf
+2025-05-19 16:57:27,395 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 16:57:30,772 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwqujP3CXI8Iod14T8D2X08pYuVkVfo3TRxEoWDVASk8qMisAspsl4wrwGVap3uCDeG9-yGZSl5zk38XZba1Z0aCtUkzMy5vfZQ7-qaGOWU&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 16:57:30,774 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 16:57:41,934 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 16:57:41,938 [INFO] AFC remote call 1 is done.
+2025-05-19 16:57:59,766 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 16:58:01,082 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 17:01:12,634 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,713 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,713 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,831 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,853 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,853 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,943 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,951 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,951 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:12,994 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:13,065 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:23,962 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,011 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,012 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,074 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,089 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,089 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,153 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,158 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,159 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,190 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:24,254 [INFO] Embedding generator initialized successfully
+2025-05-19 17:01:39,282 [INFO] File saved at: storage/resumes/resume_20250519_170139.pdf
+2025-05-19 17:01:40,838 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 17:01:46,775 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwqYdcyWeRVuPfOKV58Gh0SZKe8h3V2ghdZxwGVR5xpORnFYmxiWn-OyJQmMPHA-2IXp11i-VvffmhyYOcbgyRFPvjqDUqp29Ce69FO5CA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 17:01:46,777 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 17:01:57,834 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 17:01:57,839 [INFO] AFC remote call 1 is done.
+2025-05-19 17:02:15,758 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 17:02:17,290 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 17:03:46,838 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:46,890 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:46,890 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:46,951 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:46,964 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:46,964 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:47,026 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:47,032 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:47,032 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:47,066 [INFO] Embedding generator initialized successfully
+2025-05-19 17:03:47,152 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,196 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,278 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,278 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,357 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,373 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,374 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,441 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,446 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,446 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,479 [INFO] Embedding generator initialized successfully
+2025-05-19 17:04:07,541 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,232 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,285 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,286 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,350 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,368 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,368 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,466 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,471 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,471 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,506 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:18,574 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,067 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,124 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,124 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,191 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,210 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,210 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,280 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,286 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,287 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,321 [INFO] Embedding generator initialized successfully
+2025-05-19 17:25:41,388 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,015 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,071 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,071 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,135 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,150 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,150 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,211 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,216 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,216 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,248 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:27,311 [INFO] Embedding generator initialized successfully
+2025-05-19 17:29:29,995 [INFO] File saved at: storage/resumes/resume_20250519_172929.pdf
+2025-05-19 17:29:31,538 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 17:29:37,271 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwrhOwvQveHpZ_hLR4Fp7qwmpfliWY3cLqnJbvEngBf9x9L1WNsH_0gCZrf3Gj6Du4h3sYyZA8yOoMLFYF6kOves1u4qlaEBZuxPHsjpFHs&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 17:29:37,272 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 17:29:47,951 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 17:29:47,954 [INFO] AFC remote call 1 is done.
+2025-05-19 17:30:07,650 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 17:30:10,865 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 17:49:18,017 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,069 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,069 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,130 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,145 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,146 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,206 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,211 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,211 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,243 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:18,304 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,031 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,084 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,084 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,148 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,163 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,164 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,226 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,232 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,232 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,265 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:28,328 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,478 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,528 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,528 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,589 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,602 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,603 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,666 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,671 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,672 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,705 [INFO] Embedding generator initialized successfully
+2025-05-19 17:49:32,765 [INFO] Embedding generator initialized successfully
+2025-05-19 18:04:49,065 [INFO] File saved at: storage/resumes/resume_20250519_180449.pdf
+2025-05-19 18:04:50,832 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 18:04:55,030 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwpyt-la4qHyu0dE0VJxBBzmwgzrQspUoDF4psfw-HaJ_pHaImXoeVPdWcwTRuqanUUijk5ylgXKJWGq3RGkCnNiD1nKQqr6J8vx1CkDSA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 18:04:55,031 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 18:05:06,804 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 18:05:06,806 [INFO] AFC remote call 1 is done.
+2025-05-19 18:05:26,060 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 18:05:28,164 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 22:32:26,920 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:26,994 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:32,404 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,404 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,442 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:32,534 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:32,596 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,611 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,611 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,645 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:32,739 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:32,801 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,807 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,807 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,841 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:32,903 [INFO] Embedding generator initialized successfully
+2025-05-19 22:32:32,934 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:33,024 [WARNING] Langfuse client is disabled since no public_key was provided as a parameter or environment variable 'LANGFUSE_PUBLIC_KEY'. See our docs: https://langfuse.com/docs/sdk/python/low-level-sdk#initialize-client
+2025-05-19 22:32:33,086 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,615 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,670 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,670 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,737 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,753 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,753 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,824 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,830 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,830 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,864 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:22,928 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,568 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,656 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,657 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,770 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,799 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,800 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,881 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,886 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,887 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,920 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:25,985 [INFO] Embedding generator initialized successfully
+2025-05-19 22:34:39,408 [INFO] File saved at: storage/resumes/resume_20250519_223439.pdf
+2025-05-19 22:34:40,974 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 22:34:48,311 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwr7DdTPT9kJPx6-TYFZYlSaC9UDbTSjCof3C_HvbfxcUX7gFBY-ojGzTQv3gl6uh6diYyku_snthjDWc351Tnp4FbBao5bjVmoik-FIh3A&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 22:34:48,311 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 22:34:59,986 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 22:34:59,991 [INFO] AFC remote call 1 is done.
+2025-05-19 22:35:00,646 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-19 22:35:02,546 [ERROR] Unexpected error generating content for resume_validation: 'GeminiClient' object has no attribute '_extract_content'
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/gemini_client.py", line 87, in _call_gemini_with_retry
+    content = self._extract_content(response)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GeminiClient' object has no attribute '_extract_content'. Did you mean: 'generate_content'?
+Traceback (most recent call last):
+  File "/home/dmnsangeeth/Desktop/project/ai-recruitment-platform/app/core/llm/gemini_client.py", line 87, in _call_gemini_with_retry
+    content = self._extract_content(response)
+              ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'GeminiClient' object has no attribute '_extract_content'. Did you mean: 'generate_content'?
+2025-05-19 22:35:02,547 [ERROR] Error validating resume: Unexpected error with Gemini API: 'GeminiClient' object has no attribute '_extract_content'
+2025-05-19 22:35:02,547 [WARNING] Invalid resume detected: Validation error: Unexpected error with Gemini API: 'GeminiClient' object has no attribute '_extract_content'
+2025-05-19 22:36:40,801 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:40,854 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:40,854 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:40,920 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:40,936 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:40,936 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:40,999 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:41,004 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:41,005 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:41,040 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:41,103 [INFO] Embedding generator initialized successfully
+2025-05-19 22:36:48,566 [INFO] File saved at: storage/resumes/resume_20250519_223648.pdf
+2025-05-19 22:36:49,973 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 22:36:55,605 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwqCMpYrhKYA1kW0OEX-6ypizBCSWlv7yxgjLm3Qhs7c6gS6Mo_rgnclQ9suOt8xHN4uGbwdbNk9kUsgtyPdlzXen0OFJBLYo6Nb1m660A&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 22:36:55,606 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 22:37:08,089 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 22:37:08,091 [INFO] AFC remote call 1 is done.
+2025-05-19 22:37:08,806 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-19 22:37:27,344 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 22:37:28,715 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 23:26:41,427 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,494 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,494 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,583 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,601 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,601 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,667 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,677 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,677 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,741 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:41,847 [INFO] Embedding generator initialized successfully
+2025-05-19 23:26:43,503 [INFO] File saved at: storage/resumes/resume_20250519_232643.pdf
+2025-05-19 23:26:45,057 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 23:26:48,856 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoeS6Uhm9l-jvJ2qdnFGYP4U94eD0cz45A-Ti7nlGPFQNClEeqgh_SZURYehW_PkOgbLUfpHRltOSO7qXlcI2CtSilCOrGjYxTtSy3ZvA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 23:26:48,856 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 23:27:00,528 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 23:27:00,529 [INFO] AFC remote call 1 is done.
+2025-05-19 23:27:01,142 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-19 23:27:20,611 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 23:27:22,109 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 23:28:11,677 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,732 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,732 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,799 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,816 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,816 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,883 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,888 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,888 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,921 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:11,985 [INFO] Embedding generator initialized successfully
+2025-05-19 23:28:17,120 [INFO] File saved at: storage/resumes/resume_20250519_232817.pdf
+2025-05-19 23:28:18,667 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-19 23:28:23,099 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoGRWcX7jS9ngXLJAMV1vZUWy5i3sYss02UXmghPzWUQtZ3upu7w2k7Mv10xcE2mGsj2A88sj8kGqoBCJgY9RTu3hGZ79idf4F-5YHaRw&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-19 23:28:23,101 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-19 23:28:35,256 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-19 23:28:35,260 [INFO] AFC remote call 1 is done.
+2025-05-19 23:28:35,766 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-19 23:28:35,768 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-19 23:28:35,769 [INFO] First when uploading Response usage_metadata cache_tokens_details: None
+2025-05-19 23:28:35,769 [INFO] First when uploading Response usage_metadata: cache_tokens_details=None cached_content_token_count=None candidates_token_count=1667 candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)] prompt_token_count=782 prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=2449 traffic_type=None
+2025-05-19 23:28:54,303 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-19 23:28:55,527 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-19 23:45:50,588 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,653 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,654 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,742 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,764 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,764 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,842 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,848 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,849 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,889 [INFO] Embedding generator initialized successfully
+2025-05-19 23:45:50,976 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:26,827 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:26,893 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:26,893 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:26,956 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:26,972 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:26,972 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:27,035 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:27,041 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:27,042 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:27,073 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:27,143 [INFO] Embedding generator initialized successfully
+2025-05-20 00:02:37,480 [INFO] File saved at: storage/resumes/resume_20250520_000237.pdf
+2025-05-20 00:02:39,082 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 00:02:42,558 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoFTy2Je8XO3M1uNJo51RnIqcHZWRS0kdYw--01hPrN-TtA7H_EUPdQcBYmuqFzSToChbFa6RMGq5SyP7NdGEMVZ6x8gu1JqetwBBw-epU&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 00:02:42,559 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 00:02:54,645 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 00:02:54,649 [INFO] AFC remote call 1 is done.
+2025-05-20 00:02:55,051 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 00:02:55,053 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 00:02:55,054 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 00:02:55,054 [INFO] Total Tokens (Input + Output): 2411
+2025-05-20 00:02:55,055 [INFO] Input Tokens: 782 (Text: 8, Document: 774, Other: 0)
+2025-05-20 00:02:55,055 [INFO] Output Tokens: 1629 (Text: 1629, Other: 0)
+2025-05-20 00:03:14,106 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 00:03:15,433 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 00:04:40,306 [INFO] File saved at: storage/resumes/resume_20250520_000440.pdf
+2025-05-20 00:04:41,750 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 00:04:45,332 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoTGlerZLJvxS1tXpt9RpKxw8XZR0slNaIxPcjaYT9bofmTzmxKjxLEFca7D1mtFxQkTYby5PTynJYpIhur1-j9vnkdsFEO5JObZctFdA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 00:04:45,333 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 00:04:59,258 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 00:04:59,263 [INFO] AFC remote call 1 is done.
+2025-05-20 00:04:59,772 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 00:04:59,774 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 00:04:59,775 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 00:04:59,775 [INFO] Total Tokens (Input + Output): 2803
+2025-05-20 00:04:59,775 [INFO] Input Tokens: 782 (Text: 8, Document: 774, Other: 0)
+2025-05-20 00:04:59,775 [INFO] Output Tokens: 2021 (Text: 2021, Other: 0)
+2025-05-20 00:05:15,703 [INFO] Successfully created embedding for resume: Isuru Alagiyawanna
+2025-05-20 00:05:16,265 [INFO] Successfully processed and stored resume for Isuru Alagiyawanna
+2025-05-20 08:25:32,768 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,822 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,822 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,885 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,898 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,898 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,961 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,966 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:32,966 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:33,019 [INFO] Embedding generator initialized successfully
+2025-05-20 08:25:33,085 [INFO] Embedding generator initialized successfully
+2025-05-20 08:28:57,054 [INFO] File saved at: storage/resumes/resume_20250520_082857.pdf
+2025-05-20 08:28:58,671 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 08:29:01,841 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwoUDTWE_M9iYTY-n2_fbv7bncwF_jdWktPE3jCHl_8wGRQXQ0K32ekSI_puu70x-X-7FwZ2tXK7GDsVotKQbfcIE6kWNt4BY-u1xlhN-Q&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 08:29:01,844 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 08:29:13,107 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 08:29:13,111 [INFO] AFC remote call 1 is done.
+2025-05-20 08:29:13,516 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 08:29:13,518 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 08:29:13,518 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 08:29:13,518 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 08:29:13,519 [INFO] Input Tokens: 782 (Text: 8, Document: 774, Other: 0)
+2025-05-20 08:29:13,519 [INFO] Output Tokens: 1667 (Text: 1667, Other: 0)
+2025-05-20 08:29:17,145 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 08:29:17,148 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 08:29:17,148 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 08:29:17,148 [INFO] Total Tokens (Input + Output): 1986
+2025-05-20 08:29:17,148 [INFO] Input Tokens: 1886 (Text: 0, Document: 0, Other: 1886)
+2025-05-20 08:29:17,148 [INFO] Output Tokens: 100 (Text: 0, Other: 100)
+2025-05-20 08:29:34,206 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 08:29:34,209 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 08:29:34,210 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 08:29:34,210 [INFO] Total Tokens (Input + Output): 4264
+2025-05-20 08:29:34,211 [INFO] Input Tokens: 2061 (Text: 0, Document: 0, Other: 2061)
+2025-05-20 08:29:34,211 [INFO] Output Tokens: 2203 (Text: 0, Other: 2203)
+2025-05-20 08:29:35,550 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 08:29:37,345 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 08:29:55,239 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,292 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,292 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,363 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,381 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,381 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,449 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,457 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,457 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,490 [INFO] Embedding generator initialized successfully
+2025-05-20 08:29:55,557 [INFO] Embedding generator initialized successfully
+2025-05-20 08:30:08,271 [INFO] File saved at: storage/resumes/resume_20250520_083008.pdf
+2025-05-20 08:30:09,952 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 08:30:13,431 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwp0MADOUYcVty4472QwcyF--BbIy27HTQIQfJkQacm97Kqi_YHeZLPNzVmkpzdhGnsZw1uvkAS_z2cqMiqRcsJoX5NcYzhGmGTxvOX8iw&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 08:30:13,433 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 08:30:24,473 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 08:30:24,477 [INFO] AFC remote call 1 is done.
+2025-05-20 08:30:24,924 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 08:30:24,925 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 08:30:24,925 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 08:30:24,926 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 08:30:24,926 [INFO] Input Tokens: 782 (Text: 8, Document: 774, Other: 0)
+2025-05-20 08:30:24,926 [INFO] Output Tokens: 1667 (Text: 1667, Other: 0)
+2025-05-20 08:30:28,485 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 08:30:28,488 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 08:30:28,489 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 08:30:28,489 [INFO] Total Tokens (Input + Output): 1961
+2025-05-20 08:30:28,489 [INFO] Input Tokens: 1886 (Text: 0, Document: 0, Other: 1886)
+2025-05-20 08:30:28,489 [INFO] Output Tokens: 75 (Text: 0, Other: 75)
+2025-05-20 08:30:45,853 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 08:30:45,857 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 08:30:45,858 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 08:30:45,858 [INFO] Total Tokens (Input + Output): 4243
+2025-05-20 08:30:45,859 [INFO] Input Tokens: 2061 (Text: 0, Document: 0, Other: 2061)
+2025-05-20 08:30:45,859 [INFO] Output Tokens: 2182 (Text: 0, Other: 2182)
+2025-05-20 08:30:46,422 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 08:30:47,881 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 08:52:11,326 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,387 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,387 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,451 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,466 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,466 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,530 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,536 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,536 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,591 [INFO] Embedding generator initialized successfully
+2025-05-20 08:52:11,677 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,056 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,111 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,111 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,177 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,191 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,191 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,255 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,260 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,260 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,292 [INFO] Embedding generator initialized successfully
+2025-05-20 08:55:08,356 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:07,917 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:07,972 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:07,972 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,040 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,054 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,054 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,115 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,121 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,121 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,154 [INFO] Embedding generator initialized successfully
+2025-05-20 08:56:08,216 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,235 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,290 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,290 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,351 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,364 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,364 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,428 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,433 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,433 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,468 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:29,533 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,672 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,729 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,729 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,794 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,809 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,809 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,876 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,883 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,884 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:36,930 [INFO] Embedding generator initialized successfully
+2025-05-20 09:09:37,005 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,708 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,769 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,769 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,842 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,858 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,858 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,927 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,934 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,934 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:23,973 [INFO] Embedding generator initialized successfully
+2025-05-20 09:11:24,045 [INFO] Embedding generator initialized successfully
+2025-05-20 11:25:58,552 [INFO] File saved at: storage/resumes/resume_20250520_112558.png
+2025-05-20 11:26:00,156 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 11:26:06,195 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwr75LWY9VpR2GQcfIq0k_CtD7cZgAIm3TzkMnMkhzNOhN4HG8cVUf-XR9qskvda9Lt4Tg65hYGf6nHG34wmoHRHlizJG29kjjUxECoX1Q&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 11:26:06,197 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 11:26:10,699 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 11:26:10,701 [INFO] AFC remote call 1 is done.
+2025-05-20 11:26:11,110 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 11:26:11,114 [INFO] First when uploading Total input tokens: total_tokens=259 cached_content_token_count=None
+2025-05-20 11:26:11,115 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 11:26:11,115 [INFO] Total Tokens (Input + Output): 1783
+2025-05-20 11:26:11,115 [INFO] Input Tokens: 1298 (Text: 8, Document: 0, Other: 1290)
+2025-05-20 11:26:11,115 [INFO] Output Tokens: 485 (Text: 485, Other: 0)
+2025-05-20 11:26:15,514 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 11:26:15,517 [INFO]  when uploading Total input tokens: total_tokens=708 cached_content_token_count=None
+2025-05-20 11:26:15,518 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 11:26:15,518 [INFO] Total Tokens (Input + Output): 823
+2025-05-20 11:26:15,518 [INFO] Input Tokens: 704 (Text: 0, Document: 0, Other: 704)
+2025-05-20 11:26:15,518 [INFO] Output Tokens: 119 (Text: 0, Other: 119)
+2025-05-20 11:26:22,374 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 11:26:22,377 [INFO]  when uploading Total input tokens: total_tokens=882 cached_content_token_count=None
+2025-05-20 11:26:22,378 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 11:26:22,378 [INFO] Total Tokens (Input + Output): 1710
+2025-05-20 11:26:22,378 [INFO] Input Tokens: 879 (Text: 0, Document: 0, Other: 879)
+2025-05-20 11:26:22,379 [INFO] Output Tokens: 831 (Text: 0, Other: 831)
+2025-05-20 11:26:22,964 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 11:26:24,566 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 12:11:31,294 [INFO] File saved at: storage/resumes/resume_20250520_121131.pdf
+2025-05-20 12:11:32,883 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 12:11:36,598 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwpMKf8y0BXG-osvDNzdP_AMhjA4SdnfuMxfO3psrsdr0QDB9f7bvzcHsjP8Iow2xd8yPC5tcKDza2Mm_TaUbOcC4jAwq4qAw5kqJztIig&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 12:11:36,598 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 12:11:48,582 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 12:11:48,587 [INFO] AFC remote call 1 is done.
+2025-05-20 12:11:49,145 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:11:49,148 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 12:11:49,148 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:11:49,149 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 12:11:49,149 [INFO] Input Tokens: 782 (Text: 8, Document: 774, Other: 0)
+2025-05-20 12:11:49,149 [INFO] Output Tokens: 1667 (Text: 1667, Other: 0)
+2025-05-20 12:11:52,875 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:11:52,879 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 12:11:52,880 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:11:52,880 [INFO] Total Tokens (Input + Output): 1975
+2025-05-20 12:11:52,880 [INFO] Input Tokens: 1886 (Text: 0, Document: 0, Other: 1886)
+2025-05-20 12:11:52,881 [INFO] Output Tokens: 89 (Text: 0, Other: 89)
+2025-05-20 12:12:10,828 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:12:10,830 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 12:12:10,830 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:12:10,830 [INFO] Total Tokens (Input + Output): 4299
+2025-05-20 12:12:10,830 [INFO] Input Tokens: 2061 (Text: 0, Document: 0, Other: 2061)
+2025-05-20 12:12:10,830 [INFO] Output Tokens: 2238 (Text: 0, Other: 2238)
+2025-05-20 12:12:12,296 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 12:12:15,405 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 12:38:08,015 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,079 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,079 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,146 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,161 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,161 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,224 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,230 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,231 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,264 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:08,334 [INFO] Embedding generator initialized successfully
+2025-05-20 12:38:14,451 [INFO] File saved at: storage/resumes/resume_20250520_123814.pdf
+2025-05-20 12:38:16,052 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 12:38:19,952 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwr885JqKafpS7GB2h0Vkhq6_SWAcaJhwRcLp_l3143jJ-wGvERwHsbpXdVClQOT2CAh7f1OFY9Bo5fwC8MOupwApC-1NIZ-a2pgZPRIGig&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 12:38:19,954 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 12:38:31,932 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 12:38:31,937 [INFO] AFC remote call 1 is done.
+2025-05-20 12:38:32,366 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:38:32,368 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 12:38:32,369 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:38:32,369 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 12:38:32,369 [INFO] Input Tokens: 782 (Text: 8, Document: 774, Other: 0)
+2025-05-20 12:38:32,369 [INFO] Output Tokens: 1667 (Text: 1667, Other: 0)
+2025-05-20 12:38:35,413 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:38:35,414 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 12:38:35,415 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:38:35,415 [INFO] Total Tokens (Input + Output): 1961
+2025-05-20 12:38:35,415 [INFO] Input Tokens: 1886 (Text: 0, Document: 0, Other: 1886)
+2025-05-20 12:38:35,415 [INFO] Output Tokens: 75 (Text: 0, Other: 75)
+2025-05-20 12:38:50,467 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:38:50,471 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 12:38:50,472 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:38:50,472 [INFO] Total Tokens (Input + Output): 4135
+2025-05-20 12:38:50,472 [INFO] Input Tokens: 2061 (Text: 0, Document: 0, Other: 2061)
+2025-05-20 12:38:50,472 [INFO] Output Tokens: 2074 (Text: 0, Other: 2074)
+2025-05-20 12:38:51,072 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 12:38:52,437 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 12:42:36,299 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,384 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,384 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,483 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,505 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,505 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,582 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,588 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,588 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,624 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:36,691 [INFO] Embedding generator initialized successfully
+2025-05-20 12:42:42,624 [INFO] File saved at: storage/resumes/resume_20250520_124242.pdf
+2025-05-20 12:42:44,146 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 12:42:48,487 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwraUc5n7ZOIrJuLXuMXCpZNG5lUMobIEgjBWm3FWHMxdwF6vEZtgMT1HomZeeGvXUG1-J0ggJpfyp8kqhDCmRMInkbp8688awJvUxnsNQ&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 12:42:48,489 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 12:43:00,154 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 12:43:00,159 [INFO] AFC remote call 1 is done.
+2025-05-20 12:43:00,632 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:43:00,636 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 12:43:00,637 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:43:00,638 [INFO] ======================================
+2025-05-20 12:43:00,638 [INFO] cache_tokens_details: None
+2025-05-20 12:43:00,639 [INFO] cached_content_token_count: None
+2025-05-20 12:43:00,639 [INFO] candidates_token_count: 1667
+2025-05-20 12:43:00,640 [INFO] candidates_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)]
+2025-05-20 12:43:00,640 [INFO] construct: <bound method BaseModel.construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,641 [INFO] copy: <bound method BaseModel.copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,641 [INFO] dict: <bound method BaseModel.dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,641 [INFO] from_orm: <bound method BaseModel.from_orm of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,642 [INFO] json: <bound method BaseModel.json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,642 [INFO] model_computed_fields: {}
+2025-05-20 12:43:00,642 [INFO] model_config: {'alias_generator': <function to_camel at 0x731bc6e8ade0>, 'populate_by_name': True, 'from_attributes': True, 'protected_namespaces': (), 'extra': 'forbid', 'arbitrary_types_allowed': True, 'ser_json_bytes': 'base64', 'val_json_bytes': 'base64', 'ignored_types': (<class 'typing.TypeVar'>,)}
+2025-05-20 12:43:00,642 [INFO] model_construct: <bound method BaseModel.model_construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,642 [INFO] model_copy: <bound method BaseModel.model_copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,643 [INFO] model_dump: <bound method BaseModel.model_dump of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,643 [INFO] model_dump_json: <bound method BaseModel.model_dump_json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,643 [INFO] model_extra: None
+2025-05-20 12:43:00,644 [INFO] model_fields: {'cache_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='cacheTokensDetails', alias_priority=1, description='Output only. List of modalities of the cached content in the request input.'), 'cached_content_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='cachedContentTokenCount', alias_priority=1, description='Output only. Number of tokens in the cached part in the input (the cached content).'), 'candidates_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='candidatesTokenCount', alias_priority=1, description='Number of tokens in the response(s).'), 'candidates_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='candidatesTokensDetails', alias_priority=1, description='Output only. List of modalities that were returned in the response.'), 'prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='promptTokenCount', alias_priority=1, description='Number of tokens in the request. When `cached_content` is set, this is still the total effective prompt size meaning this includes the number of tokens in the cached content.'), 'prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='promptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed in the request input.'), 'thoughts_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='thoughtsTokenCount', alias_priority=1, description='Output only. Number of tokens present in thoughts output.'), 'tool_use_prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='toolUsePromptTokenCount', alias_priority=1, description='Output only. Number of tokens present in tool-use prompt(s).'), 'tool_use_prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='toolUsePromptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed for tool-use request inputs.'), 'total_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='totalTokenCount', alias_priority=1, description='Total token count for prompt, response candidates, and tool-use prompts (if present).'), 'traffic_type': FieldInfo(annotation=Union[TrafficType, NoneType], required=False, default=None, alias='trafficType', alias_priority=1, description='Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput quota.')}
+2025-05-20 12:43:00,645 [INFO] model_fields_set: {'candidates_token_count', 'prompt_token_count', 'total_token_count', 'prompt_tokens_details', 'candidates_tokens_details'}
+2025-05-20 12:43:00,645 [INFO] model_json_schema: <bound method BaseModel.model_json_schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,645 [INFO] model_parametrized_name: <bound method BaseModel.model_parametrized_name of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,646 [INFO] model_post_init: <bound method BaseModel.model_post_init of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,646 [INFO] model_rebuild: <bound method BaseModel.model_rebuild of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,647 [INFO] model_validate: <bound method BaseModel.model_validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,647 [INFO] model_validate_json: <bound method BaseModel.model_validate_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,647 [INFO] model_validate_strings: <bound method BaseModel.model_validate_strings of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,648 [INFO] parse_file: <bound method BaseModel.parse_file of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,648 [INFO] parse_obj: <bound method BaseModel.parse_obj of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,648 [INFO] parse_raw: <bound method BaseModel.parse_raw of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,649 [INFO] prompt_token_count: 782
+2025-05-20 12:43:00,649 [INFO] prompt_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)]
+2025-05-20 12:43:00,649 [INFO] schema: <bound method BaseModel.schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,649 [INFO] schema_json: <bound method BaseModel.schema_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,650 [INFO] thoughts_token_count: None
+2025-05-20 12:43:00,650 [INFO] to_json_dict: <bound method BaseModel.to_json_dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:43:00,651 [INFO] tool_use_prompt_token_count: None
+2025-05-20 12:43:00,651 [INFO] tool_use_prompt_tokens_details: None
+2025-05-20 12:43:00,651 [INFO] total_token_count: 2449
+2025-05-20 12:43:00,652 [INFO] traffic_type: None
+2025-05-20 12:43:00,652 [INFO] update_forward_refs: <bound method BaseModel.update_forward_refs of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,652 [INFO] validate: <bound method BaseModel.validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:43:00,652 [INFO] ======================================
+2025-05-20 12:43:00,653 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:43:00,653 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 12:43:00,653 [INFO] Input Tokens Breakdown:
+2025-05-20 12:43:00,653 [INFO] - Total: 782
+2025-05-20 12:43:00,653 [INFO] - Text: 8
+2025-05-20 12:43:00,654 [INFO] - Document: 774
+2025-05-20 12:43:00,654 [INFO] - Other modalities: 0
+2025-05-20 12:43:00,654 [INFO] Output Tokens Breakdown:
+2025-05-20 12:43:00,654 [INFO] - Total: 1667
+2025-05-20 12:43:00,654 [INFO] - Text: 1667
+2025-05-20 12:43:00,654 [INFO] - Other modalities: 0
+2025-05-20 12:43:02,986 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:43:02,989 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 12:43:02,990 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:43:02,990 [INFO] ======================================
+2025-05-20 12:43:02,990 [INFO] cached_content_token_count: 0
+2025-05-20 12:43:02,991 [INFO] candidates_token_count: 68
+2025-05-20 12:43:02,991 [INFO] prompt_token_count: 1886
+2025-05-20 12:43:02,991 [INFO] total_token_count: 1954
+2025-05-20 12:43:02,991 [INFO] ======================================
+2025-05-20 12:43:02,992 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:43:02,992 [INFO] Total Tokens (Input + Output): 1954
+2025-05-20 12:43:02,992 [INFO] Input Tokens Breakdown:
+2025-05-20 12:43:02,992 [INFO] - Total: 1886
+2025-05-20 12:43:02,992 [INFO] - Text: 0
+2025-05-20 12:43:02,993 [INFO] - Document: 0
+2025-05-20 12:43:02,993 [INFO] - Other modalities: 1886
+2025-05-20 12:43:02,993 [INFO] Output Tokens Breakdown:
+2025-05-20 12:43:02,993 [INFO] - Total: 68
+2025-05-20 12:43:02,994 [INFO] - Text: 0
+2025-05-20 12:43:02,994 [INFO] - Other modalities: 68
+2025-05-20 12:43:18,204 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:43:18,208 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 12:43:18,209 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:43:18,209 [INFO] ======================================
+2025-05-20 12:43:18,209 [INFO] cached_content_token_count: 0
+2025-05-20 12:43:18,210 [INFO] candidates_token_count: 2080
+2025-05-20 12:43:18,210 [INFO] prompt_token_count: 2061
+2025-05-20 12:43:18,210 [INFO] total_token_count: 4141
+2025-05-20 12:43:18,211 [INFO] ======================================
+2025-05-20 12:43:18,211 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:43:18,211 [INFO] Total Tokens (Input + Output): 4141
+2025-05-20 12:43:18,212 [INFO] Input Tokens Breakdown:
+2025-05-20 12:43:18,212 [INFO] - Total: 2061
+2025-05-20 12:43:18,212 [INFO] - Text: 0
+2025-05-20 12:43:18,212 [INFO] - Document: 0
+2025-05-20 12:43:18,212 [INFO] - Other modalities: 2061
+2025-05-20 12:43:18,213 [INFO] Output Tokens Breakdown:
+2025-05-20 12:43:18,213 [INFO] - Total: 2080
+2025-05-20 12:43:18,213 [INFO] - Text: 0
+2025-05-20 12:43:18,213 [INFO] - Other modalities: 2080
+2025-05-20 12:43:18,868 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 12:43:20,314 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 12:44:47,333 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,432 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,432 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,516 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,539 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,540 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,641 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,649 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,649 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,708 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,800 [INFO] Embedding generator initialized successfully
+2025-05-20 12:44:47,825 [INFO] File saved at: storage/resumes/resume_20250520_124447.pdf
+2025-05-20 12:44:49,330 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 12:44:53,781 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2Vwr_GhBUxuKoxOCD-IYoWfslPHVavElBIGjPT3xIvAnXiD4uXeG0b14H0Z4_5B29bGmqvQe3vgzTsjRyrSoCVNGuzK-PGw5AfwSpYJ4LeA&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 12:44:53,781 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 12:45:04,847 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 12:45:04,852 [INFO] AFC remote call 1 is done.
+2025-05-20 12:45:05,256 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:45:05,259 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 12:45:05,260 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:45:05,260 [INFO] ======================================
+2025-05-20 12:45:05,260 [INFO] cache_tokens_details: None
+2025-05-20 12:45:05,260 [INFO] cached_content_token_count: None
+2025-05-20 12:45:05,261 [INFO] candidates_token_count: 1667
+2025-05-20 12:45:05,261 [INFO] candidates_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)]
+2025-05-20 12:45:05,261 [INFO] construct: <bound method BaseModel.construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,261 [INFO] copy: <bound method BaseModel.copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,262 [INFO] dict: <bound method BaseModel.dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,262 [INFO] from_orm: <bound method BaseModel.from_orm of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,262 [INFO] json: <bound method BaseModel.json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,262 [INFO] model_computed_fields: {}
+2025-05-20 12:45:05,263 [INFO] model_config: {'alias_generator': <function to_camel at 0x7f1304e7ede0>, 'populate_by_name': True, 'from_attributes': True, 'protected_namespaces': (), 'extra': 'forbid', 'arbitrary_types_allowed': True, 'ser_json_bytes': 'base64', 'val_json_bytes': 'base64', 'ignored_types': (<class 'typing.TypeVar'>,)}
+2025-05-20 12:45:05,263 [INFO] model_construct: <bound method BaseModel.model_construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,263 [INFO] model_copy: <bound method BaseModel.model_copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,263 [INFO] model_dump: <bound method BaseModel.model_dump of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,264 [INFO] model_dump_json: <bound method BaseModel.model_dump_json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,264 [INFO] model_extra: None
+2025-05-20 12:45:05,265 [INFO] model_fields: {'cache_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='cacheTokensDetails', alias_priority=1, description='Output only. List of modalities of the cached content in the request input.'), 'cached_content_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='cachedContentTokenCount', alias_priority=1, description='Output only. Number of tokens in the cached part in the input (the cached content).'), 'candidates_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='candidatesTokenCount', alias_priority=1, description='Number of tokens in the response(s).'), 'candidates_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='candidatesTokensDetails', alias_priority=1, description='Output only. List of modalities that were returned in the response.'), 'prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='promptTokenCount', alias_priority=1, description='Number of tokens in the request. When `cached_content` is set, this is still the total effective prompt size meaning this includes the number of tokens in the cached content.'), 'prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='promptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed in the request input.'), 'thoughts_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='thoughtsTokenCount', alias_priority=1, description='Output only. Number of tokens present in thoughts output.'), 'tool_use_prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='toolUsePromptTokenCount', alias_priority=1, description='Output only. Number of tokens present in tool-use prompt(s).'), 'tool_use_prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='toolUsePromptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed for tool-use request inputs.'), 'total_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='totalTokenCount', alias_priority=1, description='Total token count for prompt, response candidates, and tool-use prompts (if present).'), 'traffic_type': FieldInfo(annotation=Union[TrafficType, NoneType], required=False, default=None, alias='trafficType', alias_priority=1, description='Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput quota.')}
+2025-05-20 12:45:05,265 [INFO] model_fields_set: {'total_token_count', 'prompt_token_count', 'prompt_tokens_details', 'candidates_token_count', 'candidates_tokens_details'}
+2025-05-20 12:45:05,265 [INFO] model_json_schema: <bound method BaseModel.model_json_schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,265 [INFO] model_parametrized_name: <bound method BaseModel.model_parametrized_name of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,266 [INFO] model_post_init: <bound method BaseModel.model_post_init of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,266 [INFO] model_rebuild: <bound method BaseModel.model_rebuild of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,266 [INFO] model_validate: <bound method BaseModel.model_validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,266 [INFO] model_validate_json: <bound method BaseModel.model_validate_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,267 [INFO] model_validate_strings: <bound method BaseModel.model_validate_strings of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,267 [INFO] parse_file: <bound method BaseModel.parse_file of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,267 [INFO] parse_obj: <bound method BaseModel.parse_obj of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,267 [INFO] parse_raw: <bound method BaseModel.parse_raw of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,268 [INFO] prompt_token_count: 782
+2025-05-20 12:45:05,268 [INFO] prompt_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)]
+2025-05-20 12:45:05,268 [INFO] schema: <bound method BaseModel.schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,268 [INFO] schema_json: <bound method BaseModel.schema_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,269 [INFO] thoughts_token_count: None
+2025-05-20 12:45:05,269 [INFO] to_json_dict: <bound method BaseModel.to_json_dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:45:05,269 [INFO] tool_use_prompt_token_count: None
+2025-05-20 12:45:05,270 [INFO] tool_use_prompt_tokens_details: None
+2025-05-20 12:45:05,270 [INFO] total_token_count: 2449
+2025-05-20 12:45:05,270 [INFO] traffic_type: None
+2025-05-20 12:45:05,270 [INFO] update_forward_refs: <bound method BaseModel.update_forward_refs of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,270 [INFO] validate: <bound method BaseModel.validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:45:05,271 [INFO] ======================================
+2025-05-20 12:45:05,271 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:45:05,271 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 12:45:05,271 [INFO] Input Tokens Breakdown:
+2025-05-20 12:45:05,272 [INFO] - Total: 782
+2025-05-20 12:45:05,272 [INFO] - Text: 8
+2025-05-20 12:45:05,272 [INFO] - Document: 774
+2025-05-20 12:45:05,272 [INFO] - Other modalities: 0
+2025-05-20 12:45:05,273 [INFO] Output Tokens Breakdown:
+2025-05-20 12:45:05,273 [INFO] - Total: 1667
+2025-05-20 12:45:05,273 [INFO] - Text: 1667
+2025-05-20 12:45:05,273 [INFO] - Other modalities: 0
+2025-05-20 12:45:08,011 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:45:08,015 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 12:45:08,015 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:45:08,016 [INFO] ======================================
+2025-05-20 12:45:08,016 [INFO] cached_content_token_count: 0
+2025-05-20 12:45:08,016 [INFO] candidates_token_count: 88
+2025-05-20 12:45:08,016 [INFO] prompt_token_count: 1886
+2025-05-20 12:45:08,017 [INFO] total_token_count: 1974
+2025-05-20 12:45:08,017 [INFO] ======================================
+2025-05-20 12:45:08,017 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:45:08,018 [INFO] Total Tokens (Input + Output): 1974
+2025-05-20 12:45:08,018 [INFO] Input Tokens Breakdown:
+2025-05-20 12:45:08,018 [INFO] - Total: 1886
+2025-05-20 12:45:08,019 [INFO] - Text: 0
+2025-05-20 12:45:08,019 [INFO] - Document: 0
+2025-05-20 12:45:08,019 [INFO] - Other modalities: 1886
+2025-05-20 12:45:08,020 [INFO] Output Tokens Breakdown:
+2025-05-20 12:45:08,020 [INFO] - Total: 88
+2025-05-20 12:45:08,020 [INFO] - Text: 0
+2025-05-20 12:45:08,020 [INFO] - Other modalities: 88
+2025-05-20 12:45:23,196 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:45:23,197 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 12:45:23,197 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:45:23,197 [INFO] ======================================
+2025-05-20 12:45:23,197 [INFO] cached_content_token_count: 0
+2025-05-20 12:45:23,197 [INFO] candidates_token_count: 2034
+2025-05-20 12:45:23,197 [INFO] prompt_token_count: 2061
+2025-05-20 12:45:23,197 [INFO] total_token_count: 4095
+2025-05-20 12:45:23,198 [INFO] ======================================
+2025-05-20 12:45:23,198 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:45:23,198 [INFO] Total Tokens (Input + Output): 4095
+2025-05-20 12:45:23,198 [INFO] Input Tokens Breakdown:
+2025-05-20 12:45:23,198 [INFO] - Total: 2061
+2025-05-20 12:45:23,198 [INFO] - Text: 0
+2025-05-20 12:45:23,198 [INFO] - Document: 0
+2025-05-20 12:45:23,198 [INFO] - Other modalities: 2061
+2025-05-20 12:45:23,198 [INFO] Output Tokens Breakdown:
+2025-05-20 12:45:23,198 [INFO] - Total: 2034
+2025-05-20 12:45:23,198 [INFO] - Text: 0
+2025-05-20 12:45:23,198 [INFO] - Other modalities: 2034
+2025-05-20 12:45:23,797 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 12:45:25,512 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-20 12:46:54,343 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,399 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,399 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,465 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,478 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,479 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,544 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,550 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,551 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,585 [INFO] Embedding generator initialized successfully
+2025-05-20 12:46:54,649 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:11,907 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:11,964 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:11,964 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,032 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,049 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,049 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,124 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,131 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,132 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,176 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:12,260 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,122 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,177 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,177 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,242 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,257 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,257 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,324 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,330 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,330 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,363 [INFO] Embedding generator initialized successfully
+2025-05-20 12:47:15,428 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,234 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,289 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,289 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,357 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,370 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,370 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,435 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,440 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,440 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,478 [INFO] Embedding generator initialized successfully
+2025-05-20 12:48:16,544 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,699 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,776 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,776 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,855 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,871 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,872 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,945 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,952 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,952 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:04,986 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:05,055 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,797 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,855 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,855 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,918 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,932 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,932 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:20,998 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:21,004 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:21,004 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:21,044 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:21,119 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,595 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,649 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,650 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,720 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,738 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,738 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,819 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,825 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,826 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,861 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:37,937 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,088 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,152 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,152 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,222 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,240 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,240 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,312 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,318 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,318 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,351 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:41,427 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:50,728 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:50,802 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:50,802 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:50,894 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:50,916 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:50,916 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:51,000 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:51,006 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:51,006 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:51,043 [INFO] Embedding generator initialized successfully
+2025-05-20 12:49:51,111 [INFO] Embedding generator initialized successfully
+2025-05-20 12:50:27,925 [INFO] File saved at: storage/resumes/resume_20250520_125027.pdf
+2025-05-20 12:50:29,676 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-20 12:50:34,178 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=AAO2VwpPv-HoGOR2eC3bOw1e2xDtDz5lE-EV3ZEXBTr44DJMlFvjNT7z7bA1wlDEyur5kW2payzazBgkopAMXfsKWyJOFWQ5sxLE2Mw_3Si-8rQ&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-20 12:50:34,178 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-20 12:50:46,774 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-20 12:50:46,779 [INFO] AFC remote call 1 is done.
+2025-05-20 12:50:47,285 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:50:47,286 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-20 12:50:47,286 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:50:47,286 [INFO] ======================================
+2025-05-20 12:50:47,286 [INFO] cache_tokens_details: None
+2025-05-20 12:50:47,286 [INFO] cached_content_token_count: None
+2025-05-20 12:50:47,286 [INFO] candidates_token_count: 1667
+2025-05-20 12:50:47,286 [INFO] candidates_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)]
+2025-05-20 12:50:47,286 [INFO] construct: <bound method BaseModel.construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,287 [INFO] copy: <bound method BaseModel.copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,287 [INFO] dict: <bound method BaseModel.dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,287 [INFO] from_orm: <bound method BaseModel.from_orm of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,287 [INFO] json: <bound method BaseModel.json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,287 [INFO] model_computed_fields: {}
+2025-05-20 12:50:47,287 [INFO] model_config: {'alias_generator': <function to_camel at 0x72d835986d40>, 'populate_by_name': True, 'from_attributes': True, 'protected_namespaces': (), 'extra': 'forbid', 'arbitrary_types_allowed': True, 'ser_json_bytes': 'base64', 'val_json_bytes': 'base64', 'ignored_types': (<class 'typing.TypeVar'>,)}
+2025-05-20 12:50:47,287 [INFO] model_construct: <bound method BaseModel.model_construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,287 [INFO] model_copy: <bound method BaseModel.model_copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,287 [INFO] model_dump: <bound method BaseModel.model_dump of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,287 [INFO] model_dump_json: <bound method BaseModel.model_dump_json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,287 [INFO] model_extra: None
+2025-05-20 12:50:47,287 [INFO] model_fields: {'cache_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='cacheTokensDetails', alias_priority=1, description='Output only. List of modalities of the cached content in the request input.'), 'cached_content_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='cachedContentTokenCount', alias_priority=1, description='Output only. Number of tokens in the cached part in the input (the cached content).'), 'candidates_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='candidatesTokenCount', alias_priority=1, description='Number of tokens in the response(s).'), 'candidates_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='candidatesTokensDetails', alias_priority=1, description='Output only. List of modalities that were returned in the response.'), 'prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='promptTokenCount', alias_priority=1, description='Number of tokens in the request. When `cached_content` is set, this is still the total effective prompt size meaning this includes the number of tokens in the cached content.'), 'prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='promptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed in the request input.'), 'thoughts_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='thoughtsTokenCount', alias_priority=1, description='Output only. Number of tokens present in thoughts output.'), 'tool_use_prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='toolUsePromptTokenCount', alias_priority=1, description='Output only. Number of tokens present in tool-use prompt(s).'), 'tool_use_prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='toolUsePromptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed for tool-use request inputs.'), 'total_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='totalTokenCount', alias_priority=1, description='Total token count for prompt, response candidates, and tool-use prompts (if present).'), 'traffic_type': FieldInfo(annotation=Union[TrafficType, NoneType], required=False, default=None, alias='trafficType', alias_priority=1, description='Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput quota.')}
+2025-05-20 12:50:47,287 [INFO] model_fields_set: {'prompt_tokens_details', 'candidates_token_count', 'total_token_count', 'candidates_tokens_details', 'prompt_token_count'}
+2025-05-20 12:50:47,287 [INFO] model_json_schema: <bound method BaseModel.model_json_schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] model_parametrized_name: <bound method BaseModel.model_parametrized_name of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] model_post_init: <bound method BaseModel.model_post_init of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,288 [INFO] model_rebuild: <bound method BaseModel.model_rebuild of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] model_validate: <bound method BaseModel.model_validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] model_validate_json: <bound method BaseModel.model_validate_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] model_validate_strings: <bound method BaseModel.model_validate_strings of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] parse_file: <bound method BaseModel.parse_file of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] parse_obj: <bound method BaseModel.parse_obj of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] parse_raw: <bound method BaseModel.parse_raw of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] prompt_token_count: 782
+2025-05-20 12:50:47,288 [INFO] prompt_tokens_details: [ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)]
+2025-05-20 12:50:47,288 [INFO] schema: <bound method BaseModel.schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] schema_json: <bound method BaseModel.schema_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] thoughts_token_count: None
+2025-05-20 12:50:47,288 [INFO] to_json_dict: <bound method BaseModel.to_json_dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-20 12:50:47,288 [INFO] tool_use_prompt_token_count: None
+2025-05-20 12:50:47,288 [INFO] tool_use_prompt_tokens_details: None
+2025-05-20 12:50:47,288 [INFO] total_token_count: 2449
+2025-05-20 12:50:47,288 [INFO] traffic_type: None
+2025-05-20 12:50:47,288 [INFO] update_forward_refs: <bound method BaseModel.update_forward_refs of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] validate: <bound method BaseModel.validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-20 12:50:47,288 [INFO] ======================================
+2025-05-20 12:50:47,288 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:50:47,288 [INFO] Total Tokens (Input + Output): 2449
+2025-05-20 12:50:47,288 [INFO] Input Tokens Breakdown:
+2025-05-20 12:50:47,288 [INFO] - Total: 782
+2025-05-20 12:50:47,289 [INFO] - Text: 8
+2025-05-20 12:50:47,289 [INFO] - Document: 774
+2025-05-20 12:50:47,289 [INFO] - Other modalities: 0
+2025-05-20 12:50:47,289 [INFO] Output Tokens Breakdown:
+2025-05-20 12:50:47,289 [INFO] - Total: 1667
+2025-05-20 12:50:47,289 [INFO] - Text: 1667
+2025-05-20 12:50:47,289 [INFO] - Other modalities: 0
+2025-05-20 12:50:49,755 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:50:49,756 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-20 12:50:49,757 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:50:49,757 [INFO] ======================================
+2025-05-20 12:50:49,757 [INFO] cached_content_token_count: 0
+2025-05-20 12:50:49,757 [INFO] candidates_token_count: 92
+2025-05-20 12:50:49,757 [INFO] prompt_token_count: 1886
+2025-05-20 12:50:49,757 [INFO] total_token_count: 1978
+2025-05-20 12:50:49,757 [INFO] ======================================
+2025-05-20 12:50:49,757 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:50:49,757 [INFO] Total Tokens (Input + Output): 1978
+2025-05-20 12:50:49,757 [INFO] Input Tokens Breakdown:
+2025-05-20 12:50:49,757 [INFO] - Total: 1886
+2025-05-20 12:50:49,757 [INFO] - Text: 0
+2025-05-20 12:50:49,758 [INFO] - Document: 0
+2025-05-20 12:50:49,758 [INFO] - Other modalities: 1886
+2025-05-20 12:50:49,758 [INFO] Output Tokens Breakdown:
+2025-05-20 12:50:49,758 [INFO] - Total: 92
+2025-05-20 12:50:49,758 [INFO] - Text: 0
+2025-05-20 12:50:49,758 [INFO] - Other modalities: 92
+2025-05-20 12:51:06,230 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-20 12:51:06,232 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-20 12:51:06,232 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-20 12:51:06,232 [INFO] ======================================
+2025-05-20 12:51:06,232 [INFO] cached_content_token_count: 0
+2025-05-20 12:51:06,232 [INFO] candidates_token_count: 2188
+2025-05-20 12:51:06,232 [INFO] prompt_token_count: 2061
+2025-05-20 12:51:06,232 [INFO] total_token_count: 4249
+2025-05-20 12:51:06,232 [INFO] ======================================
+2025-05-20 12:51:06,232 [INFO] TOKEN USAGE SUMMARY:
+2025-05-20 12:51:06,232 [INFO] Total Tokens (Input + Output): 4249
+2025-05-20 12:51:06,232 [INFO] Input Tokens Breakdown:
+2025-05-20 12:51:06,232 [INFO] - Total: 2061
+2025-05-20 12:51:06,232 [INFO] - Text: 0
+2025-05-20 12:51:06,232 [INFO] - Document: 0
+2025-05-20 12:51:06,233 [INFO] - Other modalities: 2061
+2025-05-20 12:51:06,233 [INFO] Output Tokens Breakdown:
+2025-05-20 12:51:06,233 [INFO] - Total: 2188
+2025-05-20 12:51:06,233 [INFO] - Text: 0
+2025-05-20 12:51:06,233 [INFO] - Other modalities: 2188
+2025-05-20 12:51:06,856 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-20 12:51:08,980 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-22 10:34:58,508 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,569 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,569 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,630 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,648 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,648 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,711 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,718 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,719 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,751 [INFO] Embedding generator initialized successfully
+2025-05-22 10:34:58,814 [INFO] Embedding generator initialized successfully

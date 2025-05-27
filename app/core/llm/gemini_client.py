@@ -8,6 +8,7 @@ from google import genai
 from app.utils import logger
 from app.utils.config import MongoDBConfig
 from app.utils.exceptions import GeminiAPIError,LLMError, GeminiRateLimitError, GeminiContentFilterError
+from app.utils.file_handling import FileHandler
 
 class GeminiClient:
     """Gemini client class"""
@@ -17,6 +18,7 @@ class GeminiClient:
         self.initial_delay = initial_delay
         self.max_retries = max_retries
         self.backoff_factor = backoff_factor
+        self.fileHandler= FileHandler()
 
     def _extract_content(self, response) -> str:
         """Safely extract content from Gemini response with error handling"""
@@ -39,6 +41,12 @@ class GeminiClient:
         for attempt in range(self.max_retries):
             try:
                 response = self.model.generate_content(prompt)
+                input_total_tokens = self.client.models.count_tokens(
+                    model="gemini-2.0-flash", contents=prompt
+                )
+                
+                logger.info(" when uploading Total input tokens: %s", input_total_tokens)
+                self.fileHandler._log_token_usage_details(response)
 
                 if hasattr(response, 'blocked') and response.blocked:
                     block_reason = getattr(response, 'block_reason', 'unknown')
@@ -123,25 +131,27 @@ class GeminiClient:
 
         raise GeminiAPIError(f"Failed to get response from Gemini API after {self.max_retries} attempts") from last_error
 
-    def generate_content(self, contents):
-        """Simplified version that matches your working example"""
-        try:
-            response = self.client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=contents
-            )
+    # def generate_content(self, contents):
+    #     """Simplified version that matches your working example"""
+    #     try:
+    #         response = self.client.models.generate_content(
+    #             model="gemini-2.0-flash",
+    #             contents=contents
+    #         )
             
-            # Directly return text if available
-            if hasattr(response, 'text'):
-                return response.text
+    #         # Directly return text if available
+    #         if hasattr(response, 'text'):
+    #             return response.text
                 
-            # Handle candidate-based response
-            if hasattr(response, 'candidates') and response.candidates:
-                if hasattr(response.candidates[0], 'content'):
-                    return response.candidates[0].content.parts[0].text
+    #         # Handle candidate-based response
+    #         if hasattr(response, 'candidates') and response.candidates:
+    #             if hasattr(response.candidates[0], 'content'):
+    #                 return response.candidates[0].content.parts[0].text
                     
-            raise GeminiAPIError("Unexpected response format")
+    #         raise GeminiAPIError("Unexpected response format")
             
-        except Exception as e:
-            logger.error(f"Generation failed: {str(e)}")
-            raise GeminiAPIError(f"Content generation failed: {str(e)}")
+    #     except Exception as e:
+    #         logger.error(f"Generation failed: {str(e)}")
+    #         raise GeminiAPIError(f"Content generation failed: {str(e)}")
+        
+        

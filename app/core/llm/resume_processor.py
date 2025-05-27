@@ -19,7 +19,7 @@ class ResumeProcessor:
     """Resume Processor class"""
     def __init__(self):
         """Initialize the Resume Processor with Gemini"""
-        genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
+        self.client = genai.configure(api_key=MongoDBConfig.get_gemini_api_key())
         self.model = genai.GenerativeModel("gemini-1.5-flash") #gemini-1.5-flash gemini-1.5-pro
         self.repository = ResumeRepository()
         self.embedding = EmbeddingGenerator()
@@ -59,10 +59,10 @@ class ResumeProcessor:
 
         try:
             prompt = self._generate_validation_prompt(text)
+            print("second=================================================")
             response = self.gemini_client._call_gemini_with_retry(prompt,
                                                                   domain="resume_validation"
                                                                   )
-
             if not response:
                 return False, "Unable to validate resume content"
 
@@ -130,6 +130,78 @@ class ResumeProcessor:
             return linkedin_profile
         else:
             logger.error("No LinkedIn URL found in resume data")
+            
+    async def extract_resume(self,
+                       resume_text: str,
+                       file_path: str = None
+                       ):
+        """Process resume text to extract structured information and store in database"""
+        print("extract resume")
+        if not resume_text:
+            logger.error("No resume text provided")
+            return None
+
+        try:
+            # First validate if this is a resume
+            is_valid, validation_reason = self.validate_resume(resume_text)
+
+            if not is_valid:
+                logger.warning("Invalid resume detected: %s", validation_reason)
+                return {
+                    "is_valid_resume": False,
+                    "validation_reason": validation_reason
+                }
+
+            prompt = self._generate_prompt(resume_text)
+            print("third =================================================")
+            content = self.gemini_client._call_gemini_with_retry(prompt,
+                                                                 domain="resume_processing"
+                                                                 )
+            if not content:
+                logger.error("Failed to extract information from resume")
+                return None
+
+            cleaned_content = extract_and_validate_json(content)
+            if not cleaned_content:
+                logger.error("Invalid JSON content extracted from resume")
+                return None
+
+            json_content = json.loads(cleaned_content) if isinstance(cleaned_content, str) else cleaned_content
+
+            resume_data = self._transform_resume_data(json_content, file_path)
+            embedding = self.embedding.create_resume_embedding(resume_data)
+            resume_data["embedding"] = embedding
+
+            education_list = []
+            for edu in resume_data.get("education", []):
+                education_list.append(Education(**edu))
+            resume_data["education"] = education_list
+
+            experience_list = []
+            for exp in resume_data.get("experience", []):
+                experience_list.append(Experience(**exp))
+
+            resume_data["experience"] = experience_list
+            resume = Resume(**resume_data)
+
+            # Only store in DB if it's a valid resume
+            if is_valid:
+                result = self.repository.create(resume)
+                if result:
+                    logger.info(
+                        "Successfully processed and stored resume for %s",
+                        resume_data["name"]
+                        )
+                else:
+                    logger.error(
+                        "Failed to store resume for %s",
+                        resume_data["name"]
+                        )
+            return resume_data
+
+        except Exception as e:
+            logger.error("Error processing resume: %s", e)
+            return None
 
     async def process_resume(self,
                        resume_text: str,

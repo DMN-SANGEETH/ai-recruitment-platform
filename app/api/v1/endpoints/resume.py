@@ -1,9 +1,10 @@
 # app/api/routes/resume_upload.py (for example)
-
+from fastapi.encoders import jsonable_encoder
 from datetime import datetime
 from fastapi import APIRouter, UploadFile, File, HTTPException, status
 from typing import List
 
+from app.db.mongodb.models.cv_extraction import ResumeResponse
 from app.db.mongodb.models.job_match import JobMatchResponse
 from app.services.resume_service import ResumeService
 from app.services.job_service import JobService
@@ -78,5 +79,46 @@ async def upload_resume(uploaded_file: UploadFile = File(...)):
             detail=f"Error processing resume: {str(e)}"
         )
         
-    
 
+
+
+@router.post("/upload/cv_extraction", response_model=ResumeResponse, status_code=status.HTTP_201_CREATED)
+async def upload_resume_extract(uploaded_file: UploadFile = File(...)):
+    """Handle resume file upload and return extracted data"""
+    try:
+        file_extension = uploaded_file.filename.split('.')[-1].lower()
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"resume_{timestamp}.{file_extension}"
+
+        if file_extension not in FileHandler.ALLOWED_EXTENSIONS:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"Unsupported file type. Allowed types: {', '.join(FileHandler.ALLOWED_EXTENSIONS)}"
+            )
+
+        result = await resume_service.process_resume_file(
+            file=uploaded_file,
+            filename=filename
+        )
+
+        if not result or not result.get("success"):
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Failed to process resume"
+            )
+
+        # Extract just the resume data without the embedding
+        resume_data = result["data"]
+        if "embedding" in resume_data:
+            del resume_data["embedding"]
+
+        return resume_data
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error processing resume: {str(e)}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error processing resume: {str(e)}"
+        )

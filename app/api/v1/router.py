@@ -1,10 +1,6 @@
 
-from typing import Any
-
 from fastapi import APIRouter
 from app.api.v1.endpoints import linkedin, resume, profile
-
-
 
 router = APIRouter()
 router.include_router(resume.router, prefix="/resumes", tags=["resumes"])

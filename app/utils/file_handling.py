@@ -6,7 +6,6 @@ import docx
 from google import genai
 
 
-from app.core.llm.gemini_client import GeminiClient
 from app.utils.config import MongoDBConfig
 from app.utils.exceptions import FileProcessingError
 from app.utils.logger import logger
@@ -89,7 +88,14 @@ class FileHandler:
                 model="gemini-2.0-flash",
                 contents=[uploaded_file, "Extract all text exactly as it appears:"]
             )
-
+            # Track the request with token counts
+            total_tokens_input = client.models.count_tokens(
+                model="gemini-2.0-flash", contents=uploaded_file
+            )
+            print("First=================================================")
+            logger.info("First when uploading Total input tokens: %s", total_tokens_input)
+            cls._log_token_usage_details(response)
+            
             if hasattr(response, 'text'):
                 return response.text
             if hasattr(response, 'candidates') and response.candidates:
@@ -152,3 +158,152 @@ class FileHandler:
         except OSError as e:
             logger.error("Error reading text file %s: %s", file_path, e, exc_info=True)
             raise FileProcessingError(f"Error reading text file: {str(e)}") from e
+
+    # @classmethod
+    # def _log_token_usage_details(cls, response):
+    #     """Log detailed token usage information from Gemini API response"""
+    #     if not hasattr(response, 'usage_metadata'):
+    #         logger.warning("No usage_metadata available in the response")
+    #         return
+        
+    #     um = response.usage_metadata
+        
+    #     # Input token details
+    #     input_details = {
+    #         'total_prompt_tokens': um.prompt_token_count,
+    #         'text_tokens': next((pt.token_count for pt in getattr(um, 'prompt_tokens_details', []) 
+    #                       if pt.modality == 'TEXT'), 0),
+    #         'document_tokens': next((pt.token_count for pt in getattr(um, 'prompt_tokens_details', []) 
+    #                         if pt.modality == 'DOCUMENT'), 0),
+    #         'other_modality_tokens': um.prompt_token_count - sum(
+    #             pt.token_count for pt in getattr(um, 'prompt_tokens_details', []) 
+    #             if pt.modality in ['TEXT', 'DOCUMENT'])
+    #     }
+        
+    #     # Output token details
+    #     output_details = {
+    #         'total_output_tokens': um.candidates_token_count,
+    #         'text_tokens': next((ct.token_count for ct in getattr(um, 'candidates_tokens_details', []) 
+    #                       if ct.modality == 'TEXT'), 0),
+    #         'other_modality_tokens': um.candidates_token_count - sum(
+    #             ct.token_count for ct in getattr(um, 'candidates_tokens_details', []) 
+    #             if ct.modality == 'TEXT')
+    #     }
+        
+    #     # Summary logging
+    #     logger.info("TOKEN USAGE SUMMARY:")
+    #     logger.info("Total Tokens (Input + Output): %d", um.total_token_count)
+    #     logger.info("Input Tokens: %d (Text: %d, Document: %d, Other: %d)", 
+    #             input_details['total_prompt_tokens'],
+    #             input_details['text_tokens'],
+    #             input_details['document_tokens'],
+    #             input_details['other_modality_tokens'])
+    #     logger.info("Output Tokens: %d (Text: %d, Other: %d)",
+    #             output_details['total_output_tokens'],
+    #             output_details['text_tokens'],
+    #             output_details['other_modality_tokens'])
+
+        
+    #     # Detailed logging
+    #     if hasattr(um, 'prompt_tokens_details'):
+    #         logger.debug("INPUT TOKEN DETAILS:")
+    #         for detail in um.prompt_tokens_details:
+    #             logger.debug("- Modality: %s, Tokens: %d", detail.modality, detail.token_count)
+        
+    #     if hasattr(um, 'candidates_tokens_details'):
+    #         logger.debug("OUTPUT TOKEN DETAILS:")
+    #         for detail in um.candidates_tokens_details:
+    #             logger.debug("- Modality: %s, Tokens: %d", detail.modality, detail.token_count)
+    
+    @classmethod
+    def _log_token_usage_details(cls, response):
+        """Log detailed token usage information from Gemini API response including full metadata"""
+        if not hasattr(response, 'usage_metadata'):
+            logger.warning("No usage_metadata available in the response")
+            return
+        
+        um = response.usage_metadata
+        print("print=========-----------------------",um)
+        # First log the complete usage_metadata structure
+        logger.info("FULL USAGE_METADATA STRUCTURE:")
+        logger.info("======================================")
+        for attr in dir(um):
+            if not attr.startswith('_'):
+                try:
+                    value = getattr(um, attr)
+                    logger.info("%s: %s", attr, str(value))
+                except Exception as e:
+                    logger.info("%s: <error accessing: %s>", attr, str(e))
+        logger.info("======================================")
+        
+        # Input token details
+        input_details = {
+            'total_prompt_tokens': um.prompt_token_count,
+            'text_tokens': next((pt.token_count for pt in getattr(um, 'prompt_tokens_details', []) 
+                        if pt.modality == 'TEXT'), 0),
+            'document_tokens': next((pt.token_count for pt in getattr(um, 'prompt_tokens_details', []) 
+                            if pt.modality == 'DOCUMENT'), 0),
+            'other_modality_tokens': um.prompt_token_count - sum(
+                pt.token_count for pt in getattr(um, 'prompt_tokens_details', []) 
+                if pt.modality in ['TEXT', 'DOCUMENT'])
+        }
+        
+        # Output token details
+        output_details = {
+            'total_output_tokens': um.candidates_token_count,
+            'text_tokens': next((ct.token_count for ct in getattr(um, 'candidates_tokens_details', []) 
+                        if ct.modality == 'TEXT'), 0),
+            'other_modality_tokens': um.candidates_token_count - sum(
+                ct.token_count for ct in getattr(um, 'candidates_tokens_details', []) 
+                if ct.modality == 'TEXT')
+        }
+        
+        # Summary logging with additional details
+        logger.info("TOKEN USAGE SUMMARY:")
+        logger.info("Total Tokens (Input + Output): %d", um.total_token_count)
+        logger.info("Input Tokens Breakdown:")
+        logger.info("- Total: %d", input_details['total_prompt_tokens'])
+        logger.info("- Text: %d", input_details['text_tokens'])
+        logger.info("- Document: %d", input_details['document_tokens'])
+        logger.info("- Other modalities: %d", input_details['other_modality_tokens'])
+        logger.info("Output Tokens Breakdown:")
+        logger.info("- Total: %d", output_details['total_output_tokens'])
+        logger.info("- Text: %d", output_details['text_tokens'])
+        logger.info("- Other modalities: %d", output_details['other_modality_tokens'])
+        
+        # Additional metadata if available
+        if hasattr(um, 'model'):
+            logger.info("Model: %s", um.model)
+        if hasattr(um, 'request_latency'):
+            logger.info("Request Latency: %s seconds", um.request_latency)
+        
+        # Detailed logging
+        if hasattr(um, 'prompt_tokens_details'):
+            logger.debug("DETAILED INPUT TOKEN BREAKDOWN:")
+            for detail in um.prompt_tokens_details:
+                logger.debug("- Modality: %s", detail.modality)
+                logger.debug("  Tokens: %d", detail.token_count)
+                # Log all available attributes of the detail object
+                for attr in dir(detail):
+                    if not attr.startswith('_') and attr not in ['modality', 'token_count']:
+                        try:
+                            value = getattr(detail, attr)
+                            if value:  # Only log if has value
+                                logger.debug("  %s: %s", attr, str(value))
+                        except:
+                            pass
+        
+        if hasattr(um, 'candidates_tokens_details'):
+            logger.debug("DETAILED OUTPUT TOKEN BREAKDOWN:")
+            for detail in um.candidates_tokens_details:
+                logger.debug("- Modality: %s", detail.modality)
+                logger.debug("  Tokens: %d", detail.token_count)
+                # Log all available attributes of the detail object
+                for attr in dir(detail):
+                    if not attr.startswith('_') and attr not in ['modality', 'token_count']:
+                        try:
+                            value = getattr(detail, attr)
+                            if value:  # Only log if has value
+                                logger.debug("  %s: %s", attr, str(value))
+                        except:
+                            pass
