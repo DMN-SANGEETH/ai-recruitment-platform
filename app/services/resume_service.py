@@ -32,7 +32,7 @@ class ResumeService:
             try:
                 resume_text = await FileHandler.extract_text_doing_ocr(file_path)
             except FileProcessingError as e:
-                logger.error(f"Text extraction failed: {str(e)}")
+                logger.error("Text extraction failed: %s", {str(e)})
                 return {
                     "error": str(e),
                     "success": False,

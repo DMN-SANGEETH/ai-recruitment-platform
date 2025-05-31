@@ -4596,3 +4596,262 @@ AttributeError: 'GeminiClient' object has no attribute '_extract_content'. Did y
 2025-05-22 10:34:58,719 [INFO] Embedding generator initialized successfully
 2025-05-22 10:34:58,751 [INFO] Embedding generator initialized successfully
 2025-05-22 10:34:58,814 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,304 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,423 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,424 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,493 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,536 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,536 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,603 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,617 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,618 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,654 [INFO] Embedding generator initialized successfully
+2025-05-28 22:55:57,719 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:46,896 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:46,949 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:46,949 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,017 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,032 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,032 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,100 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,105 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,105 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,141 [INFO] Embedding generator initialized successfully
+2025-05-29 07:45:47,214 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,245 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,359 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,359 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,423 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,462 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,462 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,527 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,539 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,539 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,575 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:18,642 [INFO] Embedding generator initialized successfully
+2025-05-29 07:46:43,005 [INFO] File saved at: storage/resumes/resume_20250529_074643.pdf
+2025-05-29 07:47:55,986 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-29 07:48:00,181 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=ABgVH8-k-gm_I2Xxka8QtNPUzfI4N1lyaVf5cZyHUF9kEUmvdBKY0p2gTdDutj9rxxO4dNj4IpEPVJI6wRNkTsINluAUeBSJAijoSbIZxBN89ns&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-29 07:57:12,483 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-29 07:57:24,413 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-29 07:57:24,423 [INFO] AFC remote call 1 is done.
+2025-05-29 07:57:24,820 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-29 07:57:24,824 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-29 07:57:24,829 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-29 07:57:24,830 [INFO] ======================================
+2025-05-29 07:57:24,831 [INFO] cache_tokens_details: None
+2025-05-29 07:57:24,831 [INFO] cached_content_token_count: None
+2025-05-29 07:57:24,831 [INFO] candidates_token_count: 1667
+2025-05-29 07:57:24,832 [INFO] candidates_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)]
+2025-05-29 07:57:24,833 [INFO] construct: <bound method BaseModel.construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,833 [INFO] copy: <bound method BaseModel.copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,834 [INFO] dict: <bound method BaseModel.dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,835 [INFO] from_orm: <bound method BaseModel.from_orm of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,835 [INFO] json: <bound method BaseModel.json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,836 [INFO] model_computed_fields: {}
+2025-05-29 07:57:24,836 [INFO] model_config: {'alias_generator': <function to_camel at 0x7f8e5ffe80e0>, 'populate_by_name': True, 'from_attributes': True, 'protected_namespaces': (), 'extra': 'forbid', 'arbitrary_types_allowed': True, 'ser_json_bytes': 'base64', 'val_json_bytes': 'base64', 'ignored_types': (<class 'typing.TypeVar'>,)}
+2025-05-29 07:57:24,837 [INFO] model_construct: <bound method BaseModel.model_construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,838 [INFO] model_copy: <bound method BaseModel.model_copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,838 [INFO] model_dump: <bound method BaseModel.model_dump of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,839 [INFO] model_dump_json: <bound method BaseModel.model_dump_json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,840 [INFO] model_extra: None
+2025-05-29 07:57:24,842 [INFO] model_fields: {'cache_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='cacheTokensDetails', alias_priority=1, description='Output only. List of modalities of the cached content in the request input.'), 'cached_content_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='cachedContentTokenCount', alias_priority=1, description='Output only. Number of tokens in the cached part in the input (the cached content).'), 'candidates_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='candidatesTokenCount', alias_priority=1, description='Number of tokens in the response(s).'), 'candidates_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='candidatesTokensDetails', alias_priority=1, description='Output only. List of modalities that were returned in the response.'), 'prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='promptTokenCount', alias_priority=1, description='Number of tokens in the request. When `cached_content` is set, this is still the total effective prompt size meaning this includes the number of tokens in the cached content.'), 'prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='promptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed in the request input.'), 'thoughts_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='thoughtsTokenCount', alias_priority=1, description='Output only. Number of tokens present in thoughts output.'), 'tool_use_prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='toolUsePromptTokenCount', alias_priority=1, description='Output only. Number of tokens present in tool-use prompt(s).'), 'tool_use_prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='toolUsePromptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed for tool-use request inputs.'), 'total_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='totalTokenCount', alias_priority=1, description='Total token count for prompt, response candidates, and tool-use prompts (if present).'), 'traffic_type': FieldInfo(annotation=Union[TrafficType, NoneType], required=False, default=None, alias='trafficType', alias_priority=1, description='Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput quota.')}
+2025-05-29 07:57:24,843 [INFO] model_fields_set: {'candidates_tokens_details', 'prompt_token_count', 'candidates_token_count', 'prompt_tokens_details', 'total_token_count'}
+2025-05-29 07:57:24,843 [INFO] model_json_schema: <bound method BaseModel.model_json_schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,844 [INFO] model_parametrized_name: <bound method BaseModel.model_parametrized_name of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,844 [INFO] model_post_init: <bound method BaseModel.model_post_init of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,844 [INFO] model_rebuild: <bound method BaseModel.model_rebuild of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,845 [INFO] model_validate: <bound method BaseModel.model_validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,845 [INFO] model_validate_json: <bound method BaseModel.model_validate_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,846 [INFO] model_validate_strings: <bound method BaseModel.model_validate_strings of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,846 [INFO] parse_file: <bound method BaseModel.parse_file of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,846 [INFO] parse_obj: <bound method BaseModel.parse_obj of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,846 [INFO] parse_raw: <bound method BaseModel.parse_raw of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,847 [INFO] prompt_token_count: 782
+2025-05-29 07:57:24,847 [INFO] prompt_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)]
+2025-05-29 07:57:24,847 [INFO] schema: <bound method BaseModel.schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,848 [INFO] schema_json: <bound method BaseModel.schema_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,848 [INFO] thoughts_token_count: None
+2025-05-29 07:57:24,848 [INFO] to_json_dict: <bound method BaseModel.to_json_dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8), ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 07:57:24,849 [INFO] tool_use_prompt_token_count: None
+2025-05-29 07:57:24,849 [INFO] tool_use_prompt_tokens_details: None
+2025-05-29 07:57:24,849 [INFO] total_token_count: 2449
+2025-05-29 07:57:24,849 [INFO] traffic_type: None
+2025-05-29 07:57:24,850 [INFO] update_forward_refs: <bound method BaseModel.update_forward_refs of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,850 [INFO] validate: <bound method BaseModel.validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 07:57:24,850 [INFO] ======================================
+2025-05-29 07:57:24,851 [INFO] TOKEN USAGE SUMMARY:
+2025-05-29 07:57:24,851 [INFO] Total Tokens (Input + Output): 2449
+2025-05-29 07:57:24,851 [INFO] Input Tokens Breakdown:
+2025-05-29 07:57:24,852 [INFO] - Total: 782
+2025-05-29 07:57:24,853 [INFO] - Text: 8
+2025-05-29 07:57:24,854 [INFO] - Document: 774
+2025-05-29 07:57:24,854 [INFO] - Other modalities: 0
+2025-05-29 07:57:24,854 [INFO] Output Tokens Breakdown:
+2025-05-29 07:57:24,855 [INFO] - Total: 1667
+2025-05-29 07:57:24,855 [INFO] - Text: 1667
+2025-05-29 07:57:24,855 [INFO] - Other modalities: 0
+2025-05-29 07:57:28,056 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-29 07:57:28,058 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-29 07:57:28,058 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-29 07:57:28,058 [INFO] ======================================
+2025-05-29 07:57:28,059 [INFO] cached_content_token_count: 0
+2025-05-29 07:57:28,059 [INFO] candidates_token_count: 79
+2025-05-29 07:57:28,059 [INFO] prompt_token_count: 1886
+2025-05-29 07:57:28,059 [INFO] total_token_count: 1965
+2025-05-29 07:57:28,059 [INFO] ======================================
+2025-05-29 07:57:28,060 [INFO] TOKEN USAGE SUMMARY:
+2025-05-29 07:57:28,060 [INFO] Total Tokens (Input + Output): 1965
+2025-05-29 07:57:28,060 [INFO] Input Tokens Breakdown:
+2025-05-29 07:57:28,060 [INFO] - Total: 1886
+2025-05-29 07:57:28,061 [INFO] - Text: 0
+2025-05-29 07:57:28,061 [INFO] - Document: 0
+2025-05-29 07:57:28,061 [INFO] - Other modalities: 1886
+2025-05-29 07:57:28,061 [INFO] Output Tokens Breakdown:
+2025-05-29 07:57:28,061 [INFO] - Total: 79
+2025-05-29 07:57:28,061 [INFO] - Text: 0
+2025-05-29 07:57:28,061 [INFO] - Other modalities: 79
+2025-05-29 07:57:43,614 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-29 07:57:43,620 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-29 07:57:43,622 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-29 07:57:43,623 [INFO] ======================================
+2025-05-29 07:57:43,624 [INFO] cached_content_token_count: 0
+2025-05-29 07:57:43,625 [INFO] candidates_token_count: 2069
+2025-05-29 07:57:43,625 [INFO] prompt_token_count: 2061
+2025-05-29 07:57:43,626 [INFO] total_token_count: 4130
+2025-05-29 07:57:43,627 [INFO] ======================================
+2025-05-29 07:57:43,628 [INFO] TOKEN USAGE SUMMARY:
+2025-05-29 07:57:43,628 [INFO] Total Tokens (Input + Output): 4130
+2025-05-29 07:57:43,629 [INFO] Input Tokens Breakdown:
+2025-05-29 07:57:43,630 [INFO] - Total: 2061
+2025-05-29 07:57:43,630 [INFO] - Text: 0
+2025-05-29 07:57:43,631 [INFO] - Document: 0
+2025-05-29 07:57:43,631 [INFO] - Other modalities: 2061
+2025-05-29 07:57:43,631 [INFO] Output Tokens Breakdown:
+2025-05-29 07:57:43,632 [INFO] - Total: 2069
+2025-05-29 07:57:43,633 [INFO] - Text: 0
+2025-05-29 07:57:43,633 [INFO] - Other modalities: 2069
+2025-05-29 07:57:44,210 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-29 07:57:45,820 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-29 22:30:18,746 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,798 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,798 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,861 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,877 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,878 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,941 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,948 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,948 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:18,980 [INFO] Embedding generator initialized successfully
+2025-05-29 22:30:19,042 [INFO] Embedding generator initialized successfully
+2025-05-29 22:44:46,320 [INFO] File saved at: storage/resumes/resume_20250529_224446.pdf
+2025-05-29 22:44:47,798 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-29 22:44:52,493 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=ABgVH8-MNbuOlFlhl1ajBnh0TnU8YQ4VU7mZJdwr3uJZIX2Re4OnGM8LyTUfxogXC2PAKlaLLgfSZZOK-Hb1IRd_ayWEggsloqjJilf79clL3A&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-29 22:44:52,494 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-29 22:45:04,859 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-29 22:45:04,863 [INFO] AFC remote call 1 is done.
+2025-05-29 22:45:05,305 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-29 22:45:05,307 [INFO] First when uploading Total input tokens: total_tokens=775 cached_content_token_count=None
+2025-05-29 22:45:05,309 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-29 22:45:05,309 [INFO] ======================================
+2025-05-29 22:45:05,309 [INFO] cache_tokens_details: None
+2025-05-29 22:45:05,310 [INFO] cached_content_token_count: None
+2025-05-29 22:45:05,310 [INFO] candidates_token_count: 1667
+2025-05-29 22:45:05,310 [INFO] candidates_tokens_details: [ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)]
+2025-05-29 22:45:05,310 [INFO] construct: <bound method BaseModel.construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,311 [INFO] copy: <bound method BaseModel.copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,311 [INFO] dict: <bound method BaseModel.dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,312 [INFO] from_orm: <bound method BaseModel.from_orm of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,312 [INFO] json: <bound method BaseModel.json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,312 [INFO] model_computed_fields: {}
+2025-05-29 22:45:05,313 [INFO] model_config: {'alias_generator': <function to_camel at 0x7f62fed82d40>, 'populate_by_name': True, 'from_attributes': True, 'protected_namespaces': (), 'extra': 'forbid', 'arbitrary_types_allowed': True, 'ser_json_bytes': 'base64', 'val_json_bytes': 'base64', 'ignored_types': (<class 'typing.TypeVar'>,)}
+2025-05-29 22:45:05,313 [INFO] model_construct: <bound method BaseModel.model_construct of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,314 [INFO] model_copy: <bound method BaseModel.model_copy of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,314 [INFO] model_dump: <bound method BaseModel.model_dump of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,315 [INFO] model_dump_json: <bound method BaseModel.model_dump_json of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,315 [INFO] model_extra: None
+2025-05-29 22:45:05,316 [INFO] model_fields: {'cache_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='cacheTokensDetails', alias_priority=1, description='Output only. List of modalities of the cached content in the request input.'), 'cached_content_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='cachedContentTokenCount', alias_priority=1, description='Output only. Number of tokens in the cached part in the input (the cached content).'), 'candidates_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='candidatesTokenCount', alias_priority=1, description='Number of tokens in the response(s).'), 'candidates_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='candidatesTokensDetails', alias_priority=1, description='Output only. List of modalities that were returned in the response.'), 'prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='promptTokenCount', alias_priority=1, description='Number of tokens in the request. When `cached_content` is set, this is still the total effective prompt size meaning this includes the number of tokens in the cached content.'), 'prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='promptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed in the request input.'), 'thoughts_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='thoughtsTokenCount', alias_priority=1, description='Output only. Number of tokens present in thoughts output.'), 'tool_use_prompt_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='toolUsePromptTokenCount', alias_priority=1, description='Output only. Number of tokens present in tool-use prompt(s).'), 'tool_use_prompt_tokens_details': FieldInfo(annotation=Union[list[ModalityTokenCount], NoneType], required=False, default=None, alias='toolUsePromptTokensDetails', alias_priority=1, description='Output only. List of modalities that were processed for tool-use request inputs.'), 'total_token_count': FieldInfo(annotation=Union[int, NoneType], required=False, default=None, alias='totalTokenCount', alias_priority=1, description='Total token count for prompt, response candidates, and tool-use prompts (if present).'), 'traffic_type': FieldInfo(annotation=Union[TrafficType, NoneType], required=False, default=None, alias='trafficType', alias_priority=1, description='Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned Throughput quota.')}
+2025-05-29 22:45:05,316 [INFO] model_fields_set: {'candidates_token_count', 'candidates_tokens_details', 'prompt_tokens_details', 'prompt_token_count', 'total_token_count'}
+2025-05-29 22:45:05,317 [INFO] model_json_schema: <bound method BaseModel.model_json_schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,317 [INFO] model_parametrized_name: <bound method BaseModel.model_parametrized_name of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,318 [INFO] model_post_init: <bound method BaseModel.model_post_init of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,318 [INFO] model_rebuild: <bound method BaseModel.model_rebuild of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,318 [INFO] model_validate: <bound method BaseModel.model_validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,318 [INFO] model_validate_json: <bound method BaseModel.model_validate_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,318 [INFO] model_validate_strings: <bound method BaseModel.model_validate_strings of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,319 [INFO] parse_file: <bound method BaseModel.parse_file of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,319 [INFO] parse_obj: <bound method BaseModel.parse_obj of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,319 [INFO] parse_raw: <bound method BaseModel.parse_raw of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,319 [INFO] prompt_token_count: 782
+2025-05-29 22:45:05,319 [INFO] prompt_tokens_details: [ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)]
+2025-05-29 22:45:05,319 [INFO] schema: <bound method BaseModel.schema of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,320 [INFO] schema_json: <bound method BaseModel.schema_json of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,320 [INFO] thoughts_token_count: None
+2025-05-29 22:45:05,320 [INFO] to_json_dict: <bound method BaseModel.to_json_dict of GenerateContentResponseUsageMetadata(cache_tokens_details=None, cached_content_token_count=None, candidates_token_count=1667, candidates_tokens_details=[ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=1667)], prompt_token_count=782, prompt_tokens_details=[ModalityTokenCount(modality=<MediaModality.DOCUMENT: 'DOCUMENT'>, token_count=774), ModalityTokenCount(modality=<MediaModality.TEXT: 'TEXT'>, token_count=8)], thoughts_token_count=None, tool_use_prompt_token_count=None, tool_use_prompt_tokens_details=None, total_token_count=2449, traffic_type=None)>
+2025-05-29 22:45:05,320 [INFO] tool_use_prompt_token_count: None
+2025-05-29 22:45:05,320 [INFO] tool_use_prompt_tokens_details: None
+2025-05-29 22:45:05,320 [INFO] total_token_count: 2449
+2025-05-29 22:45:05,321 [INFO] traffic_type: None
+2025-05-29 22:45:05,321 [INFO] update_forward_refs: <bound method BaseModel.update_forward_refs of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,321 [INFO] validate: <bound method BaseModel.validate of <class 'google.genai.types.GenerateContentResponseUsageMetadata'>>
+2025-05-29 22:45:05,321 [INFO] ======================================
+2025-05-29 22:45:05,321 [INFO] TOKEN USAGE SUMMARY:
+2025-05-29 22:45:05,321 [INFO] Total Tokens (Input + Output): 2449
+2025-05-29 22:45:05,322 [INFO] Input Tokens Breakdown:
+2025-05-29 22:45:05,322 [INFO] - Total: 782
+2025-05-29 22:45:05,322 [INFO] - Text: 8
+2025-05-29 22:45:05,322 [INFO] - Document: 774
+2025-05-29 22:45:05,322 [INFO] - Other modalities: 0
+2025-05-29 22:45:05,322 [INFO] Output Tokens Breakdown:
+2025-05-29 22:45:05,323 [INFO] - Total: 1667
+2025-05-29 22:45:05,323 [INFO] - Text: 1667
+2025-05-29 22:45:05,323 [INFO] - Other modalities: 0
+2025-05-29 22:45:08,785 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-29 22:45:08,786 [INFO]  when uploading Total input tokens: total_tokens=1897 cached_content_token_count=None
+2025-05-29 22:45:08,787 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-29 22:45:08,787 [INFO] ======================================
+2025-05-29 22:45:08,787 [INFO] cached_content_token_count: 0
+2025-05-29 22:45:08,787 [INFO] candidates_token_count: 94
+2025-05-29 22:45:08,787 [INFO] prompt_token_count: 1886
+2025-05-29 22:45:08,787 [INFO] total_token_count: 1980
+2025-05-29 22:45:08,787 [INFO] ======================================
+2025-05-29 22:45:08,787 [INFO] TOKEN USAGE SUMMARY:
+2025-05-29 22:45:08,787 [INFO] Total Tokens (Input + Output): 1980
+2025-05-29 22:45:08,787 [INFO] Input Tokens Breakdown:
+2025-05-29 22:45:08,787 [INFO] - Total: 1886
+2025-05-29 22:45:08,787 [INFO] - Text: 0
+2025-05-29 22:45:08,787 [INFO] - Document: 0
+2025-05-29 22:45:08,788 [INFO] - Other modalities: 1886
+2025-05-29 22:45:08,788 [INFO] Output Tokens Breakdown:
+2025-05-29 22:45:08,788 [INFO] - Total: 94
+2025-05-29 22:45:08,788 [INFO] - Text: 0
+2025-05-29 22:45:08,788 [INFO] - Other modalities: 94
+2025-05-29 22:45:26,603 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:countTokens "HTTP/1.1 200 OK"
+2025-05-29 22:45:26,604 [INFO]  when uploading Total input tokens: total_tokens=2071 cached_content_token_count=None
+2025-05-29 22:45:26,604 [INFO] FULL USAGE_METADATA STRUCTURE:
+2025-05-29 22:45:26,605 [INFO] ======================================
+2025-05-29 22:45:26,605 [INFO] cached_content_token_count: 0
+2025-05-29 22:45:26,605 [INFO] candidates_token_count: 2173
+2025-05-29 22:45:26,605 [INFO] prompt_token_count: 2061
+2025-05-29 22:45:26,605 [INFO] total_token_count: 4234
+2025-05-29 22:45:26,605 [INFO] ======================================
+2025-05-29 22:45:26,605 [INFO] TOKEN USAGE SUMMARY:
+2025-05-29 22:45:26,605 [INFO] Total Tokens (Input + Output): 4234
+2025-05-29 22:45:26,605 [INFO] Input Tokens Breakdown:
+2025-05-29 22:45:26,605 [INFO] - Total: 2061
+2025-05-29 22:45:26,605 [INFO] - Text: 0
+2025-05-29 22:45:26,605 [INFO] - Document: 0
+2025-05-29 22:45:26,605 [INFO] - Other modalities: 2061
+2025-05-29 22:45:26,605 [INFO] Output Tokens Breakdown:
+2025-05-29 22:45:26,605 [INFO] - Total: 2173
+2025-05-29 22:45:26,605 [INFO] - Text: 0
+2025-05-29 22:45:26,605 [INFO] - Other modalities: 2173
+2025-05-29 22:45:28,180 [INFO] Successfully created embedding for resume: Nishan Sangeeth
+2025-05-29 22:45:29,922 [INFO] Successfully processed and stored resume for Nishan Sangeeth
+2025-05-29 22:46:31,661 [INFO] File saved at: storage/resumes/resume_20250529_224631.pdf
+2025-05-29 22:46:33,165 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files "HTTP/1.1 200 OK"
+2025-05-29 22:46:36,750 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/upload/v1beta/files?upload_id=ABgVH8_dEPXjgCTXeJnOzbuGD7S5c3MHzxi-VZ5TFfgQi-TkiqhiuG6RXhflTfML1yhn9I00bp31D2bLm7eyjYMGo2uz9w_HCCidd8cODhEQGyM&upload_protocol=resumable "HTTP/1.1 200 OK"
+2025-05-29 22:46:36,752 [INFO] AFC is enabled with max remote calls: 10.
+2025-05-29 22:46:42,689 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2025-05-29 22:46:42,689 [ERROR] OCR failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}
+2025-05-29 22:46:42,689 [ERROR] Text extraction failed: {"Text extraction failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The model is overloaded. Please try again later.', 'status': 'UNAVAILABLE'}}"}

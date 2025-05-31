@@ -187,6 +187,7 @@ class ResumeProcessor:
             # Only store in DB if it's a valid resume
             if is_valid:
                 result = self.repository.create(resume)
+                print("==================",result)
                 if result:
                     logger.info(
                         "Successfully processed and stored resume for %s",
